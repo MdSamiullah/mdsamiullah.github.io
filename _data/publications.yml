@@ -1,350 +1,467 @@
-- title: "Discovering the Impact on Mental Health for Prolonged Online Dependency in Post-COVID Era Using Deep Transfer Learning"
-  authors: "Mahir, Md Ehesas Mia, Samiullah, Md, Rahman, Md Sazzadur, Leung, Carson K"
-  venue: "2026 20th International Conference on Ubiquitous Information Management and Communication (IMCOM)"
+- title: |
+    Discovering the Impact on Mental Health for Prolonged Online Dependency in Post-COVID Era Using Deep Transfer Learning
+  authors: |
+    Md Ehesas Mia Mahir, Md Samiullah, Md Sazzadur Rahman, Carson K Leung
+  venue: |
+    2026 20th International Conference on Ubiquitous Information Management and Communication (IMCOM)
   year: 2026
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "MIRACLE: Malware image recognition and classification by layered extraction: MIRACLE: malware image recognition...: I. Alam et al."
-  authors: "Alam, Inzamamul, Samiullah, Md, Asaduzzaman, SM, Kabir, Upama, Aahad, AM, Woo, Simon S"
-  venue: "Data Mining \& Knowledge Discovery"
+- title: |
+    MIRACLE: Malware image recognition and classification by layered extraction: MIRACLE: malware image recognition...: I. Alam et al.
+  authors: |
+    Inzamamul Alam, Md Samiullah, SM Asaduzzaman, Upama Kabir, AM Aahad, Simon S Woo
+  venue: |
+    Data Mining \& Knowledge Discovery
   year: 2025
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Supervised graph embedding for classification using discriminating frequent patterns"
-  authors: "Alam, Md Tanvir, Ahmed, Chowdhury Farhan, Samiullah, Md, Leung, Carson K"
-  venue: "International Journal of Data Science and Analytics"
+- title: |
+    Supervised graph embedding for classification using discriminating frequent patterns
+  authors: |
+    Md Tanvir Alam, Chowdhury Farhan Ahmed, Md Samiullah, Carson K Leung
+  venue: |
+    International Journal of Data Science and Analytics
   year: 2025
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "A Probabilistic Reasoning Framework to Detect Fake News on Social Media"
-  authors: "Rashid, Mehreen, Anber, Fabliha, Samiullah, Md, Ahmed, Chowdhury Farhan, Leung, Carson K, Pazdor, Adam GM"
-  venue: "2025 19th International Conference on Ubiquitous Information Management and Communication (IMCOM)"
+- title: |
+    A Probabilistic Reasoning Framework to Detect Fake News on Social Media
+  authors: |
+    Mehreen Rashid, Fabliha Anber, Md Samiullah, Chowdhury Farhan Ahmed, Carson K Leung, Adam GM Pazdor
+  venue: |
+    2025 19th International Conference on Ubiquitous Information Management and Communication (IMCOM)
   year: 2025
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Framework for Implementation of Poisson MaxSPRT Technique with Variations for Vaccine Safety"
-  authors: "Samiullah, Md, Buttery, Jim, Clothier, Hazel J, Yin, Jiying, Mallard, John, Munakabayo, Jeremiah, Kattan, Gonzalo Sepulveda, Dimaguila, Gerardo Luis"
-  venue: "medRxiv"
+- title: |
+    Framework for Implementation of Poisson MaxSPRT Technique with Variations for Vaccine Safety
+  authors: |
+    Md Samiullah, Jim Buttery, Hazel J Clothier, Jiying Yin, John Mallard, Jeremiah Munakabayo, Gonzalo Sepulveda Kattan, Gerardo Luis Dimaguila
+  venue: |
+    medRxiv
   year: 2024
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "SREMIC: Spatial relation extraction-based malware image classification"
-  authors: "Alam, Inzamamul, Samiullah, Md, Kabir, Upama, Woo, Simon, Leung, Carson K, Nguyen, Hoang Hai"
-  venue: "2024 18th International Conference on Ubiquitous Information Management and Communication (IMCOM)"
+- title: |
+    SREMIC: Spatial relation extraction-based malware image classification
+  authors: |
+    Inzamamul Alam, Md Samiullah, Upama Kabir, Simon Woo, Carson K Leung, Hoang Hai Nguyen
+  venue: |
+    2024 18th International Conference on Ubiquitous Information Management and Communication (IMCOM)
   year: 2024
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "An Efficient Approach to Learn an Effective Hierarchy of a Set of OOBN Classes"
-  authors: "Islam, Wakilur, Karim, Rezaul, Samiullah, Md, Ahmed, Chowdhury Farhan, Leung, Carson K, Pazdor, Adam GM, Hryhoruk, Connor CJ"
-  venue: "2024 18th International Conference on Ubiquitous Information Management and Communication (IMCOM)"
+- title: |
+    An Efficient Approach to Learn an Effective Hierarchy of a Set of OOBN Classes
+  authors: |
+    Wakilur Islam, Rezaul Karim, Md Samiullah, Chowdhury Farhan Ahmed, Carson K Leung, Adam GM Pazdor, Connor CJ Hryhoruk
+  venue: |
+    2024 18th International Conference on Ubiquitous Information Management and Communication (IMCOM)
   year: 2024
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Discovering interesting patterns from hypergraphs"
-  authors: "Alam, Md Tanvir, Ahmed, Chowdhury Farhan, Samiullah, Md, Leung, Carson Kai-Sang"
-  venue: "ACM Transactions on Knowledge Discovery from Data"
+- title: |
+    Discovering interesting patterns from hypergraphs
+  authors: |
+    Md Tanvir Alam, Chowdhury Farhan Ahmed, Md Samiullah, Carson Kai-Sang Leung
+  venue: |
+    ACM Transactions on Knowledge Discovery from Data
   year: 2023
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Shareable and inheritable incremental compilation in iOOBN"
-  authors: "Samiullah, Md, Nicholson, Ann, Albrecht, David"
-  venue: "Pacific Rim International Conference on Artificial Intelligence"
+- title: |
+    Shareable and inheritable incremental compilation in iOOBN
+  authors: |
+    Md Samiullah, Ann Nicholson, David Albrecht
+  venue: |
+    Pacific Rim International Conference on Artificial Intelligence
   year: 2023
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Connectable and independent junction tree-based compilation technique of object-oriented bayesian networks"
-  authors: "Aahad, AM, Yamin, Khondker Bin, Samiullah, Md, Ahmed, Chowdhury Farhan, Leung, Carson K, Madill, Evan WR, Pazdor, Adam GM"
-  venue: "2023 IEEE 35th International Conference on Tools with Artificial Intelligence (ICTAI)"
+- title: |
+    Connectable and independent junction tree-based compilation technique of object-oriented bayesian networks
+  authors: |
+    AM Aahad, Khondker Bin Yamin, Md Samiullah, Chowdhury Farhan Ahmed, Carson K Leung, Evan WR Madill, Adam GM Pazdor
+  venue: |
+    2023 IEEE 35th International Conference on Tools with Artificial Intelligence (ICTAI)
   year: 2023
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Discovering probabilistically weighted sequential patterns in uncertain databases"
-  authors: "Islam, Md Sahidul, Kar, Pankaj Chandra, Samiullah, Md, Ahmed, Chowdhury Farhan, Leung, Carson Kai-Sang"
-  venue: "Applied Intelligence"
+- title: |
+    Discovering probabilistically weighted sequential patterns in uncertain databases
+  authors: |
+    Md Sahidul Islam, Pankaj Chandra Kar, Md Samiullah, Chowdhury Farhan Ahmed, Carson Kai-Sang Leung
+  venue: |
+    Applied Intelligence
   year: 2023
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "A Vertex-extension based Algorithm for Frequent Pattern Mining from Graph Databases"
-  authors: "Alam, Md Tanvir, Ahmed, Chowdhury Farhan, Samiullah, Md"
-  venue: "Dhaka University Journal of Applied Science and Engineering"
+- title: |
+    A Vertex-extension based Algorithm for Frequent Pattern Mining from Graph Databases
+  authors: |
+    Md Tanvir Alam, Chowdhury Farhan Ahmed, Md Samiullah
+  venue: |
+    Dhaka University Journal of Applied Science and Engineering
   year: 2022
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Automated construction of an object-oriented Bayesian network (OOBN) class hierarchy"
-  authors: "Samiullah, Md, Nicholson, Ann, Albrecht, David"
-  venue: "2022 IEEE 34th International Conference on Tools with Artificial Intelligence (ICTAI)"
+- title: |
+    Automated construction of an object-oriented Bayesian network (OOBN) class hierarchy
+  authors: |
+    Md Samiullah, Ann Nicholson, David Albrecht
+  venue: |
+    2022 IEEE 34th International Conference on Tools with Artificial Intelligence (ICTAI)
   year: 2022
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Dr. AI: A Heterogeneous Clinical Decision Support System for Personalised Health Care"
-  authors: "Samiullah, Md, Kar, Pankaj Chandra, Islam, Md Sahidul, Alam, Md Tanvir, Ahmed, Chowdhury Farhan"
-  venue: "Proceedings of Seventh International Congress on Information and Communication Technology: ICICT 2022, London, Volume 3"
+- title: |
+    Dr. AI: A Heterogeneous Clinical Decision Support System for Personalised Health Care
+  authors: |
+    Md Samiullah, Pankaj Chandra Kar, Md Sahidul Islam, Md Tanvir Alam, Chowdhury Farhan Ahmed
+  venue: |
+    Proceedings of Seventh International Congress on Information and Communication Technology: ICICT 2022, London, Volume 3
   year: 2022
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "UFreS: a new technique for discovering frequent subgraph patterns in uncertain graph databases"
-  authors: "Haque, Riddho Ridwanul, Ahmed, Chowdhury Farhan, Samiullah, Md, Leung, Carson K"
-  venue: "2021 IEEE International Conference on Big Knowledge (ICBK)"
+- title: |
+    UFreS: a new technique for discovering frequent subgraph patterns in uncertain graph databases
+  authors: |
+    Riddho Ridwanul Haque, Chowdhury Farhan Ahmed, Md Samiullah, Carson K Leung
+  venue: |
+    2021 IEEE International Conference on Big Knowledge (ICBK)
   year: 2021
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Discriminating frequent pattern based supervised graph embedding for classification"
-  authors: "Alam, Md Tanvir, Ahmed, Chowdhury Farhan, Samiullah, Md, Leung, Carson K"
-  venue: "Pacific-Asia Conference on Knowledge Discovery and Data Mining"
+- title: |
+    Discriminating frequent pattern based supervised graph embedding for classification
+  authors: |
+    Md Tanvir Alam, Chowdhury Farhan Ahmed, Md Samiullah, Carson K Leung
+  venue: |
+    Pacific-Asia Conference on Knowledge Discovery and Data Mining
   year: 2021
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Mining frequent patterns from hypergraph databases"
-  authors: "Alam, Md Tanvir, Ahmed, Chowdhury Farhan, Samiullah, Md, Leung, Carson K"
-  venue: "Pacific-Asia Conference on Knowledge Discovery and Data Mining"
+- title: |
+    Mining frequent patterns from hypergraph databases
+  authors: |
+    Md Tanvir Alam, Chowdhury Farhan Ahmed, Md Samiullah, Carson K Leung
+  venue: |
+    Pacific-Asia Conference on Knowledge Discovery and Data Mining
   year: 2021
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "A review on probabilistic graphical models and tools"
-  authors: "Samiullah, Md, Albrecht, David, Nicholson, Ann E, Ahmed, Chowdhury Farhan"
-  venue: "Dhaka University Journal of Applied Science and Engineering"
+- title: |
+    A review on probabilistic graphical models and tools
+  authors: |
+    Md Samiullah, David Albrecht, Ann E Nicholson, Chowdhury Farhan Ahmed
+  venue: |
+    Dhaka University Journal of Applied Science and Engineering
   year: 2021
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "iOOBN: an object-oriented Bayesian network modelling framework with inheritance"
-  authors: "Samiullah, Md"
-  venue: ""
+- title: |
+    iOOBN: an object-oriented Bayesian network modelling framework with inheritance
+  authors: |
+    Md Samiullah
+  venue: |
+    
   year: 2020
-  type: "phdthesis"
+  type: phdthesis
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Mining non-redundant closed flexible periodic patterns"
-  authors: "Akther, Sayma, Karim, Md Rezaul, Samiullah, Md, Ahmed, Chowdhury Farhan"
-  venue: "Engineering Applications of Artificial Intelligence"
+- title: |
+    Mining non-redundant closed flexible periodic patterns
+  authors: |
+    Sayma Akther, Md Rezaul Karim, Md Samiullah, Chowdhury Farhan Ahmed
+  venue: |
+    Engineering Applications of Artificial Intelligence
   year: 2018
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Ioobn: A Bayesian network modelling tool using object oriented Bayesian networks with inheritance"
-  authors: "Samiullah, Md, Hoang, Thao Xuan, Albrecht, David, Nicholson, Ann, Korb, Kevin"
-  venue: "2017 IEEE 29th International Conference on Tools with Artificial Intelligence (ICTAI)"
+- title: |
+    Ioobn: A Bayesian network modelling tool using object oriented Bayesian networks with inheritance
+  authors: |
+    Md Samiullah, Thao Xuan Hoang, David Albrecht, Ann Nicholson, Kevin Korb
+  venue: |
+    2017 IEEE 29th International Conference on Tools with Artificial Intelligence (ICTAI)
   year: 2017
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "An efficient dynamic superset bit-vector approach for mining frequent closed itemsets and their lattice structure"
-  authors: "Hashem, Tahrima, Karim, Md Rezaul, Samiullah, Md, Ahmed, Chowdhury Farhan"
-  venue: "Expert Systems with Applications"
+- title: |
+    An efficient dynamic superset bit-vector approach for mining frequent closed itemsets and their lattice structure
+  authors: |
+    Tahrima Hashem, Md Rezaul Karim, Md Samiullah, Chowdhury Farhan Ahmed
+  venue: |
+    Expert Systems with Applications
   year: 2017
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "An efficient approach for mining frequent subgraphs"
-  authors: "Alam, Tahira, Zahin, Sabit Anwar, Samiullah, Md, Ahmed, Chowdhury Farhan"
-  venue: "International Conference on Pattern Recognition and Machine Intelligence"
+- title: |
+    An efficient approach for mining frequent subgraphs
+  authors: |
+    Tahira Alam, Sabit Anwar Zahin, Md Samiullah, Chowdhury Farhan Ahmed
+  venue: |
+    International Conference on Pattern Recognition and Machine Intelligence
   year: 2017
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Supergraph based periodic pattern mining in dynamic social networks"
-  authors: "Halder, Sajal, Samiullah, Md, Lee, Young-Koo"
-  venue: "Expert Systems with Applications"
+- title: |
+    Supergraph based periodic pattern mining in dynamic social networks
+  authors: |
+    Sajal Halder, Md Samiullah, Young-Koo Lee
+  venue: |
+    Expert Systems with Applications
   year: 2017
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "A new framework for mining weighted periodic patterns in time series databases"
-  authors: "Chanda, Ashis Kumar, Ahmed, Chowdhury Farhan, Samiullah, Md, Leung, Carson K"
-  venue: "Expert Systems with Applications"
+- title: |
+    A new framework for mining weighted periodic patterns in time series databases
+  authors: |
+    Ashis Kumar Chanda, Chowdhury Farhan Ahmed, Md Samiullah, Carson K Leung
+  venue: |
+    Expert Systems with Applications
   year: 2017
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Mining interesting patterns from uncertain databases"
-  authors: "Ahmed, Akiz Uddin, Ahmed, Chowdhury Farhan, Samiullah, Md, Adnan, Nahim, Leung, Carson Kai-Sang"
-  venue: "Information Sciences"
+- title: |
+    Mining interesting patterns from uncertain databases
+  authors: |
+    Akiz Uddin Ahmed, Chowdhury Farhan Ahmed, Md Samiullah, Nahim Adnan, Carson Kai-Sang Leung
+  venue: |
+    Information Sciences
   year: 2016
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "An efficient approach for mining frequent patterns over uncertain data streams"
-  authors: "Shajib, Md Badi-Uz-Zaman, Samiullah, Md, Ahmed, Chowdhury Farhan, Leung, Carson K, Pazdor, Adam GM"
-  venue: "2016 IEEE 28th International Conference on Tools with Artificial Intelligence (ICTAI)"
+- title: |
+    An efficient approach for mining frequent patterns over uncertain data streams
+  authors: |
+    Md Badi-Uz-Zaman Shajib, Md Samiullah, Chowdhury Farhan Ahmed, Carson K Leung, Adam GM Pazdor
+  venue: |
+    2016 IEEE 28th International Conference on Tools with Artificial Intelligence (ICTAI)
   year: 2016
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Reframing in frequent pattern mining"
-  authors: "Ahmed, Chowdhury Farhan, Samiullah, Md, Lachiche, Nicolas, Kull, Meelis, Flach, Peter"
-  venue: "2015 IEEE 27th International Conference on Tools with Artificial Intelligence (ICTAI)"
+- title: |
+    Reframing in frequent pattern mining
+  authors: |
+    Chowdhury Farhan Ahmed, Md Samiullah, Nicolas Lachiche, Meelis Kull, Peter Flach
+  venue: |
+    2015 IEEE 27th International Conference on Tools with Artificial Intelligence (ICTAI)
   year: 2015
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "A new framework for mining frequent interaction patterns from meeting databases"
-  authors: "Fariha, Anna, Ahmed, Chowdhury Farhan, Leung, Carson K, Samiullah, Md, Pervin, Suraiya, Cao, Longbing"
-  venue: "Engineering Applications of Artificial Intelligence"
+- title: |
+    A new framework for mining frequent interaction patterns from meeting databases
+  authors: |
+    Anna Fariha, Chowdhury Farhan Ahmed, Carson K Leung, Md Samiullah, Suraiya Pervin, Longbing Cao
+  venue: |
+    Engineering Applications of Artificial Intelligence
   year: 2015
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "An efficient approach to mine flexible periodic patterns in time series databases"
-  authors: "Chanda, Ashis Kumar, Saha, Swapnil, Nishi, Manziba Akanda, Samiullah, Md, Ahmed, Chowdhury Farhan"
-  venue: "Engineering Applications of Artificial Intelligence"
+- title: |
+    An efficient approach to mine flexible periodic patterns in time series databases
+  authors: |
+    Ashis Kumar Chanda, Swapnil Saha, Manziba Akanda Nishi, Md Samiullah, Chowdhury Farhan Ahmed
+  venue: |
+    Engineering Applications of Artificial Intelligence
   year: 2015
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "An efficient approach for mining cross-level closed itemsets and minimal association rules using closed itemset lattices"
-  authors: "Hashem, Tahrima, Ahmed, Chowdhury Farhan, Samiullah, Md, Akther, Sayma, Jeong, Byeong-Soo, Jeon, Seokhee"
-  venue: "Expert systems with applications"
+- title: |
+    An efficient approach for mining cross-level closed itemsets and minimal association rules using closed itemset lattices
+  authors: |
+    Tahrima Hashem, Chowdhury Farhan Ahmed, Md Samiullah, Sayma Akther, Byeong-Soo Jeong, Seokhee Jeon
+  venue: |
+    Expert systems with applications
   year: 2014
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Mining frequent correlated graphs with a new measure"
-  authors: "Samiullah, Md, Ahmed, Chowdhury Farhan, Fariha, Anna, Islam, Md Rafiqul, Lachiche, Nicolas"
-  venue: "Expert systems with applications"
+- title: |
+    Mining frequent correlated graphs with a new measure
+  authors: |
+    Md Samiullah, Chowdhury Farhan Ahmed, Anna Fariha, Md Rafiqul Islam, Nicolas Lachiche
+  venue: |
+    Expert systems with applications
   year: 2014
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Correlation mining in graph databases with a new measure"
-  authors: "Samiullah, Md, Ahmed, Chowdhury Farhan, Nishi, Manziba Akanda, Fariha, Anna, Abdullah, SM, Islam, Md Rafiqul"
-  venue: "Asia-Pacific Web Conference"
+- title: |
+    Correlation mining in graph databases with a new measure
+  authors: |
+    Md Samiullah, Chowdhury Farhan Ahmed, Manziba Akanda Nishi, Anna Fariha, SM Abdullah, Md Rafiqul Islam
+  venue: |
+    Asia-Pacific Web Conference
   year: 2013
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Effective periodic pattern mining in time series databases"
-  authors: "Nishi, Manziba Akanda, Ahmed, Chowdhury Farhan, Samiullah, Md, Jeong, Byeong-Soo"
-  venue: "Expert Systems with Applications"
+- title: |
+    Effective periodic pattern mining in time series databases
+  authors: |
+    Manziba Akanda Nishi, Chowdhury Farhan Ahmed, Md Samiullah, Byeong-Soo Jeong
+  venue: |
+    Expert Systems with Applications
   year: 2013
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Queue management based congestion control in wireless body sensor network"
-  authors: "Samiullah, Md, Abdullah, SM, Bappi, AFM Imamul Hoq, Anwar, Shahed"
-  venue: "2012 International Conference on Informatics, Electronics \& Vision (ICIEV)"
+- title: |
+    Queue management based congestion control in wireless body sensor network
+  authors: |
+    Md Samiullah, SM Abdullah, AFM Imamul Hoq Bappi, Shahed Anwar
+  venue: |
+    2012 International Conference on Informatics, Electronics \& Vision (ICIEV)
   year: 2012
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Movie swarm: Information mining technique for movie recommendation system"
-  authors: "Halder, Sajal, Samiullah, Md, Sarkar, AM Jehad, Lee, Young-Koo"
-  venue: "2012 7th International Conference on Electrical and Computer Engineering"
+- title: |
+    Movie swarm: Information mining technique for movie recommendation system
+  authors: |
+    Sajal Halder, Md Samiullah, AM Jehad Sarkar, Young-Koo Lee
+  venue: |
+    2012 7th International Conference on Electrical and Computer Engineering
   year: 2012
-  type: "inproceedings"
+  type: inproceedings
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Efficient Graph Classification in Shifted Datasets Using Weighted Correlated Feature Selection"
-  authors: "Samiullah, Md, Ahmed, Chowdhury Farhan, Fariha, Anna, Uddin, Akiz"
-  venue: ""
+- title: |
+    Efficient Graph Classification in Shifted Datasets Using Weighted Correlated Feature Selection
+  authors: |
+    Md Samiullah, Chowdhury Farhan Ahmed, Anna Fariha, Akiz Uddin
+  venue: |
+    
   year: 0
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "A new framework for mining weighted periodic patterns in time series"
-  authors: "Chanda, Ashis Kumar, Ahmed, Chowdhury Farhan, Samiullah, Md, Leung, Carson K"
-  venue: ""
+- title: |
+    A new framework for mining weighted periodic patterns in time series
+  authors: |
+    Ashis Kumar Chanda, Chowdhury Farhan Ahmed, Md Samiullah, Carson K Leung
+  venue: |
+    
   year: 0
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
 
-- title: "Reframing in Frequent Pattern Mining. In 2015 IEEE 27th International Conference on Tools with Artificial Intelligence (ICTAI 2015): Proceedings of a meeting held 9-11 November 2015 at Vietri sul Mare, Italy (pp. 799"
-  authors: "Ahmed, CF, Samiullah, M, Lachiche, N, Kull, M, Flach, PA"
-  venue: ""
+- title: |
+    Reframing in Frequent Pattern Mining. In 2015 IEEE 27th International Conference on Tools with Artificial Intelligence (ICTAI 2015): Proceedings of a meeting held 9-11 November 2015 at Vietri sul Mare, Italy (pp. 799
+  authors: |
+    CF Ahmed, M Samiullah, N Lachiche, M Kull, PA Flach
+  venue: |
+    
   year: 0
-  type: "article"
+  type: article
   pdf: ""
   doi: ""
   code: ""
