@@ -1,12 +1,10 @@
 # scripts/fetch_scholar_citations.py
 import sys
-import yaml
 import time
+import yaml
 from scholarly import scholarly
 
-# ---- CONFIG ----
-TIMEOUT_SECONDS = 60   # hard stop
-# ----------------
+TIMEOUT_SECONDS = 60  # hard stop
 
 def main():
     if len(sys.argv) < 2:
@@ -15,21 +13,24 @@ def main():
 
     scholar_id = sys.argv[1]
 
-    # IMPORTANT: disable proxies to avoid infinite waits
-    scholarly.use_proxy(None)
-
     start = time.time()
-    try:
-        author = scholarly.search_author_id(scholar_id)
-        if time.time() - start > TIMEOUT_SECONDS:
-            raise TimeoutError("Scholar lookup timeout")
 
-        author = scholarly.fill(author, sections=["counts"])
+    try:
+        # Fetch author by ID
+        author = scholarly.search_author_id(scholar_id)
+
         if time.time() - start > TIMEOUT_SECONDS:
-            raise TimeoutError("Scholar fill timeout")
+            raise TimeoutError("Timeout while searching author")
+
+        # Only fetch citation counts (fastest & safest)
+        author = scholarly.fill(author, sections=["counts"])
+
+        if time.time() - start > TIMEOUT_SECONDS:
+            raise TimeoutError("Timeout while filling citation counts")
 
     except Exception as e:
-        print("ERROR: Failed to fetch Scholar data:", e)
+        print("ERROR: Google Scholar fetch failed")
+        print(e)
         sys.exit(2)
 
     cites = author.get("cites_per_year", {})
