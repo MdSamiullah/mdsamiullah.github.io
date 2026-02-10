@@ -1,0 +1,10 @@
+# Placeholder file so first Jekyll build doesn't fail.
+# GitHub Actions will overwrite this automatically from assets/bib/publications.bib.
+- title: "Generating publications..."
+  authors: ""
+  venue: ""
+  year: 1900
+  type: "info"
+  pdf: ""
+  doi: ""
+  code: ""
