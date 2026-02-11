@@ -33,8 +33,8 @@ jobs:
 
       - name: Commit updates
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "mdsamiullah"
+          git config user.email "samiullahmdsami@gmail.com"
           git add _data/citations.yml
           git commit -m "ci: update scholar citations" || echo "No changes"
           git push
