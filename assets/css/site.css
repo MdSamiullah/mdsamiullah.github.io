@@ -93,20 +93,26 @@ a{color:inherit}
   color: var(--text);
 }
 
-.profile{
-  text-align: center;
+.profile__photo{
+  width:100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  border:1px solid var(--line);
+  background: var(--panel2);
 }
 
-.profile__photo{
-  width: 160px;              /* adjust size here (140–180 works well) */
+/* .profile__photo{
+  width: 160px;              
   height: 160px;
   object-fit: cover;
-  border-radius: 50%;        /* makes it circular */
-  border: 4px solid #ffffff; /* clean white border */
+  border-radius: 50%;        
+  border: 4px solid #ffffff; 
   box-shadow: 0 6px 18px rgba(17,24,39,.12);
   display: block;
-  margin: 0 auto 14px auto;  /* center it */
-}
+  margin: 0 auto 14px auto;  
+} */
+
 .profile__name{margin-top:12px; font-size:22px; font-weight:900}
 .profile__tagline{margin-top:4px; color:var(--muted); line-height:1.4}
 .profile__meta{margin-top:10px; color:var(--muted); font-size:14px}
