@@ -29,7 +29,7 @@ jobs:
       - name: Fetch citations
         timeout-minutes: 3
         run: |
-          python scripts/fetch_scholar_citations.py TvgYhREAAAAJ
+          python scripts/FetchScholarlyCitations.py TvgYhREAAAAJ
 
       - name: Commit updates
         run: |
