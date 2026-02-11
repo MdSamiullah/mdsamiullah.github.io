@@ -335,7 +335,8 @@ a{color:inherit}
 }
 .muted{ color: var(--muted, #4b5563); }
 
-/* === Scholar-like citations chart (vertical bars) === */
+/* === Scholar-like citations chart (stacked, with counts + vertical years) === */
+
 .scholar-chart{
   border: 1px solid var(--line, rgba(17,24,39,.12));
   border-radius: 14px;
@@ -362,11 +363,11 @@ a{color:inherit}
 
 .scholar-bars{
   position: relative;
-  height: 180px; /* chart height */
+  height: 230px;              /* room for bars + rotated labels */
   display:flex;
   align-items:flex-end;
   gap: 6px;
-  padding: 8px 6px 18px;  /* bottom padding for year labels */
+  padding: 10px 8px 46px;     /* bigger bottom padding for rotated year labels */
   border-radius: 12px;
   background: linear-gradient(180deg, rgba(17,24,39,.03), transparent 70%);
   border: 1px solid rgba(17,24,39,.08);
@@ -379,45 +380,54 @@ a{color:inherit}
   position:absolute;
   left: 0;
   right: 0;
-  bottom: 18px;
+  bottom: 46px;
   height: 1px;
   background: rgba(17,24,39,.18);
 }
 
 .scholar-bar{
   flex: 1 1 0;
-  min-width: 10px;
+  min-width: 14px;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:flex-end;
   gap: 6px;
+  position: relative;
 }
 
+/* Count label above each bar */
+.scholar-bar__count{
+  font-size: 11px;
+  font-weight: 900;
+  color: var(--muted, #4b5563);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+/* Bar */
 .scholar-bar__col{
   width: 100%;
   height: var(--h);
-  max-height: 160px;
+  max-height: 170px;
   border-radius: 5px 5px 2px 2px;
-  background: rgba(17,24,39,.25);        /* very similar to Scholar gray bars */
+  background: rgba(17,24,39,.25);        /* Scholar-like gray */
   border: 1px solid rgba(17,24,39,.10);
 }
 
+/* Year labels: rotate to avoid overlap */
 .scholar-bar__year{
   position: absolute;
-  bottom: 2px;
-  transform: translateY(0);
+  bottom: 6px;
   font-size: 11px;
   color: var(--muted, #4b5563);
   font-weight: 800;
+  transform: rotate(-90deg);
+  transform-origin: center;
   white-space: nowrap;
 }
 
-/* tooltip (CSS-only) */
-.scholar-bar__col[data-tip]:hover{
-  outline: 2px solid rgba(37,99,235,.25);
-  outline-offset: 1px;
-}
+/* Optional tooltip on hover (CSS-only) */
 .scholar-bar__col[data-tip]{
   position: relative;
   cursor: default;
@@ -454,7 +464,6 @@ a{color:inherit}
 .scholar-bar__col[data-tip]:hover::before{
   opacity: 1;
 }
-
 
 /* Footer */
 .footer{
