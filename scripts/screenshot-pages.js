@@ -7,12 +7,12 @@ const path = require('path');
   const browser = await puppeteer.launch({
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
+
   const page = await browser.newPage();
   await page.setViewport({ width: 1400, height: 900 });
 
   const base = process.env.SITE_BASE || "https://mdsamiullah.github.io";
 
-  // Pages you want screenshots for; adjust paths or names if needed
   const pages = {
     cv: "/cv/",
     publications: "/publications/",
@@ -23,13 +23,18 @@ const path = require('path');
 
   const rawDir = "generated/snap-raw";
   const outDir = "assets/img/cards";
+  const procDir = "generated/snap-proc";
 
-  if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+  for (const d of [rawDir, outDir, procDir]) {
+    if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
+  }
 
-  // selectors to try when picking the top/content region (first match wins)
   const selectorsToTry = [
-    "header", "main", "main .panel", ".scholar-chart", ".panel", ".content", ".shell", "#content", "article"
+    "main",
+    ".content",
+    ".panel",
+    "article",
+    "body"
   ];
 
   for (const name of Object.keys(pages)) {
@@ -38,123 +43,139 @@ const path = require('path');
     console.log("-> Capturing", url);
 
     try {
-      await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-      // try to find a desired element bounding box
+      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+
+      // Give the page a moment to finish layout/fonts
+      await page.waitForTimeout(1500);
+
+      // Try to pick a good region; else fallback to excluding sidebar
       let clip = null;
       for (const sel of selectorsToTry) {
         const el = await page.$(sel);
         if (el) {
           const box = await el.boundingBox();
-          if (box && box.width > 50 && box.height > 50) {
-            // we want the top portion; reduce height to ~50-60% to avoid sidebar
-            const height = Math.min(box.height, page.viewport().height * 0.5);
+          if (box && box.width > 200 && box.height > 200) {
+            // Crop top section and exclude left sidebar by shifting right
+            const vw = page.viewport().width;
+            const vh = page.viewport().height;
+
+            const leftShift = Math.round(vw * 0.24);       // remove sidebar area
+            const topHeight = Math.round(vh * 0.42);       // only top portion
+
             clip = {
-              x: Math.round(box.x),
-              y: Math.round(box.y),
-              width: Math.round(box.width),
-              height: Math.round(height)
+              x: leftShift,
+              y: 0,
+              width: Math.round(vw * 0.72),
+              height: topHeight
             };
-            console.log("Using selector", sel, "clip:", clip);
             break;
           }
         }
       }
 
-      // fallback: center-top crop removing left sidebar area
       if (!clip) {
         const vw = page.viewport().width;
         const vh = page.viewport().height;
-        // assume sidebar ~300px, take center-right area
-        const left = Math.round(vw * 0.25);
-        const width = Math.round(vw * 0.7);
-        const height = Math.round(vh * 0.42);
-        clip = { x: left, y: 0, width: width, height: height };
-        console.log("Fallback clip:", clip);
+        clip = {
+          x: Math.round(vw * 0.24),
+          y: 0,
+          width: Math.round(vw * 0.72),
+          height: Math.round(vh * 0.42)
+        };
       }
 
-      // raw screenshot of the region
       const rawPath = path.join(rawDir, `${name}-raw.png`);
-      await page.screenshot({ path: rawPath, clip: clip });
+      await page.screenshot({ path: rawPath, clip });
       console.log("Saved raw:", rawPath);
 
-      // create a small HTML file for processing (overlay/filters)
+      // Processing HTML uses <img> (NOT background-image) to avoid black renders
+      const title = name.charAt(0).toUpperCase() + name.slice(1).replace(/[-_]/g, ' ');
+      const imgFileUrl = "file://" + path.resolve(rawPath).replace(/#/g, "%23");
+
       const html = `
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
-  html,body{margin:0;height:100%}
+  html,body{margin:0;height:100%;background:#000;}
   .wrap{
     width: 1200px;
     height: 600px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-    overflow:hidden;
-    border-radius:12px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
   }
   .bg{
     position:absolute;
-    inset:0;
-    background-image: url("file://${path.resolve(rawPath)}");
-    background-size: cover;
-    background-position: center;
-    filter: blur(4px) brightness(.52);
-    transform: scale(1.02);
+    inset:-20px; /* extra for blur edges */
+    filter: blur(5px) brightness(.55);
+    transform: scale(1.04);
+    object-fit: cover;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
   }
-  /* subtle noise / texture (optional) */
   .overlay{
     position:absolute; inset:0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.25));
+    background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.35));
   }
   .title{
     position:absolute;
     left: 28px;
-    bottom: 28px;
-    color: white;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    font-weight:800;
-    font-size:28px;
-    text-shadow: 0 6px 20px rgba(0,0,0,.6);
+    bottom: 26px;
+    color: #fff;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    font-weight: 900;
+    font-size: 30px;
     letter-spacing: -0.5px;
+    text-shadow: 0 10px 24px rgba(0,0,0,.65);
   }
-  /* rounded vignette */
   .wrap::before{
     content:"";
     position:absolute; inset:0;
-    box-shadow: inset 0 120px 120px rgba(0,0,0,0.12);
+    box-shadow: inset 0 140px 120px rgba(0,0,0,0.12);
     pointer-events:none;
   }
 </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="bg"></div>
+    <img class="bg" id="bg" src="${imgFileUrl}" alt="bg"/>
     <div class="overlay"></div>
-    <div class="title">${name.charAt(0).toUpperCase() + name.slice(1).replace(/[-_]/g,' ')}</div>
+    <div class="title">${title}</div>
   </div>
+
+<script>
+  // Signal readiness only after the image fully loads/decodes
+  (async () => {
+    const img = document.getElementById('bg');
+    if (!img) return;
+    if (img.decode) { try { await img.decode(); } catch(e) {} }
+    window.__READY__ = true;
+  })();
+</script>
 </body>
 </html>
 `;
 
-      const procHtmlPath = path.join(rawDir, `${name}-proc.html`);
+      const procHtmlPath = path.join(procDir, `${name}-proc.html`);
       fs.writeFileSync(procHtmlPath, html, "utf8");
 
-      // render the processed HTML and screenshot center area
       const procPage = await browser.newPage();
       await procPage.setViewport({ width: 1200, height: 600 });
-      await procPage.goto("file://" + path.resolve(procHtmlPath), { waitUntil: 'networkidle2' });
+      await procPage.goto("file://" + path.resolve(procHtmlPath), { waitUntil: "domcontentloaded" });
+
+      // wait for __READY__ flag (image loaded/decoded)
+      await procPage.waitForFunction(() => window.__READY__ === true, { timeout: 15000 });
 
       const finalPath = path.join(outDir, `${name}.jpg`);
-      await procPage.screenshot({ path: finalPath, type: 'jpeg', quality: 80 });
+      await procPage.screenshot({ path: finalPath, type: "jpeg", quality: 82 });
       await procPage.close();
-      console.log("Saved final:", finalPath);
 
+      console.log("Saved final:", finalPath);
     } catch (err) {
-      console.error("Failed for", name, err);
+      console.error("FAILED:", name, err);
     }
   }
 
