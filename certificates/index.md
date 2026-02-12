@@ -4,5 +4,6 @@ title: Certificates
 permalink: /certificates/
 ---
 
-- Certificate — Issuer — Year — [Link](#)
-- Certificate — Issuer — Year — [Link](#)
+# Certificates & Awards
+
+{% include cards-from-data.html datafile="certificates" %}

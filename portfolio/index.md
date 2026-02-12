@@ -4,6 +4,6 @@ title: Portfolio
 permalink: /portfolio/
 ---
 
-## Featured
-- **Project Name** — one-liner — [GitHub](#) · [Demo](#)
-- **Project Name** — one-liner — [GitHub](#)
+# Portfolio
+
+{% include cards-from-data.html datafile="portfolio" %}

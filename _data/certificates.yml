@@ -1,0 +1,22 @@
+# _data/certificates.yml
+sections:
+  - title: "Certifications"
+    subsections:
+      - title: ""
+        items:
+          - title: "Deep Learning Specialization"
+            issuer: "Coursera / Andrew Ng"
+            year: 2021
+            url: "https://coursera.org/share/..."
+          - title: "Advanced Data Analytics"
+            issuer: "Some Institute"
+            year: 2020
+            url: ""
+  - title: "Awards & Courses"
+    subsections:
+      - title: ""
+        items:
+          - title: "Best Paper Award"
+            issuer: "IMCOM 2026"
+            year: 2026
+            url: ""

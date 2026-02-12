@@ -1,0 +1,18 @@
+# _data/mentoring.yml
+sections:
+  - title: "Monash University"
+    subsections:
+      - title: "PhD Supervision"
+        items:
+          - name: "A. Student"
+            project: "Graph embedding for classification"
+            year: "2023–"
+            role: "Primary supervisor"
+            url: ""
+      - title: "Masters"
+        items:
+          - name: "B. Student"
+            project: "Malware image classification"
+            year: "2022"
+            role: "Co-supervisor"
+            url: ""
