@@ -30,7 +30,6 @@ profile:
   designations:
     - "Research Fellow, MCRI, RCH"
     - "Research Interests: AI, ML, BioStat, Bayesian"
-    - "Melbourne, Australia"
 
 social:
   email: "samiullahmdsami@gmail.com"
@@ -41,6 +40,7 @@ social:
   # researchgate: "Your-ResearchGate-Handle"   # e.g. Md-Samiullah-2
   orcid: "0000-0001-8212-1938"
   # twitter: "yourhandle"
+  location: "Melbourne, Australia"
   facebook: "samicse"
 
 nav:

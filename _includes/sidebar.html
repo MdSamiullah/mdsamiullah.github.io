@@ -14,20 +14,6 @@
 
   <div class="profile-contact">
 
-    <!-- Email -->
-    {% if site.social.email %}
-    <div class="contact-item">
-      <span class="contact-icon">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"
-          stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="5" width="18" height="14" rx="2" />
-          <path d="M3 7l9 6 9-6" />
-        </svg>
-      </span>
-      <a href="mailto:{{ site.social.email }}">{{ site.social.email }}</a>
-    </div>
-    {% endif %}
-
     <!-- Location -->
     {% if site.profile.location %}
     <div class="contact-item">
@@ -39,6 +25,20 @@
         </svg>
       </span>
       <span>{{ site.profile.location }}</span>
+    </div>
+    {% endif %}
+
+    <!-- Email -->
+    {% if site.social.email %}
+    <div class="contact-item">
+      <span class="contact-icon">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <path d="M3 7l9 6 9-6" />
+        </svg>
+      </span>
+      <a href="mailto:{{ site.social.email }}">{{ site.social.email }}</a>
     </div>
     {% endif %}
 

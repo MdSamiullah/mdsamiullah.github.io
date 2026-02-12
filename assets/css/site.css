@@ -582,6 +582,27 @@ a{color:inherit}
   border-radius: 12px;
 }
 
+/* === Card thumbnails as SVG icons (stable Option A) === */
+.qcard__thumb--icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 22px;
+  background: linear-gradient(135deg, rgba(37,99,235,.10), rgba(124,58,237,.08));
+}
+.qcard__thumb--icon img{
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  display:block;
+  color: var(--text, #111827);
+  opacity: .95;
+}
+/* Make SVG inherit currentColor in most browsers */
+.qcard{
+  color: var(--text, #111827);
+}
+
 
 .qcard__title{
   font-size: 17px;
