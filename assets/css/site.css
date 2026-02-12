@@ -10,7 +10,7 @@
   --radius: 18px;
   --shadow: 0 10px 30px rgba(17,24,39,.10);
   --max: 1100px;
-  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --font: Roboto/*ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial*/;
 }
 
 *{box-sizing:border-box}
