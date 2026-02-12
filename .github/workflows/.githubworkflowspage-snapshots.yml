@@ -1,0 +1,70 @@
+name: Generate Page Snapshots
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install Puppeteer
+        run: |
+          npm install puppeteer
+
+      - name: Take Screenshots
+        run: |
+          node <<EOF
+          const puppeteer = require('puppeteer');
+          (async () => {
+            const browser = await puppeteer.launch({args: ['--no-sandbox']});
+            const page = await browser.newPage();
+            await page.setViewport({ width: 1200, height: 800 });
+
+            const base = "https://mdsamiullah.github.io";
+
+            const pages = {
+              "cv": "/cv/",
+              "publications": "/publications/",
+              "teaching": "/teaching/",
+              "certificates": "/certificates/",
+              "portfolio": "/portfolio/"
+            };
+
+            const fs = require('fs');
+            if (!fs.existsSync('assets/img/cards')) {
+              fs.mkdirSync('assets/img/cards', { recursive: true });
+            }
+
+            for (const [name, path] of Object.entries(pages)) {
+              await page.goto(base + path, { waitUntil: 'networkidle2' });
+              await page.screenshot({
+                path: `assets/img/cards/${name}.jpg`,
+                fullPage: false
+              });
+            }
+
+            await browser.close();
+          })();
+          EOF
+
+      - name: Commit Images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/img/cards/*.jpg
+          git commit -m "Auto-generate page thumbnails" || echo "No changes"
+          git push
