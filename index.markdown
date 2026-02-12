@@ -28,7 +28,7 @@ Alongside my research, I am deeply committed to teaching and mentorship, guiding
 
   <a class="qcard" href="{{ '/publications/' | relative_url }}">
     <div class="qcard__thumb qcard__thumb--icon">
-      <img src="{{ '/assets/img/cards/publications.svg' | relative_url }}" alt="Publications thumbnail">
+      <img src="{{ '/assets/img/icons/publications.svg' | relative_url }}" alt="Publications thumbnail">
     </div>
     <h3 class="qcard__title">Publications</h3>
     <p class="qcard__text">Browse my research outputs, venues, and links to papers/code.</p>
@@ -37,7 +37,7 @@ Alongside my research, I am deeply committed to teaching and mentorship, guiding
 
   <a class="qcard" href="{{ '/teaching/' | relative_url }}">
     <div class="qcard__thumb qcard__thumb--icon">
-      <img src="{{ '/assets/img/cards/teaching.svg' | relative_url }}" alt="Teaching thumbnail">
+      <img src="{{ '/assets/img/icons/teaching.svg' | relative_url }}" alt="Teaching thumbnail">
     </div>
     <h3 class="qcard__title">Teaching</h3>
     <p class="qcard__text">Courses, topics, supervision, and teaching-related materials.</p>
@@ -46,7 +46,7 @@ Alongside my research, I am deeply committed to teaching and mentorship, guiding
 
   <a class="qcard" href="{{ '/certificates/' | relative_url }}">
     <div class="qcard__thumb qcard__thumb--icon">
-      <img src="{{ '/assets/img/cards/certificates.svg' | relative_url }}" alt="Certificates thumbnail">
+      <img src="{{ '/assets/img/icons/certificates.svg' | relative_url }}" alt="Certificates thumbnail">
     </div>
     <h3 class="qcard__title">Certificates</h3>
     <p class="qcard__text">Selected professional certifications and training highlights.</p>
@@ -55,7 +55,7 @@ Alongside my research, I am deeply committed to teaching and mentorship, guiding
 
   <a class="qcard" href="{{ '/portfolio/' | relative_url }}">
     <div class="qcard__thumb qcard__thumb--icon">
-      <img src="{{ '/assets/img/cards/portfolio.svg' | relative_url }}" alt="Portfolio thumbnail">
+      <img src="{{ '/assets/img/icons/portfolio.svg' | relative_url }}" alt="Portfolio thumbnail">
     </div>
     <h3 class="qcard__title">Portfolio</h3>
     <p class="qcard__text">Projects, demos, tools, and practical implementations.</p>
