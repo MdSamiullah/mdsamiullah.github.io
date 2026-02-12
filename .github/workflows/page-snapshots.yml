@@ -25,7 +25,9 @@ jobs:
         run: |
           npm install puppeteer
 
-      - name: Generate screenshots
+      - name: Generate screenshots (crop + overlay)
+        env:
+          SITE_BASE: "https://mdsamiullah.github.io"
         run: |
           node scripts/screenshot-pages.js
 
@@ -34,5 +36,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/img/cards/*.jpg || true
-          git commit -m "Auto-generate page thumbnails" || echo "No changes"
+          git commit -m "ci: Auto-generate page thumbnails" || echo "No image changes"
           git push

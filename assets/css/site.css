@@ -102,14 +102,14 @@ a{color:inherit}
   gap: 8px;
 }
 
-.contact-item{
+/* .contact-item{
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 14px;
   color: var(--muted, #4b5563);
   word-break: break-word;
-}
+} */
 
 .contact-item a{
   text-decoration: none;
@@ -122,16 +122,20 @@ a{color:inherit}
 }
 
 .contact-icon{
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
-  background: rgba(17,24,39,.06);
-  font-size: 12px;
-  font-weight: 900;
+  color: var(--text);
+  opacity: .85;
 }
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
 
 
 /* .profile__photo{
@@ -547,46 +551,37 @@ a{color:inherit}
   .quickcards{ grid-template-columns: 1fr; }
 }
 
-.qcard{
-  display:flex;
-  flex-direction:column;
-  gap: 10px;
-  padding: 14px;
-  border-radius: 18px;
-  border: 1px solid var(--line, rgba(17,24,39,.12));
-  background: rgba(255,255,255,.92);
-  box-shadow: 0 10px 30px rgba(17,24,39,.10);
-  text-decoration:none;
-  color: var(--text, #111827);
-  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease, background .12s ease;
-  overflow:hidden;
-}
-
-.qcard:hover{
-  transform: translateY(-2px);
-  border-color: rgba(37,99,235,.25);
-  background: rgba(255,255,255,.98);
-  box-shadow: 0 14px 36px rgba(17,24,39,.14);
-}
-
+/* card thumbnail: processed images already have blur/darken+title.
+   this CSS adds hover zoom and a subtle overlay/gamma on card */
 .qcard__thumb{
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  border-radius: 14px;
-  border: 1px solid var(--line, rgba(17,24,39,.12));
-  background: linear-gradient(135deg, rgba(37,99,235,.10), rgba(124,58,237,.08));
+  position:relative;
   overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  border-radius: 12px;
+  transition: transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .2s;
 }
-
 .qcard__thumb img{
+  display:block;
   width:100%;
   height:100%;
   object-fit: cover;
-  display:block;
+  transform-origin: center center;
+  transition: transform .6s cubic-bezier(.2,.9,.2,1);
 }
+/* hover zoom */
+.qcard:hover .qcard__thumb img{
+  transform: scale(1.06);
+  filter: contrast(0.95) saturate(.98);
+}
+/* slightly darken over image so CTA stands out */
+.qcard__thumb::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.12));
+  pointer-events: none;
+  border-radius: 12px;
+}
+
 
 .qcard__title{
   font-size: 17px;
