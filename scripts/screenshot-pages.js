@@ -5,7 +5,11 @@ const path = require('path');
 
 (async () => {
   const browser = await puppeteer.launch({
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-web-security'
+    ]
   });
 
   const page = await browser.newPage();
@@ -22,75 +26,45 @@ const path = require('path');
   };
 
   const rawDir = "generated/snap-raw";
-  const outDir = "assets/img/cards";
   const procDir = "generated/snap-proc";
+  const outDir = "assets/img/cards";
 
-  for (const d of [rawDir, outDir, procDir]) {
+  for (const d of [rawDir, procDir, outDir]) {
     if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
   }
 
-  const selectorsToTry = [
-    "main",
-    ".content",
-    ".panel",
-    "article",
-    "body"
-  ];
+  function titleFromKey(key) {
+    return key.charAt(0).toUpperCase() + key.slice(1).replace(/[-_]/g, ' ');
+  }
 
-  for (const name of Object.keys(pages)) {
-    const pagePath = pages[name];
-    const url = base + pagePath;
+  for (const key of Object.keys(pages)) {
+    const url = base + pages[key];
     console.log("-> Capturing", url);
 
     try {
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+      await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+      await page.waitForTimeout(2500); // give layout/fonts time
 
-      // Give the page a moment to finish layout/fonts
-      await page.waitForTimeout(1500);
+      // Crop: remove left sidebar; keep only top section
+      const vw = page.viewport().width;
+      const vh = page.viewport().height;
 
-      // Try to pick a good region; else fallback to excluding sidebar
-      let clip = null;
-      for (const sel of selectorsToTry) {
-        const el = await page.$(sel);
-        if (el) {
-          const box = await el.boundingBox();
-          if (box && box.width > 200 && box.height > 200) {
-            // Crop top section and exclude left sidebar by shifting right
-            const vw = page.viewport().width;
-            const vh = page.viewport().height;
+      const clip = {
+        x: Math.round(vw * 0.24),       // cut left sidebar area
+        y: 0,
+        width: Math.round(vw * 0.72),
+        height: Math.round(vh * 0.42)   // top portion only
+      };
 
-            const leftShift = Math.round(vw * 0.24);       // remove sidebar area
-            const topHeight = Math.round(vh * 0.42);       // only top portion
-
-            clip = {
-              x: leftShift,
-              y: 0,
-              width: Math.round(vw * 0.72),
-              height: topHeight
-            };
-            break;
-          }
-        }
-      }
-
-      if (!clip) {
-        const vw = page.viewport().width;
-        const vh = page.viewport().height;
-        clip = {
-          x: Math.round(vw * 0.24),
-          y: 0,
-          width: Math.round(vw * 0.72),
-          height: Math.round(vh * 0.42)
-        };
-      }
-
-      const rawPath = path.join(rawDir, `${name}-raw.png`);
+      const rawPath = path.join(rawDir, `${key}-raw.png`);
       await page.screenshot({ path: rawPath, clip });
       console.log("Saved raw:", rawPath);
 
-      // Processing HTML uses <img> (NOT background-image) to avoid black renders
-      const title = name.charAt(0).toUpperCase() + name.slice(1).replace(/[-_]/g, ' ');
-      const imgFileUrl = "file://" + path.resolve(rawPath).replace(/#/g, "%23");
+      // Read raw screenshot and embed as base64 (NO file:// loading issues)
+      const rawB64 = fs.readFileSync(rawPath).toString('base64');
+      const dataUrl = `data:image/png;base64,${rawB64}`;
+
+      const title = titleFromKey(key);
 
       const html = `
 <!doctype html>
@@ -109,12 +83,12 @@ const path = require('path');
   }
   .bg{
     position:absolute;
-    inset:-20px; /* extra for blur edges */
-    filter: blur(5px) brightness(.55);
-    transform: scale(1.04);
-    object-fit: cover;
+    inset:-20px;
     width: calc(100% + 40px);
     height: calc(100% + 40px);
+    object-fit: cover;
+    filter: blur(5px) brightness(.55);
+    transform: scale(1.04);
   }
   .overlay{
     position:absolute; inset:0;
@@ -131,27 +105,18 @@ const path = require('path');
     letter-spacing: -0.5px;
     text-shadow: 0 10px 24px rgba(0,0,0,.65);
   }
-  .wrap::before{
-    content:"";
-    position:absolute; inset:0;
-    box-shadow: inset 0 140px 120px rgba(0,0,0,0.12);
-    pointer-events:none;
-  }
 </style>
 </head>
 <body>
   <div class="wrap">
-    <img class="bg" id="bg" src="${imgFileUrl}" alt="bg"/>
+    <img class="bg" id="bg" src="${dataUrl}" alt="bg"/>
     <div class="overlay"></div>
     <div class="title">${title}</div>
   </div>
-
 <script>
-  // Signal readiness only after the image fully loads/decodes
   (async () => {
     const img = document.getElementById('bg');
-    if (!img) return;
-    if (img.decode) { try { await img.decode(); } catch(e) {} }
+    if (img && img.decode) { try { await img.decode(); } catch(e) {} }
     window.__READY__ = true;
   })();
 </script>
@@ -159,23 +124,21 @@ const path = require('path');
 </html>
 `;
 
-      const procHtmlPath = path.join(procDir, `${name}-proc.html`);
+      const procHtmlPath = path.join(procDir, `${key}-proc.html`);
       fs.writeFileSync(procHtmlPath, html, "utf8");
 
       const procPage = await browser.newPage();
       await procPage.setViewport({ width: 1200, height: 600 });
       await procPage.goto("file://" + path.resolve(procHtmlPath), { waitUntil: "domcontentloaded" });
-
-      // wait for __READY__ flag (image loaded/decoded)
       await procPage.waitForFunction(() => window.__READY__ === true, { timeout: 15000 });
 
-      const finalPath = path.join(outDir, `${name}.jpg`);
+      const finalPath = path.join(outDir, `${key}.jpg`);
       await procPage.screenshot({ path: finalPath, type: "jpeg", quality: 82 });
       await procPage.close();
 
       console.log("Saved final:", finalPath);
-    } catch (err) {
-      console.error("FAILED:", name, err);
+    } catch (e) {
+      console.error("FAILED:", key, e);
     }
   }
 
