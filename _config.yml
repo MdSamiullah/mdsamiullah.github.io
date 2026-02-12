@@ -29,7 +29,8 @@ profile:
   photo: "/assets/img/profile.jpg"
   designations:
     - "Research Fellow, MCRI, RCH"
-    - "Research Interests: AI, ML, BioStat, Bayesian"
+    - "Assitant Professor, CSE, DU"
+  interests: "Research Interests: AI, ML, BioStat, Bayesian"
   location: "Melbourne, Australia"
 
 social:

@@ -4,16 +4,18 @@
   <div class="profile__name">{{ site.profile.name }}</div>
   <div class="profile__tagline">{{ site.description }}</div>
 
-  {% if site.profile.designations %}
-  <ul class="profile__list">
+
+  <!-- <ul class="profile__list">
     {% for d in site.profile.designations %}
     <li>{{ d }}</li>
     {% endfor %}
-  </ul>
-  {% endif %}
+  </ul> -->
+
 
   <div class="profile-contact">
 
+    {% if site.profile.designations %}
+    {% for d in site.profile.designations %}
     <div class="contact-item">
       <span class="contact-icon">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"
@@ -23,9 +25,25 @@
           <path d="M3 12h18" />
         </svg>
       </span>
-
-      <span>{{ site.profile.designations }}</span>
+      <span>{{ d }}</span>
     </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if site.profile.interests %}
+    <div class="contact-item">
+      <span class="contact-icon">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 3h6" />
+          <path d="M10 3v4l-4 7a4 4 0 0 0 3.5 6h5a4 4 0 0 0 3.5-6l-4-7V3" />
+          <path d="M8 14h8" />
+        </svg>
+      </span>
+
+      <span>{{ site.profile.interests }}</span>
+    </div>
+    {% endif %}
 
     <!-- Location -->
     {% if site.profile.location %}
