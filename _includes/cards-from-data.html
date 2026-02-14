@@ -2,72 +2,74 @@
 Include: cards-from-data.html
 Usage: Provide "datafile" variable (string) when including.
 Example:
-  {% include cards-from-data.html datafile="teaching" show_codes=true %}
+{% include cards-from-data.html datafile="teaching" show_codes=true %}
 {%- endcomment -%}
 
 {%- assign dataset = site.data | where_exp:"d","d[include.datafile] != nil" | first -%}
 {%- if dataset == nil %}
-  {%- assign dataset = site.data[include.datafile] -%}
+{%- assign dataset = site.data[include.datafile] -%}
 {%- else -%}
-  {%- assign dataset = dataset[include.datafile] -%}
+{%- assign dataset = dataset[include.datafile] -%}
 {%- endif -%}
 
 {%- if dataset == nil %}
-  <p class="muted">No data found for <code>{{ include.datafile }}</code>.</p>
+<p class="muted">No data found for <code>{{ include.datafile }}</code>.</p>
 {%- else -%}
-  {%- for section in dataset.sections %}
-    <section class="data-section">
-      {% if section.title %}
-        <h2 class="section-title">{{ section.title }}</h2>
-      {% endif %}
+{%- for section in dataset.sections %}
+<section class="data-section">
+    {% if section.title %}
+    <h2 class="section-title">{{ section.title }}</h2>
+    {% endif %}
 
-      {%- for sub in section.subsections %}
-        {% if sub.title %}
-          <h3 class="subsection-title">{{ sub.title }}</h3>
-        {% endif %}
+    {%- for sub in section.subsections %}
+    {% if sub.title %}
+    <h3 class="subsection-title">{{ sub.title }}</h3>
+    {% endif %}
 
-        {% if sub.items and sub.items.size > 0 %}
-          <div class="cards-grid">
+    {% if sub.items and sub.items.size > 0 %}
+    <div class="cards-scroll">
+        <div class="cards-grid">
             {% for item in sub.items %}
-              <article class="info-card">
+            <article class="info-card">
                 <div class="info-card__meta">
-                  {% if item.code %}<div class="info-card__code">{{ item.code }}</div>{% endif %}
-                  {% if item.year %}<div class="info-card__year">{{ item.year }}</div>{% endif %}
+                    {% if item.code %}<div class="info-card__code">{{ item.code }}</div>{% endif %}
+                    {% if item.year %}<div class="info-card__year">{{ item.year }}</div>{% endif %}
                 </div>
 
                 <h4 class="info-card__title">
-                  {% if item.title %}{{ item.title }}{% elsif item.name %}{{ item.name }}{% endif %}
+                    {% if item.title %}{{ item.title }}{% elsif item.name %}{{ item.name }}{% endif %}
                 </h4>
 
                 {% if item.description %}
-                  <p class="info-card__desc">{{ item.description }}</p>
+                <p class="info-card__desc">{{ item.description }}</p>
                 {% endif %}
 
                 <div class="info-card__foot">
-                  {% if item.role %}
+                    {% if item.role %}
                     <span class="meta-pill">{{ item.role }}</span>
-                  {% endif %}
-                  {% if item.issuer %}
+                    {% endif %}
+                    {% if item.issuer %}
                     <span class="meta-pill">{{ item.issuer }}</span>
-                  {% endif %}
+                    {% endif %}
 
-                  {% if item.github %}
+                    {% if item.github %}
                     <a class="meta-link" href="{{ item.github }}" target="_blank" rel="noreferrer">GitHub</a>
-                  {% endif %}
-                  {% if item.demo %}
+                    {% endif %}
+                    {% if item.demo %}
                     <a class="meta-link" href="{{ item.demo }}" target="_blank" rel="noreferrer">Demo</a>
-                  {% endif %}
-                  {% if item.url %}
+                    {% endif %}
+                    {% if item.url %}
                     <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
-                  {% endif %}
+                    {% endif %}
                 </div>
-              </article>
+            </article>
             {% endfor %}
-          </div>
-        {% else %}
-          <p class="muted">No items in this section.</p>
-        {% endif %}
-      {%- endfor %}
-    </section>
-  {% endfor %}
+        </div>
+    </div>
+    {% else %}
+    <p class="muted">No items in this section.</p>
+    {% endif %}
+    {%- endfor %}
+</section>
+{% endfor %}
 {%- endif -%}
