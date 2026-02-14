@@ -640,60 +640,111 @@ a{color:inherit}
 .subsection-title{ margin: 12px 0 8px; font-size: 16px; font-weight:800; color: var(--muted); }
 
 .cards-grid{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 14px;
+  display: grid;
+  grid-template-columns: 1fr;   /* 1 card per row */
+  gap: 12px;
 }
-@media (max-width: 960px){
+/* @media (max-width: 960px){
   .cards-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
 }
 @media (max-width: 640px){
   .cards-grid{ grid-template-columns: 1fr; }
-}
+} */
 
+/* Row card: meta (left) + content (right) */
 .info-card{
-  display:flex;
-  flex-direction:column;
-  gap: 10px;
-  padding: 14px;
-  border-radius: 12px;
-  border: 1px solid var(--line, rgba(17,24,39,.08));
+  display: grid;
+  grid-template-columns: 240px 1fr;  /* ~80:20 feel on wide screens */
+  gap: 14px;
+  align-items: start;
+
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--line, rgba(17,24,39,.10));
   background: #fff;
-  box-shadow: 0 8px 22px rgba(17,24,39,.04);
-  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: 0 8px 22px rgba(17,24,39,.05);
 }
+
 .info-card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(17,24,39,.08);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(17,24,39,.08);
 }
 
-.info-card__meta{ display:flex; gap:8px; align-items:center; justify-content:flex-start; }
-.info-card__code{ font-weight:900; font-size:13px; color: var(--accent, #2563eb); }
-.info-card__year{ font-size:12px; color: var(--muted, #6b7280); }
+/* Make it responsive: meta stacks on top on small screens */
+@media (max-width: 720px){
+  .info-card{
+    grid-template-columns: 1fr;
+  }
+}
 
-.info-card__title{ margin:0; font-size:16px; font-weight:900; color: var(--text, #111827); }
-.info-card__desc{ margin:0; font-size:14px; color: var(--muted, #4b5563); line-height:1.5; }
+/* Left side (meta) looks like a compact block */
+.info-card__meta{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(17,24,39,.04);
+  border: 1px solid rgba(17,24,39,.08);
+}
 
+.info-card__code{
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--accent, #2563eb);
+}
+
+.info-card__year{
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--muted, #4b5563);
+}
+
+/* Right side content */
+.info-card__title{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--text, #111827);
+}
+
+.info-card__desc{
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--muted, #4b5563);
+  line-height: 1.55;
+}
+
+/* Put footer links/pills under the description */
 .info-card__foot{
-  display:flex;
-  gap:8px;
-  align-items:center;
-  flex-wrap:wrap;
-  margin-top:auto;
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+/* Make pills a little tighter, like publications buttons */
 .meta-pill{
   background: rgba(17,24,39,.06);
   border-radius: 999px;
   padding: 6px 10px;
-  font-weight:700;
-  font-size:12px;
+  font-weight: 800;
+  font-size: 12px;
   color: var(--muted, #374151);
 }
+
 .meta-link{
-  text-decoration:none;
-  font-weight:800;
-  color: var(--accent, #2563eb);
-  padding:6px 10px;
-  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 12.5px;
+  color: var(--text, #111827);
+  border: 1px solid rgba(17,24,39,.12);
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
 }
-.meta-link:hover{ text-decoration:underline; }
+.meta-link:hover{
+  background: rgba(37,99,235,.08);
+  border-color: rgba(37,99,235,.25);
+}
