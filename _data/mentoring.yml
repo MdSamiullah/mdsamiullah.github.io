@@ -19,7 +19,7 @@ sections:
     subsections:
       - title: "Masters Thesis Supervision"
         items:
-          - name: "KUET Student"
+          - name: "Shadman Rabby"
             project: "Multimodal Fake News Detection Technique using LLM and VLMs"
             year: "Current"
             role: "Associate supervisor"
