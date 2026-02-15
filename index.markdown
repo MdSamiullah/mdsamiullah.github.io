@@ -40,8 +40,17 @@ Alongside my research, I am deeply committed to teaching and mentorship, guiding
       <img src="{{ '/assets/img/icons/teaching.svg' | relative_url }}" alt="Teaching thumbnail">
     </div>
     <h3 class="qcard__title">Teaching</h3>
-    <p class="qcard__text">Courses, topics, supervision, and teaching-related materials.</p>
+    <p class="qcard__text">Courses, topics, and teaching-related materials.</p>
     <div class="qcard__cta">Open Teaching <span>→</span></div>
+  </a>
+
+  <a class="qcard" href="{{ '/mentoring/' | relative_url }}">
+    <div class="qcard__thumb qcard__thumb--icon">
+      <img src="{{ '/assets/img/icons/teaching.svg' | relative_url }}" alt="Mentoring thumbnail">
+    </div>
+    <h3 class="qcard__title">Mentoring</h3>
+    <p class="qcard__text">Research and Development Project Supervision.</p>
+    <div class="qcard__cta">Open Mentoring <span>→</span></div>
   </a>
 
   <a class="qcard" href="{{ '/certificates/' | relative_url }}">
