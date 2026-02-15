@@ -47,8 +47,10 @@ _data/<datafile>.yml
 
           <!-- LEFT META COLUMN -->
           <div class="info-card__meta">
-            {%- elsif item.name and item.name != "" -%}
-              {{ item.name }}
+            {%- if item.name and item.name != "" -%}
+            <div class="info-card__code">{{ item.name }}</div>
+            {%- endif -%}
+
             {%- if item.code and item.code != "" -%}
             <div class="info-card__code">{{ item.code }}</div>
             {%- endif -%}
@@ -71,6 +73,8 @@ _data/<datafile>.yml
             <h4 class="info-card__title">
               {%- if item.title and item.title != "" -%}
               {{ item.title }}
+              <!-- {%- elsif item.name and item.name != "" -%}
+              {{ item.name }} -->
               {%- elsif item.project and item.project != "" -%}
               {{ item.project }}
               {%- else -%}
