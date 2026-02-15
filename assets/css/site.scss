@@ -48,6 +48,19 @@ a{ color: inherit; }
 }
 
 .topbar{
+  // max-width: var(--max);
+  // margin: 14px auto 0;
+  // padding: 12px 16px;
+  // display: flex;
+  // gap: 12px;
+  // align-items: center;
+  // justify-content: space-between;
+  // border: 1px solid var(--line);
+  // border-radius: 999px;
+  // background: rgba(255,255,255,.75);
+  // backdrop-filter: blur(10px);
+  // box-shadow: var(--shadow);
+
   max-width: var(--max);
   margin: 14px auto 0;
   padding: 12px 16px;
@@ -57,9 +70,13 @@ a{ color: inherit; }
   justify-content: space-between;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255,255,255,.75);
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(12px);
   box-shadow: var(--shadow);
+
+  position: sticky;
+  top: 10px;          /* space from top */
+  z-index: 1000;      /* stay above content */
 
   .brand{
     text-decoration: none;
