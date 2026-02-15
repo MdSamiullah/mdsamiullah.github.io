@@ -52,6 +52,8 @@ nav:
     url: "/certificates/"
   - title: "Teaching"
     url: "/teaching/"
+  - title: "Mentoring"
+    url: "/mentoring/"  
   - title: "CV"
     url: "/cv/"
   - title: "Portfolio"
