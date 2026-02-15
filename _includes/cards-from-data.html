@@ -57,9 +57,7 @@ sections -> subsections -> items
                     {%- if item.role and item.role != "" -%}
                       <span class="mentor-role">{{ item.role }}</span>
                     {%- endif -%}
-                    {%- if item.role and item.role != "" and item.name and item.name != "" -%}
-                      <span class="mentor-sep"> of </span>
-                    {%- endif -%}
+                    
                     {%- if item.name and item.name != "" -%}
                       <span class="mentor-name">{{ item.name }}</span>
                     {%- endif -%}
@@ -96,7 +94,7 @@ sections -> subsections -> items
                         <span class="teach-year">({{ item.year }})</span>
                       {%- endif -%}
                       {%- if item.role and item.role != "" -%}
-                        <span class="teach-role">({{ item.role }})</span>
+                        <span class="teach-role">{{ item.role }}</span>
                       {%- endif -%}
                     </div>
 
