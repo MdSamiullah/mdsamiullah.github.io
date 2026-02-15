@@ -48,7 +48,7 @@ _data/<datafile>.yml
           <!-- LEFT META COLUMN -->
           <div class="info-card__meta">
             {%- if item.name and item.name != "" -%}
-            <div class="info-card__code">{{ item.name }}</div>
+            <div class="info-card__name">{{ item.name }}</div>
             {%- endif -%}
 
             {%- if item.code and item.code != "" -%}
@@ -61,6 +61,10 @@ _data/<datafile>.yml
 
             {%- if item.role and item.role != "" -%}
             <div class="info-card__role">{{ item.role }}</div>
+            {%- endif -%}
+
+            {%- if item.role and item.role != "" -%}
+            <a class="meta-link" rel="noreferrer">{{ item.role }}</a>
             {%- endif -%}
 
           </div>
@@ -82,9 +86,9 @@ _data/<datafile>.yml
 
             <!-- Project (for mentoring) -->
             {%- if item.project and item.project != "" -%}
-            <p class="info-card__desc">
+            <!-- <p class="info-card__desc">
               <strong>Project:</strong> {{ item.project }}
-            </p>
+            </p> -->
             {%- elsif item.description and item.description != "" -%}
             <p class="info-card__desc">
               {{ item.description }}
