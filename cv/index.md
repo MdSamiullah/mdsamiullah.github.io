@@ -2,6 +2,7 @@
 layout: default
 title: CV
 permalink: /cv/
+body_class: cv-page
 ---
 
 {% assign cv_pdf = '/assets/cv/CV.pdf' | relative_url %}
