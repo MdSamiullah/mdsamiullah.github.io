@@ -460,9 +460,20 @@ a{ color: inherit; }
 .subsection-title{ margin: 12px 0 8px; font-size: 16px; font-weight: 800; color: var(--muted); }
 
 /* Disable per-section scrolling (safe no-op if older markup still has cards-scroll) */
-.cards-scroll{ max-height: none; overflow: visible; padding-right: 0; margin-top: 0; }
+// .cards-scroll{ max-height: none; overflow: visible; padding-right: 0; margin-top: 0; }
 
-/* One scroll container per page */
+.cards-scroll{
+  max-height: 70vh;
+  overflow: auto;
+  padding-right: 6px;
+  margin-top: 8px;
+
+  &::-webkit-scrollbar{ width: 10px; }
+  &::-webkit-scrollbar-thumb{ background: rgba(17,24,39,.15); border-radius: 999px; }
+  &::-webkit-scrollbar-track{ background: transparent; }
+}
+
+/* One scroll container per page (not per section) */
 .page-scroll{
   max-height: 75vh;
   overflow: auto;
