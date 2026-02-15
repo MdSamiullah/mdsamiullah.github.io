@@ -18,9 +18,19 @@ body_class: cv-page
   <a class="btn" href="{{ cv_pdf }}" target="_blank" rel="noreferrer">Download PDF</a>
 </div>
 
-<iframe
+<!-- <iframe
   class="cv-frame"
   src="{{ cv_pdf }}"
   title="CV PDF Preview"
   loading="lazy">
-</iframe>
+</iframe> -->
+
+<div class="pdf-wrap">
+  <iframe
+    class="pdf-frame"
+    src="{{ cv_pdf }}"
+    title="CV PDF Preview"
+    loading="lazy">
+  </iframe>
+</div>
+
