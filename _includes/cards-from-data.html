@@ -58,18 +58,12 @@ _data/<datafile>.yml
             {%- if item.year and item.year != "" -%}
             <div class="info-card__year">{{ item.year }}</div>
             {%- endif -%}
-
-            {%- if item.role and item.role != "" -%}
-            <div class="info-card__role">{{ item.role }}</div>
-            {%- endif -%}
-
-            {%- if item.role and item.role != "" -%}
-            <a class="meta-link" rel="noreferrer">{{ item.role }}</a>
-            {%- endif -%}
-
           </div>
 
-
+          {%- if item.role and item.role != "" -%}
+          <div class="info-card__role">{{ item.role }}</div>
+          {%- endif -%}
+          
           <!-- RIGHT CONTENT COLUMN -->
           <div class="info-card__body">
 
