@@ -571,6 +571,13 @@ a{ color: inherit; }
     color: var(--muted);
     font-size: 13px;
   }
+
+  .teach-role{
+    font-weight: 900;
+    color: var(--accent);
+    font-size: 14px;
+  }
+  
 }
 
 /* Mentoring format */
@@ -588,7 +595,7 @@ a{ color: inherit; }
     font-size: 13.5px;
   }
 
-  .mentor-role{ font-weight: 900; color: var(--text); }
+  .mentor-role{ font-weight: 900; color: var(--accent); }
   .mentor-sep{ font-weight: 900; color: var(--muted); }
   .mentor-name{ font-weight: 800; }
   .mentor-year{ font-weight: 900; color: var(--muted); }

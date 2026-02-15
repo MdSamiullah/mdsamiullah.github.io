@@ -1,8 +1,8 @@
 {%- comment -%}
 cards-from-data.html
 Usage:
-{% include cards-from-data.html datafile="teaching" %}
-{% include cards-from-data.html datafile="mentoring" %}
+  {% include cards-from-data.html datafile="teaching" %}
+  {% include cards-from-data.html datafile="mentoring" %}
 
 Expected YAML structure:
 sections -> subsections -> items
@@ -11,177 +11,177 @@ sections -> subsections -> items
 {%- assign dataset = site.data[include.datafile] -%}
 
 {%- if dataset == nil -%}
-<p class="muted">
-  No data found for <code>{{ include.datafile }}</code>.
-  Check <code>_data/{{ include.datafile }}.yml</code>.
-</p>
+  <p class="muted">
+    No data found for <code>{{ include.datafile }}</code>.
+    Check <code>_data/{{ include.datafile }}.yml</code>.
+  </p>
 {%- else -%}
 
-{%- for section in dataset.sections -%}
-<section class="data-section">
+  {%- for section in dataset.sections -%}
+    <section class="data-section">
 
-  {%- if section.title and section.title != "" -%}
-  <h2 class="section-title">{{ section.title }}</h2>
-  {%- endif -%}
+      {%- if section.title and section.title != "" -%}
+        <h2 class="section-title">{{ section.title }}</h2>
+      {%- endif -%}
 
-  {%- for sub in section.subsections -%}
+      {%- for sub in section.subsections -%}
 
-  {%- if sub.title and sub.title != "" -%}
-  <h3 class="subsection-title">{{ sub.title }}</h3>
-  {%- endif -%}
+        {%- if sub.title and sub.title != "" -%}
+          <h3 class="subsection-title">{{ sub.title }}</h3>
+        {%- endif -%}
 
-  {%- if sub.items and sub.items.size > 0 -%}
-  <div class="cards-grid">
+        {%- if sub.items and sub.items.size > 0 -%}
+          <div class="cards-grid">
 
-    {%- for item in sub.items -%}
+            {%- for item in sub.items -%}
 
-    {%- if include.datafile == "mentoring" -%}
-    <!-- ===================== -->
-    <!-- Mentoring card format -->
-    <!-- Project -->
-    <!-- Role: Name (Year) -->
-    <!-- ===================== -->
-    <article class="info-card info-card--simple">
+              {%- if include.datafile == "mentoring" -%}
+                <!-- ===================== -->
+                <!-- Mentoring card format -->
+                <!-- Project -->
+                <!-- Role: Name (Year) -->
+                <!-- ===================== -->
+                <article class="info-card info-card--simple">
 
-      <h4 class="info-card__title">
-        {%- if item.project and item.project != "" -%}
-        {{ item.project }}
-        {%- elsif item.title and item.title != "" -%}
-        {{ item.title }}
+                  <h4 class="info-card__title">
+                    {%- if item.project and item.project != "" -%}
+                      {{ item.project }}
+                    {%- elsif item.title and item.title != "" -%}
+                      {{ item.title }}
+                    {%- else -%}
+                      Untitled Project
+                    {%- endif -%}
+                  </h4>
+
+                  <div class="mentor-line">
+                    {%- if item.role and item.role != "" -%}
+                      <span class="mentor-role">{{ item.role }}</span>
+                    {%- endif -%}
+                    {%- if item.role and item.role != "" and item.name and item.name != "" -%}
+                      <span class="mentor-sep"> of </span>
+                    {%- endif -%}
+                    {%- if item.name and item.name != "" -%}
+                      <span class="mentor-name">{{ item.name }}</span>
+                    {%- endif -%}
+                    {%- if item.year and item.year != "" -%}
+                      <span class="mentor-year">({{ item.year }})</span>
+                    {%- endif -%}
+
+                    {%- if item.url and item.url != "" -%}
+                      <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
+                    {%- endif -%}
+                  </div>
+
+                  {%- if item.description and item.description != "" -%}
+                    <p class="info-card__desc">{{ item.description }}</p>
+                  {%- endif -%}
+
+                </article>
+
+              {%- elsif include.datafile == "teaching" -%}
+                <!-- =================== -->
+                <!-- Teaching card format -->
+                <!-- CODE (Year) + Link -->
+                <!-- Title -->
+                <!-- Description + optional URL link -->
+                <!-- =================== -->
+                <article class="info-card info-card--teach">
+
+                  <div class="teach-top">
+                    <div class="teach-codeyear">
+                      {%- if item.code and item.code != "" -%}
+                        <span class="teach-code">{{ item.code }}</span>
+                      {%- endif -%}
+                      {%- if item.year and item.year != "" -%}
+                        <span class="teach-year">({{ item.year }})</span>
+                      {%- endif -%}
+                      {%- if item.role and item.role != "" -%}
+                        <span class="teach-role">({{ item.role }})</span>
+                      {%- endif -%}
+                    </div>
+
+                    {%- if item.url and item.url != "" -%}
+                      <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
+                    {%- endif -%}
+                  </div>
+
+                  <h4 class="info-card__title">
+                    {%- if item.title and item.title != "" -%}
+                      {{ item.title }}
+                    {%- else -%}
+                      Untitled Unit
+                    {%- endif -%}
+                  </h4>
+
+                  {%- if item.description and item.description != "" -%}
+                    <p class="info-card__desc">
+                      {{ item.description }}
+                      {%- if item.url and item.url != "" -%}
+                        &nbsp;<a href="{{ item.url }}" target="_blank" rel="noreferrer">More</a>
+                      {%- endif -%}
+                    </p>
+                  {%- else -%}
+                    {%- if item.url and item.url != "" -%}
+                      <p class="info-card__desc">
+                        <a href="{{ item.url }}" target="_blank" rel="noreferrer">More details</a>
+                      </p>
+                    {%- endif -%}
+                  {%- endif -%}
+
+                </article>
+
+              {%- else -%}
+                <!-- ================= -->
+                <!-- Generic card format -->
+                <!-- ================= -->
+                <article class="info-card info-card--generic">
+
+                  <div class="generic-top">
+                    {%- if item.year and item.year != "" -%}
+                      <span class="generic-year">{{ item.year }}</span>
+                    {%- endif -%}
+
+                    {%- if item.url and item.url != "" -%}
+                      <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
+                    {%- endif -%}
+                    {%- if item.github and item.github != "" -%}
+                      <a class="meta-link" href="{{ item.github }}" target="_blank" rel="noreferrer">GitHub</a>
+                    {%- endif -%}
+                    {%- if item.demo and item.demo != "" -%}
+                      <a class="meta-link" href="{{ item.demo }}" target="_blank" rel="noreferrer">Demo</a>
+                    {%- endif -%}
+                  </div>
+
+                  <h4 class="info-card__title">
+                    {%- if item.title and item.title != "" -%}
+                      {{ item.title }}
+                    {%- elsif item.name and item.name != "" -%}
+                      {{ item.name }}
+                    {%- else -%}
+                      Untitled
+                    {%- endif -%}
+                  </h4>
+
+                  {%- if item.issuer and item.issuer != "" -%}
+                    <p class="info-card__desc"><b>{{ item.issuer }}</b></p>
+                  {%- endif -%}
+
+                  {%- if item.description and item.description != "" -%}
+                    <p class="info-card__desc">{{ item.description }}</p>
+                  {%- endif -%}
+
+                </article>
+              {%- endif -%}
+
+            {%- endfor -%}
+          </div>
+
         {%- else -%}
-        Untitled Project
-        {%- endif -%}
-      </h4>
-
-      <div class="mentor-line">
-        {%- if item.role and item.role != "" -%}
-        <span class="mentor-role">{{ item.role }}</span>
-        {%- endif -%}
-        {%- if item.role and item.role != "" and item.name and item.name != "" -%}
-        <span class="mentor-sep"> of </span>
-        {%- endif -%}
-        {%- if item.name and item.name != "" -%}
-        <span class="mentor-name">{{ item.name }}</span>
-        {%- endif -%}
-        {%- if item.year and item.year != "" -%}
-        <span class="mentor-year">({{ item.year }})</span>
+          <p class="muted">No items in this subsection.</p>
         {%- endif -%}
 
-        {%- if item.url and item.url != "" -%}
-        <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
-        {%- endif -%}
-      </div>
-
-      {%- if item.description and item.description != "" -%}
-      <p class="info-card__desc">{{ item.description }}</p>
-      {%- endif -%}
-
-    </article>
-
-    {%- elsif include.datafile == "teaching" -%}
-    <!-- =================== -->
-    <!-- Teaching card format -->
-    <!-- CODE (Year) + Link -->
-    <!-- Title -->
-    <!-- Description + optional URL link -->
-    <!-- =================== -->
-    <article class="info-card info-card--teach">
-
-      <div class="teach-top">
-        <div class="teach-codeyear">
-          {%- if item.code and item.code != "" -%}
-          <span class="teach-code">{{ item.code }}</span>
-          {%- endif -%}
-          {%- if item.year and item.year != "" -%}
-          <span class="teach-year">({{ item.year }})</span>
-          {%- endif -%}
-          {%- if item.role and item.role != "" -%}
-          <span class="mentor-role">{{ item.role }}</span>
-          {%- endif -%}
-        </div>
-
-        {%- if item.url and item.url != "" -%}
-        <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
-        {%- endif -%}
-      </div>
-
-      <h4 class="info-card__title">
-        {%- if item.title and item.title != "" -%}
-        {{ item.title }}
-        {%- else -%}
-        Untitled Unit
-        {%- endif -%}
-      </h4>
-
-      {%- if item.description and item.description != "" -%}
-      <p class="info-card__desc">
-        {{ item.description }}
-        {%- if item.url and item.url != "" -%}
-        &nbsp;<a href="{{ item.url }}" target="_blank" rel="noreferrer">More</a>
-        {%- endif -%}
-      </p>
-      {%- else -%}
-      {%- if item.url and item.url != "" -%}
-      <p class="info-card__desc">
-        <a href="{{ item.url }}" target="_blank" rel="noreferrer">More details</a>
-      </p>
-      {%- endif -%}
-      {%- endif -%}
-
-    </article>
-
-    {%- else -%}
-    <!-- ================= -->
-    <!-- Generic card format -->
-    <!-- ================= -->
-    <article class="info-card info-card--generic">
-
-      <div class="generic-top">
-        {%- if item.year and item.year != "" -%}
-        <span class="generic-year">{{ item.year }}</span>
-        {%- endif -%}
-
-        {%- if item.url and item.url != "" -%}
-        <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
-        {%- endif -%}
-        {%- if item.github and item.github != "" -%}
-        <a class="meta-link" href="{{ item.github }}" target="_blank" rel="noreferrer">GitHub</a>
-        {%- endif -%}
-        {%- if item.demo and item.demo != "" -%}
-        <a class="meta-link" href="{{ item.demo }}" target="_blank" rel="noreferrer">Demo</a>
-        {%- endif -%}
-      </div>
-
-      <h4 class="info-card__title">
-        {%- if item.title and item.title != "" -%}
-        {{ item.title }}
-        {%- elsif item.name and item.name != "" -%}
-        {{ item.name }}
-        {%- else -%}
-        Untitled
-        {%- endif -%}
-      </h4>
-
-      {%- if item.issuer and item.issuer != "" -%}
-      <p class="info-card__desc"><b>{{ item.issuer }}</b></p>
-      {%- endif -%}
-
-      {%- if item.description and item.description != "" -%}
-      <p class="info-card__desc">{{ item.description }}</p>
-      {%- endif -%}
-
-    </article>
-    {%- endif -%}
-
-    {%- endfor -%}
-  </div>
-
-  {%- else -%}
-  <p class="muted">No items in this subsection.</p>
-  {%- endif -%}
-
+      {%- endfor -%}
+    </section>
   {%- endfor -%}
-</section>
-{%- endfor -%}
 
 {%- endif -%}
