@@ -1,140 +1,136 @@
 {%- comment -%}
 cards-from-data.html
 Usage:
-  {% include cards-from-data.html datafile="mentoring" %}
+{% include cards-from-data.html datafile="mentoring" %}
 
 Expected YAML structure:
 _data/<datafile>.yml
 
-sections:
+  sections:
   - title:
-    subsections:
-      - title:
-        items:
-          - title / name / project / description
-{%- endcomment -%}
+  subsections:
+  - title:
+  items:
+  - title / name / project / description
+  {%- endcomment -%}
 
-{%- assign dataset = site.data[include.datafile] -%}
+  {%- assign dataset = site.data[include.datafile] -%}
 
-{%- if dataset == nil -%}
+  {%- if dataset == nil -%}
   <p class="muted">
     No data found for <code>{{ include.datafile }}</code>.
     Check <code>_data/{{ include.datafile }}.yml</code>.
   </p>
-{%- else -%}
+  {%- else -%}
 
   {%- for section in dataset.sections -%}
-    <section class="data-section">
+  <section class="data-section">
 
-      {%- if section.title and section.title != "" -%}
-        <h2 class="section-title">{{ section.title }}</h2>
-      {%- endif -%}
+    {%- if section.title and section.title != "" -%}
+    <h2 class="section-title">{{ section.title }}</h2>
+    {%- endif -%}
 
-      {%- for sub in section.subsections -%}
+    {%- for sub in section.subsections -%}
 
-        {%- if sub.title and sub.title != "" -%}
-          <h3 class="subsection-title">{{ sub.title }}</h3>
-        {%- endif -%}
+    {%- if sub.title and sub.title != "" -%}
+    <h3 class="subsection-title">{{ sub.title }}</h3>
+    {%- endif -%}
 
-        {%- if sub.items and sub.items.size > 0 -%}
+    {%- if sub.items and sub.items.size > 0 -%}
 
-          <div class="cards-scroll">
-            <div class="cards-grid">
+    <div class="cards-scroll">
+      <div class="cards-grid">
 
-              {%- for item in sub.items -%}
+        {%- for item in sub.items -%}
 
-                <article class="info-card">
+        <article class="info-card">
 
-                  <!-- LEFT META COLUMN -->
-                  <div class="info-card__meta">
+          <!-- LEFT META COLUMN -->
+          <div class="info-card__meta">
 
-                    {%- if item.code and item.code != "" -%}
-                      <div class="info-card__code">{{ item.code }}</div>
-                    {%- endif -%}
+            {%- if item.code and item.code != "" -%}
+            <div class="info-card__code">{{ item.code }}</div>
+            {%- endif -%}
 
-                    {%- if item.year and item.year != "" -%}
-                      <div class="info-card__year">{{ item.year }}</div>
-                    {%- endif -%}
+            {%- if item.year and item.year != "" -%}
+            <div class="info-card__year">{{ item.year }}</div>
+            {%- endif -%}
 
-                  </div>
+            {%- if item.role and item.role != "" -%}
+            <div class="info-card__role">{{ item.role }}</div>
+            {%- endif -%}
 
-                  <!-- RIGHT CONTENT COLUMN -->
-                  <div class="info-card__body">
-
-                    <!-- Title / Name -->
-                    <h4 class="info-card__title">
-                      {%- if item.title and item.title != "" -%}
-                        {{ item.title }}
-                      {%- elsif item.name and item.name != "" -%}
-                        {{ item.name }}
-                      {%- elsif item.project and item.project != "" -%}
-                        {{ item.project }}
-                      {%- else -%}
-                        Untitled
-                      {%- endif -%}
-                    </h4>
-
-                    <!-- Project (for mentoring) -->
-                    {%- if item.project and item.project != "" -%}
-                      <p class="info-card__desc">
-                        <strong>Project:</strong> {{ item.project }}
-                      </p>
-                    {%- elsif item.description and item.description != "" -%}
-                      <p class="info-card__desc">
-                        {{ item.description }}
-                      </p>
-                    {%- endif -%}
-
-                    <!-- Footer: role, issuer, links -->
-                    <div class="info-card__foot">
-
-                      {%- if item.role and item.role != "" -%}
-                        <span class="meta-pill">{{ item.role }}</span>
-                      {%- endif -%}
-
-                      {%- if item.issuer and item.issuer != "" -%}
-                        <span class="meta-pill">{{ item.issuer }}</span>
-                      {%- endif -%}
-
-                      {%- if item.github and item.github != "" -%}
-                        <a class="meta-link"
-                           href="{{ item.github }}"
-                           target="_blank"
-                           rel="noreferrer">GitHub</a>
-                      {%- endif -%}
-
-                      {%- if item.demo and item.demo != "" -%}
-                        <a class="meta-link"
-                           href="{{ item.demo }}"
-                           target="_blank"
-                           rel="noreferrer">Demo</a>
-                      {%- endif -%}
-
-                      {%- if item.url and item.url != "" -%}
-                        <a class="meta-link"
-                           href="{{ item.url }}"
-                           target="_blank"
-                           rel="noreferrer">Link</a>
-                      {%- endif -%}
-
-                    </div>
-
-                  </div>
-
-                </article>
-
-              {%- endfor -%}
-
-            </div>
           </div>
 
-        {%- else -%}
-          <p class="muted">No items in this subsection.</p>
-        {%- endif -%}
 
-      {%- endfor -%}
+          <!-- RIGHT CONTENT COLUMN -->
+          <div class="info-card__body">
 
-    </section>
+            <!-- Title / Name -->
+            <h4 class="info-card__title">
+              {%- if item.title and item.title != "" -%}
+              {{ item.title }}
+              {%- elsif item.name and item.name != "" -%}
+              {{ item.name }}
+              {%- elsif item.project and item.project != "" -%}
+              {{ item.project }}
+              {%- else -%}
+              Untitled
+              {%- endif -%}
+            </h4>
+
+            <!-- Project (for mentoring) -->
+            {%- if item.project and item.project != "" -%}
+            <p class="info-card__desc">
+              <strong>Project:</strong> {{ item.project }}
+            </p>
+            {%- elsif item.description and item.description != "" -%}
+            <p class="info-card__desc">
+              {{ item.description }}
+            </p>
+            {%- endif -%}
+
+            <!-- Footer: role, issuer, links -->
+            <div class="info-card__foot">
+
+              {%- if item.role and item.role != "" -%}
+              <span class="meta-pill">{{ item.role }}</span>
+              {%- endif -%}
+
+              {%- if item.issuer and item.issuer != "" -%}
+              <span class="meta-pill">{{ item.issuer }}</span>
+              {%- endif -%}
+
+              {%- if item.github and item.github != "" -%}
+              <a class="meta-link" href="{{ item.github }}" target="_blank" rel="noreferrer">GitHub</a>
+              {%- endif -%}
+
+              {%- if item.demo and item.demo != "" -%}
+              <a class="meta-link" href="{{ item.demo }}" target="_blank" rel="noreferrer">Demo</a>
+              {%- endif -%}
+
+              {%- if item.url and item.url != "" -%}
+              <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
+              {%- endif -%}
+
+            </div>
+
+          </div>
+
+        </article>
+
+        {%- endfor -%}
+
+      </div>
+    </div>
+
+    {%- else -%}
+    <p class="muted">No items in this subsection.</p>
+    {%- endif -%}
+
+    {%- endfor -%}
+
+  </section>
   {%- endfor -%}
 
-{%- endif -%}
+  {%- endif -%}
