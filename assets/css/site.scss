@@ -117,7 +117,7 @@ a{ color: inherit; }
     width: 70%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 20px; /* make 50% if you want fully round */
+    border-radius: 20px;
     border: 4px solid #fff;
     box-shadow: 0 6px 18px rgba(17,24,39,.12);
     display: block;
@@ -459,18 +459,10 @@ a{ color: inherit; }
 .section-title{ margin: 0 0 8px; font-size: 20px; font-weight: 900; }
 .subsection-title{ margin: 12px 0 8px; font-size: 16px; font-weight: 800; color: var(--muted); }
 
-.cards-scroll{
-  max-height: 70vh;
-  overflow: auto;
-  padding-right: 6px;
-  margin-top: 8px;
+/* Disable per-section scrolling (safe no-op if older markup still has cards-scroll) */
+.cards-scroll{ max-height: none; overflow: visible; padding-right: 0; margin-top: 0; }
 
-  &::-webkit-scrollbar{ width: 10px; }
-  &::-webkit-scrollbar-thumb{ background: rgba(17,24,39,.15); border-radius: 999px; }
-  &::-webkit-scrollbar-track{ background: transparent; }
-}
-
-/* One scroll container per page (not per section) */
+/* One scroll container per page */
 .page-scroll{
   max-height: 75vh;
   overflow: auto;
@@ -482,7 +474,6 @@ a{ color: inherit; }
   &::-webkit-scrollbar-track{ background: transparent; }
 }
 
-
 /* 1 card per row */
 .cards-grid{
   display: grid;
@@ -490,94 +481,7 @@ a{ color: inherit; }
   gap: 12px;
 }
 
-/* ✅ FIXED: role rendered in left column under year (NOT inside meta) */
-.info-card{
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  grid-template-rows: auto auto;
-  gap: 14px;
-  align-items: start;
-
-  padding: 14px 16px;
-  border-radius: 14px;
-  border: 1px solid rgba(17,24,39,.10);
-  background: #fff;
-  box-shadow: 0 8px 22px rgba(17,24,39,.05);
-  transition: transform .12s ease, box-shadow .12s ease;
-
-  &:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 16px 36px rgba(17,24,39,.08);
-  }
-
-  @media (max-width: 720px){
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  &__meta{
-    grid-column: 1;
-    grid-row: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 10px 12px;
-    border-radius: 12px;
-    background: rgba(17,24,39,.04);
-    border: 1px solid rgba(17,24,39,.08);
-  }
-
-  &__role{
-    grid-column: 1;
-    grid-row: 2;
-    padding: 10px 12px;
-    border-radius: 12px;
-    background: rgba(17,24,39,.04);
-    border: 1px solid rgba(17,24,39,.08);
-    font-size: 12.5px;
-    font-weight: 900;
-    color: var(--muted);
-
-    @media (max-width: 720px){
-      grid-column: 1;
-      grid-row: auto;
-    }
-  }
-
-  &__body{
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    min-width: 0;
-
-    @media (max-width: 720px){
-      grid-column: 1;
-      grid-row: auto;
-    }
-  }
-
-  &__code{ font-weight: 900; font-size: 14px; color: var(--accent); }
-  &__year{ font-size: 13px; font-weight: 800; color: var(--muted); }
-  &__title{ margin: 0; font-size: 16px; font-weight: 900; }
-  &__desc{ margin: 6px 0 0; font-size: 14px; color: var(--muted); line-height: 1.55; }
-
-  &__foot{
-    margin-top: 10px;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-}
-
-.meta-pill{
-  background: rgba(17,24,39,.06);
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-weight: 800;
-  font-size: 12px;
-  color: #374151;
-}
-
+/* Link pill */
 .meta-link{
   text-decoration: none;
   font-weight: 900;
@@ -592,6 +496,91 @@ a{ color: inherit; }
     background: rgba(37,99,235,.08);
     border-color: rgba(37,99,235,.25);
   }
+}
+
+/* Base card typography */
+.info-card{
+  border: 1px solid rgba(17,24,39,.10);
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(17,24,39,.05);
+  padding: 14px 16px;
+  transition: transform .12s ease, box-shadow .12s ease;
+
+  &:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(17,24,39,.08);
+  }
+
+  &__title{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--text);
+  }
+
+  &__desc{
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.55;
+
+    a{ color: var(--accent); font-weight: 800; text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+  }
+}
+
+/* Teaching format */
+.info-card--teach{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .teach-top{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .teach-codeyear{
+    display:flex;
+    align-items:baseline;
+    gap: 8px;
+  }
+
+  .teach-code{
+    font-weight: 900;
+    color: var(--accent);
+    font-size: 14px;
+  }
+
+  .teach-year{
+    font-weight: 900;
+    color: var(--muted);
+    font-size: 13px;
+  }
+}
+
+/* Mentoring format */
+.info-card--simple{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .mentor-line{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: baseline;
+    color: var(--muted);
+    font-size: 13.5px;
+  }
+
+  .mentor-role{ font-weight: 900; color: var(--text); }
+  .mentor-sep{ font-weight: 900; color: var(--muted); }
+  .mentor-name{ font-weight: 800; }
+  .mentor-year{ font-weight: 900; color: var(--muted); }
 }
 
 /* Footer */
