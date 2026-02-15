@@ -231,11 +231,6 @@ sections:
             year: "2012-2013"
             role: "Associate Supervisor"
             url: ""
-          - name: "Md Azizur Rahman and NJ Samiha"
-            project: "Library Management System using Java Spring Hybernate framework"
-            year: "2011-2012"
-            role: "Primary Supervisor"
-            url: ""
       
   - title: "Jahangir Nagar University"
     subsections:
@@ -245,4 +240,13 @@ sections:
             project: "Discovering the Impact on Mental Health for Prolonged Online Dependency in Post-COVID Era Using Deep Transfer Learning"
             year: "2023–2025"
             role: "Associate supervisor"
+            url: ""
+  - title: "Daffodil International University"
+    subsections:
+      - title: "Undergraduate Project"
+        items:
+          - name: "Md Azizur Rahman and NJ Samiha"
+            project: "Library Management System using Java Spring Hybernate framework"
+            year: "2011–2012"
+            role: "Primary supervisor"
             url: ""
