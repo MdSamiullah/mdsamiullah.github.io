@@ -2,7 +2,7 @@
 layout: default
 title: CV
 permalink: /cv/
-body_class: cv-page
+# body_class: cv-page
 ---
 
 {% assign cv_pdf = '/assets/cv/CV.pdf' | relative_url %}
@@ -18,19 +18,19 @@ body_class: cv-page
   <a class="btn" href="{{ cv_pdf }}" target="_blank" rel="noreferrer">Download PDF</a>
 </div>
 
-<!-- <iframe
+<iframe
   class="cv-frame"
   src="{{ cv_pdf }}"
   title="CV PDF Preview"
   loading="lazy">
-</iframe> -->
+</iframe>
 
-<div class="pdf-wrap">
+<!-- <div class="pdf-wrap">
   <iframe
     class="pdf-frame"
     src="{{ cv_pdf }}"
     title="CV PDF Preview"
     loading="lazy">
   </iframe>
-</div>
+</div> -->
 
