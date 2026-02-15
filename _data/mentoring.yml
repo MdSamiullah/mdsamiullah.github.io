@@ -9,7 +9,6 @@ sections:
             year: "Currrent"
             role: "Primary supervisor"
             url: ""
-        items:
           - name: "Jatin Yadav"
             project: "Combined approach to detecting LLM hallucianation"
             year: "Currrent"
