@@ -7,20 +7,18 @@ sections:
           - title: "Vaccine Safety BN"
             issuer: "Coursera / Andrew Ng"
             year: 2021
+            collaboration: "Monash University"
+            description: "This is all habijabi stuffs don't know what to do hulukulu"
+            fundingBody: "Don't know"
+            amount: "$50000"
+            status: "Ongoing"
             url: "https://coursera.org/share/..."
-          - title: "Advanced Data Analytics"
-            issuer: "Some Institute"
-            year: 2020
-            url: ""
-        items:
+            Role: ["Researcher"]
+            Keywords: ["Haha", "Hihi", "Hoho"]
           - title: "GVDN RCA"
             issuer: "Coursera / Andrew Ng"
             year: 2021
             url: "https://coursera.org/share/..."
-          - title: "Advanced Data Analytics"
-            issuer: "Some Institute"
-            year: 2020
-            url: ""
   - title: "Monash University"
     subsections:
       - title: "Roles"

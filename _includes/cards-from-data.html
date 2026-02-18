@@ -79,7 +79,7 @@ sections -> subsections -> items
               {%- elsif include.datafile == "teaching" -%}
                 <!-- =================== -->
                 <!-- Teaching card format -->
-                <!-- CODE (Year) + Link -->
+                <!-- CODE (Year) + Role -->
                 <!-- Title -->
                 <!-- Description + optional URL link -->
                 <!-- =================== -->
@@ -124,6 +124,116 @@ sections -> subsections -> items
                         <a href="{{ item.url }}" target="_blank" rel="noreferrer">More details</a>
                       </p>
                     {%- endif -%}
+                  {%- endif -%}
+
+                </article>
+
+              {%- elsif include.datafile == "portfolio" -%}
+                <!-- =================== -->
+                <!-- Portfolio card format (custom) -->
+                <!-- Title (Status) -->
+                <!-- Capsules: Collaboration, FundingBody, (Amount) -->
+                <!-- Year + URL -->
+                <!-- Description -->
+                <!-- Roles capsules -->
+                <!-- Keywords capsules -->
+                <!-- =================== -->
+                <article class="info-card info-card--portfolio">
+
+                  <!-- Line 1: Title + (Status) -->
+                  <h4 class="info-card__title">
+                    {%- if item.title and item.title != "" -%}
+                      <b>{{ item.title }}</b>
+                    {%- elsif item.name and item.name != "" -%}
+                      <b>{{ item.name }}</b>
+                    {%- else -%}
+                      <b>Untitled Project</b>
+                    {%- endif -%}
+                    {%- if item.status and item.status != "" -%}
+                      <span class="meta-pill meta-pill--status">({{ item.status }})</span>
+                    {%- endif -%}
+                  </h4>
+
+                  <!-- Line 2: Collaboration + FundingBody + (Amount) capsules -->
+                  <div class="meta-row">
+                    {%- if item.collaboration and item.collaboration != "" -%}
+                      <span class="meta-pill">{{ item.collaboration }}</span>
+                    {%- endif -%}
+                    {%- if item.fundingBody and item.fundingBody != "" -%}
+                      <span class="meta-pill">{{ item.fundingBody }}</span>
+                    {%- endif -%}
+                    {%- if item.amount and item.amount != "" -%}
+                      <span class="meta-pill meta-pill--amount">({{ item.amount }})</span>
+                    {%- endif -%}
+                  </div>
+
+                  <!-- Line 3: Year + URL -->
+                  <div class="meta-row">
+                    {%- if item.year and item.year != "" -%}
+                      <span class="generic-year">{{ item.year }}</span>
+                    {%- endif -%}
+
+                    {%- if item.url and item.url != "" -%}
+                      <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
+                    {%- endif -%}
+                    {%- if item.github and item.github != "" -%}
+                      <a class="meta-link" href="{{ item.github }}" target="_blank" rel="noreferrer">GitHub</a>
+                    {%- endif -%}
+                    {%- if item.demo and item.demo != "" -%}
+                      <a class="meta-link" href="{{ item.demo }}" target="_blank" rel="noreferrer">Demo</a>
+                    {%- endif -%}
+                  </div>
+
+                  <!-- Optional issuer line (you asked "allow issuer") -->
+                  {%- if item.issuer and item.issuer != "" -%}
+                    <p class="info-card__desc"><b>{{ item.issuer }}</b></p>
+                  {%- endif -%}
+
+                  <!-- Line 4: Description -->
+                  {%- if item.description and item.description != "" -%}
+                    <p class="info-card__desc">{{ item.description }}</p>
+                  {%- endif -%}
+
+                  <!-- Roles: support roles as list OR Role as string -->
+                  {%- assign role_list = nil -%}
+                  {%- if item.roles and item.roles.size > 0 -%}
+                    {%- assign role_list = item.roles -%}
+                  {%- elsif item.Role and item.Role != "" -%}
+                    {%- assign role_list = item.Role | split: "," -%}
+                  {%- elsif item.role and item.role != "" -%}
+                    {%- assign role_list = item.role | split: "," -%}
+                  {%- endif -%}
+
+                  {%- if role_list -%}
+                    <div class="meta-row">
+                      {%- for r in role_list -%}
+                        {%- assign rr = r | strip -%}
+                        {%- if rr != "" -%}
+                          <span class="meta-pill">{{ rr }}</span>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
+                  {%- endif -%}
+
+                  <!-- Keywords: support keywords as list OR "a; b; c" string -->
+                  {%- assign kw_list = nil -%}
+                  {%- if item.keywords and item.keywords.size > 0 -%}
+                    {%- assign kw_list = item.keywords -%}
+                  {%- elsif item.Keywords and item.Keywords != "" -%}
+                    {%- assign kw_list = item.Keywords | split: ";" -%}
+                  {%- elsif item.keywords and item.keywords != "" -%}
+                    {%- assign kw_list = item.keywords | split: ";" -%}
+                  {%- endif -%}
+
+                  {%- if kw_list -%}
+                    <div class="meta-row">
+                      {%- for k in kw_list -%}
+                        {%- assign kk = k | strip -%}
+                        {%- if kk != "" -%}
+                          <span class="meta-pill meta-pill--kw">{{ kk }}</span>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
                   {%- endif -%}
 
                 </article>
