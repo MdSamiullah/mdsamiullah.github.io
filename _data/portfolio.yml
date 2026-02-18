@@ -35,22 +35,18 @@ sections:
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-        items:
           - title: "Unit Marking Breakdown Summary Automation"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-        items:
           - title: "BARD Project"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-        items:
           - title: "iOOBN software development"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-        items:
           - title: "BN Model for PROTIC"
             issuer: "HAHAHA 2026"
             year: 2026
@@ -71,7 +67,6 @@ sections:
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-        items:
           - title: "MS Open Credit System"
             issuer: "HAHAHA 2026"
             year: 2026
@@ -82,32 +77,26 @@ sections:
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-        items:
           - title: "COVID-19 Digital Grants from Australian Academy of Science for “Geo-spatial transfer learning based rumour-spreading trend analysis to detect fake news about COVID-19 and on the effects of its vaccines"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-        items:
           - title: "Developing Efficient Technique to Detect False Facts Using Knowledge Graph and Bayesian Network Based Models"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-        items:
           - title: "Data Driven Intelligent Assistant for Medical Practitioners"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-        items:
           - title: "Central Admission System"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-        items:
           - title: "Accounting Information System"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-        items:
           - title: "Titas Gas Digitalization Capability Testing Project"
             issuer: "HAHAHA 2026"
             year: 2026
@@ -123,16 +112,11 @@ sections:
   - title: "Startups"
     subsections:
       - title: "Projects"
-        title: "Somadha"
-        issuer: "HAHAHA 2026"
-        year: 2026
-        url: ""
         items:
           - title: "Somadha"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-        items:
           - title: "Sobar Daktar"
             issuer: "HAHAHA 2026"
             year: 2026
