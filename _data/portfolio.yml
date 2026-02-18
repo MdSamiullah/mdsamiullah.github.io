@@ -2,9 +2,9 @@
 sections:
   - title: "Murdocu Children Research Institute (MCRI)"
     subsections:
-      - title: "Vaccine Safety BN"
+      - title: "Projects"
         items:
-          - title: "Deep Learning Specialization"
+          - title: "Vaccine Safety BN"
             issuer: "Coursera / Andrew Ng"
             year: 2021
             url: "https://coursera.org/share/..."
@@ -12,9 +12,8 @@ sections:
             issuer: "Some Institute"
             year: 2020
             url: ""
-      - title: "GVDN RCA"
         items:
-          - title: "Deep Learning Specialization"
+          - title: "GVDN RCA"
             issuer: "Coursera / Andrew Ng"
             year: 2021
             url: "https://coursera.org/share/..."
@@ -30,41 +29,37 @@ sections:
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "Western Grassland Reserve Reengineering"
+      - title: "Projects"
         items:
-          - title: "Best Paper Award"
+          - title: "Western Grassland Reserve Reengineering"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "Unit Marking Breakdown Summary Automation"
         items:
-          - title: "Best Paper Award"
+          - title: "Unit Marking Breakdown Summary Automation"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "BARD Project"
         items:
-          - title: "Best Paper Award"
+          - title: "BARD Project"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "iOOBN software developments"
         items:
-          - title: "Best Paper Award"
+          - title: "iOOBN software development"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "BN Model for PROTIC"
         items:
-          - title: "Best Paper Award"
+          - title: "BN Model for PROTIC"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
   - title: "Bayesian Intelligence"
     subsections:
-      - title: "Trustworthy AI"
+      - title: "Projects"
         items:
-          - title: "Best Paper Award"
+          - title: "Trustworthy AI"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
@@ -76,67 +71,65 @@ sections:
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "DrAi: Artificial Intelligence and Pattern Recognition Driven Assistant for Providing Effective Treatment"
         items:
-          - title: "Best Paper Award"
+          - title: "MS Open Credit System"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "COVID-19 Digital Grants from Australian Academy of Science for “Geo-spatial transfer learning based rumour-spreading trend analysis to detect fake news about COVID-19 and on the effects of its vaccines"
+      - title: "Projects"
         items:
-          - title: "Best Paper Award"
+          - title: "DrAi: Artificial Intelligence and Pattern Recognition Driven Assistant for Providing Effective Treatment"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "Developing Efficient Technique to Detect False Facts Using Knowledge Graph and Bayesian Network Based Models"
         items:
-          - title: "Best Paper Award"
+          - title: "COVID-19 Digital Grants from Australian Academy of Science for “Geo-spatial transfer learning based rumour-spreading trend analysis to detect fake news about COVID-19 and on the effects of its vaccines"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "Data Driven Intelligent Assistant for Medical Practitioners"
         items:
-          - title: "Best Paper Award"
+          - title: "Developing Efficient Technique to Detect False Facts Using Knowledge Graph and Bayesian Network Based Models"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "Central Admission System"
         items:
-          - title: "Best Paper Award"
+          - title: "Data Driven Intelligent Assistant for Medical Practitioners"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "Accounting Information System"
         items:
-          - title: "Best Paper Award"
+          - title: "Central Admission System"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "Titas Gas Digitalization Capability Testing Project"
         items:
-          - title: "Best Paper Award"
+          - title: "Accounting Information System"
+            issuer: "HAHAHA 2026"
+            year: 2026
+            url: ""
+        items:
+          - title: "Titas Gas Digitalization Capability Testing Project"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
   - title: "Daffodil Internation University"
     subsections:
-      - title: "IEB Accreditation Project"
+      - title: "Projects"
         items:
-          - title: "Best Paper Award"
+          - title: "IEB Accreditation Project"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
   - title: "Startups"
     subsections:
-      - title: "Somadha"
+      - title: "Projects"
         items:
-          - title: "Best Paper Award"
+          - title: "Somadha"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
-      - title: "Sobar Daktar"
         items:
-          - title: "Best Paper Award"
+          - title: "Sobar Daktar"
             issuer: "HAHAHA 2026"
             year: 2026
             url: ""
