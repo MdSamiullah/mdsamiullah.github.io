@@ -5,20 +5,20 @@ sections:
       - title: "Projects"
         items:
           - title: "Vaccine Safety BN"
-            issuer: "Coursera / Andrew Ng"
-            year: 2021
+            year: 2022
             collaboration: "Monash University"
-            description: "This is all habijabi stuffs don't know what to do hulukulu"
-            fundingBody: "Don't know"
-            amount: "$50000"
+            description: "Developing a BN model to effectively detecting vaccine safety signals in a timely manner."
+            # fundingBody: "Don't know"
+            # amount: "$50000"
             status: "Ongoing"
-            url: "https://coursera.org/share/..."
-            Role: Researcher
-            Keywords: Haha; Hihi; Hoho
-          - title: "GVDN RCA"
-            issuer: "Coursera / Andrew Ng"
-            year: 2021
-            url: "https://coursera.org/share/..."
+            # url: "https://coursera.org/share/..."
+            Role: Researcher Officer
+            Keywords: Vaccine; Reaction; Statistical; Bayesian Network
+          - title: "GVDN Rapid Cycle analysis"
+            # issuer: "Coursera / Andrew Ng"
+            collaboration: Global Vaccine Data Network (GVDN)
+            year: 2023-2024
+            # url: "https://coursera.org/share/..."
   - title: "Monash University"
     subsections:
       - title: "Roles"
