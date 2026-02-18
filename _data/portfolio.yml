@@ -13,8 +13,8 @@ sections:
             amount: "$50000"
             status: "Ongoing"
             url: "https://coursera.org/share/..."
-            Role: ["Researcher"]
-            Keywords: ["Haha", "Hihi", "Hoho"]
+            Role: Researcher
+            Keywords: Haha; Hihi; Hoho
           - title: "GVDN RCA"
             issuer: "Coursera / Andrew Ng"
             year: 2021
