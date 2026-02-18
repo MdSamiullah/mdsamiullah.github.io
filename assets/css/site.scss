@@ -1,3 +1,6 @@
+---
+---
+
 :root{
   --bg: #f6f7fb;
   --panel: #ffffff;
@@ -202,7 +205,6 @@ a{ color: inherit; }
   a{
     color: var(--accent);
     text-decoration: none;
-
     &:hover{ text-decoration: underline; }
   }
 }
@@ -642,26 +644,12 @@ a{ color: inherit; }
 /* =============================== */
 
 /* Meta rows inside portfolio cards */
-.info-card--portfolio{
-  .meta-row{
-    margin-top: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    align-items: center;
-  }
-
-  .generic-year{
-    font-weight: 900;
-    color: var(--muted);
-  }
-
-  .meta-text{
-    font-weight: 900;
-    color: var(--muted);
-    font-size: 12.5px;
-    line-height: 1;
-  }
+.info-card--portfolio .meta-row{
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
 }
 
 /* Pills (safe global; used only where applied in markup) */
@@ -689,6 +677,11 @@ a{ color: inherit; }
 
 .meta-pill--kw{
   background: rgba(17,24,39,.04);
+}
+
+.info-card--portfolio .generic-year{
+  font-weight: 900;
+  color: var(--muted);
 }
 
 /* Footer */
