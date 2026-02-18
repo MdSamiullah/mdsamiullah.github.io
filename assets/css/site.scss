@@ -684,6 +684,14 @@ a{ color: inherit; }
   color: var(--muted);
 }
 
+.info-card--portfolio .meta-text{
+  font-weight: 900;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1;
+}
+
+
 /* Footer */
 .footer{
   max-width: var(--max);
