@@ -123,6 +123,10 @@ sections:
   - title: "Startups"
     subsections:
       - title: "Projects"
+        title: "Somadha"
+        issuer: "HAHAHA 2026"
+        year: 2026
+        url: ""
         items:
           - title: "Somadha"
             issuer: "HAHAHA 2026"
