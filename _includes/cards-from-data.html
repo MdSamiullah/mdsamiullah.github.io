@@ -238,6 +238,53 @@ sections -> subsections -> items
 
                 </article>
 
+              {%- elsif include.datafile == "certificates" -%}
+                <!-- ====================== -->
+                <!-- Certificates card format -->
+                <!-- Title + Year pill -->
+                <!-- Hat icon + Issuer -->
+                <!-- Description -->
+                <!-- ====================== -->
+                <article class="info-card info-card--cert">
+
+                  <div class="cert-top">
+                    <h4 class="info-card__title">
+                      {%- if item.title and item.title != "" -%}
+                        {{ item.title }}
+                      {%- else -%}
+                        Untitled Certificate
+                      {%- endif -%}
+                    </h4>
+
+                    {%- if item.year and item.year != "" -%}
+                      <span class="meta-pill cert-year">{{ item.year }}</span>
+                    {%- endif -%}
+                  </div>
+
+                  {%- if item.issuer and item.issuer != "" -%}
+                    <div class="cert-issuer">
+                      <span class="cert-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 10L12 5 2 10l10 5 10-5z"/>
+                          <path d="M6 12v5c0 .6 2.7 2 6 2s6-1.4 6-2v-5"/>
+                        </svg>
+                      </span>
+                      <span class="cert-issuer-text">
+                        {%- if item.url and item.url != "" -%}
+                          <a href="{{ item.url }}" target="_blank" rel="noreferrer">{{ item.issuer }}</a>
+                        {%- else -%}
+                          {{ item.issuer }}
+                        {%- endif -%}
+                      </span>
+                    </div>
+                  {%- endif -%}
+
+                  {%- if item.description and item.description != "" -%}
+                    <p class="info-card__desc">{{ item.description }}</p>
+                  {%- endif -%}
+
+                </article>
+
               {%- else -%}
                 <!-- ================= -->
                 <!-- Generic card format -->

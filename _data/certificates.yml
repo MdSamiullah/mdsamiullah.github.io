@@ -8,6 +8,7 @@ sections:
             issuer: "Coursera / Andrew Ng"
             year: 2021
             url: "https://coursera.org/share/..."
+            description: This certificate is a part of my doing nothing hahaha
           - title: "Advanced Data Analytics"
             issuer: "Some Institute"
             year: 2020
