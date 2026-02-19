@@ -131,16 +131,17 @@ sections -> subsections -> items
               {%- elsif include.datafile == "portfolio" -%}
                 <!-- =================== -->
                 <!-- Portfolio card format (custom) -->
-                <!-- Title (Status) -->
-                <!-- Capsules: Collaboration, FundingBody, (Amount) -->
+                <!-- Title -->
+                <!-- Status + Year pills (right) -->
+                <!-- Collaboration pill (with icon), FundingBody + Amount text (with icons) -->
                 <!-- Year + URL -->
                 <!-- Description -->
-                <!-- Roles capsules -->
+                <!-- Roles capsules (with icon) -->
                 <!-- Keywords capsules -->
                 <!-- =================== -->
                 <article class="info-card info-card--portfolio">
 
-                  <!-- Line 1: Title + (Status) -->
+                  <!-- Line 1: Title -->
                   <h4 class="info-card__title">
                     {%- if item.title and item.title != "" -%}
                       <b>{{ item.title }}</b>
@@ -149,30 +150,89 @@ sections -> subsections -> items
                     {%- else -%}
                       <b>Untitled Project</b>
                     {%- endif -%}
-                    {%- if item.status and item.status != "" -%}
-                      <span class="meta-pill meta-pill--status">({{ item.status }})</span>
-                    {%- endif -%}
                   </h4>
 
-                  <!-- Line 2: Collaboration + FundingBody + (Amount) capsules -->
+                  <!-- Line 2: top meta row (Status + Year pills right-aligned) -->
+                  <div class="portfolio-top">
+                    <div class="portfolio-top__left">
+                      {%- if item.issuer and item.issuer != "" -%}
+                        <span class="portfolio-issuer">{{ item.issuer }}</span>
+                      {%- endif -%}
+                    </div>
+
+                    <div class="portfolio-top__right">
+                      {%- if item.status and item.status != "" -%}
+                        <span class="meta-pill meta-pill--status">
+                          {{ item.status }}
+                        </span>
+                      {%- endif -%}
+
+                      {%- if item.year and item.year != "" -%}
+                        <span class="meta-pill meta-pill--year">
+                          <!-- Graduation hat icon -->
+                          <span class="pill-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M22 10L12 5 2 10l10 5 10-5z"></path>
+                              <path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"></path>
+                            </svg>
+                          </span>
+                          {{ item.year }}
+                        </span>
+                      {%- endif -%}
+                    </div>
+                  </div>
+
+                  <!-- Line 3: Collaboration (pill + handshake icon), Funding body & amount (plain text + icons) -->
                   <div class="meta-row">
                     {%- if item.collaboration and item.collaboration != "" -%}
-                      <span class="meta-pill">{{ item.collaboration }}</span>
+                      <span class="meta-pill meta-pill--collab">
+                        <span class="pill-ico" aria-hidden="true">
+                          <!-- Handshake icon -->
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 12l2 2c1.2 1.2 3.1 1.2 4.3 0l5.2-5.2"></path>
+                            <path d="M16 7l2 2"></path>
+                            <path d="M2 12l5-5 5 5"></path>
+                            <path d="M22 12l-4-4"></path>
+                          </svg>
+                        </span>
+                        {{ item.collaboration }}
+                      </span>
                     {%- endif -%}
+
                     {%- if item.fundingBody and item.fundingBody != "" -%}
-                      <span class="meta-pill">{{ item.fundingBody }}</span>
+                      <span class="meta-text">
+                        <span class="meta-ico" aria-hidden="true">
+                          <!-- Bank icon -->
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 10h18"></path>
+                            <path d="M4 10V7l8-4 8 4v3"></path>
+                            <path d="M6 10v9"></path>
+                            <path d="M10 10v9"></path>
+                            <path d="M14 10v9"></path>
+                            <path d="M18 10v9"></path>
+                            <path d="M4 19h16"></path>
+                          </svg>
+                        </span>
+                        {{ item.fundingBody }}
+                      </span>
                     {%- endif -%}
+
                     {%- if item.amount and item.amount != "" -%}
-                      <span class="meta-pill meta-pill--amount">({{ item.amount }})</span>
+                      <span class="meta-text">
+                        <span class="meta-ico" aria-hidden="true">
+                          <!-- Dollar icon -->
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20"></path>
+                            <path d="M17 6.5c0-2-2.2-3.5-5-3.5S7 4.5 7 6.5 9.2 10 12 10s5 1.5 5 3.5S14.8 17 12 17s-5-1.5-5-3.5"></path>
+                          </svg>
+                        </span>
+                        ({{ item.amount }})
+                      </span>
                     {%- endif -%}
                   </div>
 
-                  <!-- Line 3: Year + URL -->
+                  <!-- Line 4: URL row -->
                   <div class="meta-row">
-                    {%- if item.year and item.year != "" -%}
-                      <span class="generic-year">{{ item.year }}</span>
-                    {%- endif -%}
-
                     {%- if item.url and item.url != "" -%}
                       <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
                     {%- endif -%}
@@ -184,12 +244,7 @@ sections -> subsections -> items
                     {%- endif -%}
                   </div>
 
-                  <!-- Optional issuer line (you asked "allow issuer") -->
-                  {%- if item.issuer and item.issuer != "" -%}
-                    <p class="info-card__desc"><b>{{ item.issuer }}</b></p>
-                  {%- endif -%}
-
-                  <!-- Line 4: Description -->
+                  <!-- Description -->
                   {%- if item.description and item.description != "" -%}
                     <p class="info-card__desc">{{ item.description }}</p>
                   {%- endif -%}
@@ -209,7 +264,16 @@ sections -> subsections -> items
                       {%- for r in role_list -%}
                         {%- assign rr = r | strip -%}
                         {%- if rr != "" -%}
-                          <span class="meta-pill">{{ rr }}</span>
+                          <span class="meta-pill meta-pill--role">
+                            <span class="pill-ico" aria-hidden="true">
+                              <!-- Person/role icon -->
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21a8 8 0 0 0-16 0"></path>
+                                <circle cx="12" cy="8" r="4"></circle>
+                              </svg>
+                            </span>
+                            {{ rr }}
+                          </span>
                         {%- endif -%}
                       {%- endfor -%}
                     </div>

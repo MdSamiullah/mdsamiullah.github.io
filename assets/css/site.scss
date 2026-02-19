@@ -692,46 +692,84 @@ a{ color: inherit; }
 /* (does not change existing rules) */
 /* =============================== */
 
-/* Meta rows inside portfolio cards */
-.info-card--portfolio .meta-row{
-  margin-top: 8px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
+/* =============================== */
+/* Portfolio (icons + right pills) */
+/* =============================== */
+
+.info-card--portfolio{
+  .portfolio-top{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    &__left{
+      min-width: 0;
+    }
+
+    &__right{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+    }
+  }
+
+  .portfolio-issuer{
+    font-weight: 900;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .meta-row{
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .pill-ico,
+  .meta-ico{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+    opacity: .9;
+  }
 }
 
-/* Pills (safe global; used only where applied in markup) */
-.meta-pill{
-  display: inline-flex;
-  align-items: center;
-  padding: 5px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(17,24,39,.12);
+/* Year pill variant */
+.meta-pill--year{
   background: rgba(17,24,39,.06);
-  color: var(--text);
-  font-weight: 900;
-  font-size: 12.5px;
-  line-height: 1;
-  white-space: nowrap;
 }
 
+/* Collaboration pill a touch “team-ish” */
+.meta-pill--collab{
+  background: rgba(37,99,235,.10);
+}
+
+/* Status pill already exists; keep your existing var if present */
 .meta-pill--status{
   background: rgba(124,58,237,.10);
 }
 
-.meta-pill--amount{
-  background: rgba(37,99,235,.10);
+/* Roles pill */
+.meta-pill--role{
+  background: rgba(37,99,235,.08);
 }
 
-.meta-pill--kw{
-  background: rgba(17,24,39,.04);
-}
-
-.info-card--portfolio .generic-year{
+/* Funding/amount text style (not pills) */
+.info-card--portfolio .meta-text{
+  display: inline-flex;
+  align-items: center;
   font-weight: 900;
   color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1;
 }
+
 
 /* Certificates layout */
 .info-card--cert{
