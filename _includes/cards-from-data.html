@@ -57,12 +57,23 @@ sections -> subsections -> items
                     {%- if item.role and item.role != "" -%}
                       <span class="mentor-role">{{ item.role }}</span>
                     {%- endif -%}
-                    
+
                     {%- if item.name and item.name != "" -%}
                       <span class="mentor-name">{{ item.name }}</span>
                     {%- endif -%}
+
                     {%- if item.year and item.year != "" -%}
-                      <span class="mentor-year">({{ item.year }})</span>
+                      <span class="meta-pill meta-pill--year">
+                        <span class="pill-ico" aria-hidden="true">
+                          <!-- Calendar -->
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 2v3M16 2v3"></path>
+                            <path d="M3 8h18"></path>
+                            <path d="M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
+                          </svg>
+                        </span>
+                        {{ item.year }}
+                      </span>
                     {%- endif -%}
 
                     {%- if item.url and item.url != "" -%}
@@ -90,9 +101,21 @@ sections -> subsections -> items
                       {%- if item.code and item.code != "" -%}
                         <span class="teach-code">{{ item.code }}</span>
                       {%- endif -%}
+
                       {%- if item.year and item.year != "" -%}
-                        <span class="teach-year">({{ item.year }})</span>
+                        <span class="meta-pill meta-pill--year">
+                          <span class="pill-ico" aria-hidden="true">
+                            <!-- Calendar -->
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M8 2v3M16 2v3"></path>
+                              <path d="M3 8h18"></path>
+                              <path d="M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
+                            </svg>
+                          </span>
+                          {{ item.year }}
+                        </span>
                       {%- endif -%}
+
                       {%- if item.role and item.role != "" -%}
                         <span class="teach-role">{{ item.role }}</span>
                       {%- endif -%}
@@ -130,50 +153,42 @@ sections -> subsections -> items
 
               {%- elsif include.datafile == "portfolio" -%}
                 <!-- =================== -->
-                <!-- Portfolio card format (custom) -->
-                <!-- Title -->
-                <!-- Status + Year pills (right) -->
-                <!-- Collaboration pill (with icon), FundingBody + Amount text (with icons) -->
-                <!-- Year + URL -->
+                <!-- Portfolio (custom) -->
+                <!-- Title + (Status, Year) SAME ROW, right aligned -->
+                <!-- Collaboration pill (team/users icon) -->
+                <!-- Funding body + amount (as text w/icons) -->
+                <!-- Links row -->
                 <!-- Description -->
-                <!-- Roles capsules (with icon) -->
-                <!-- Keywords capsules -->
+                <!-- Roles pills (icon) -->
+                <!-- Keywords pills -->
                 <!-- =================== -->
                 <article class="info-card info-card--portfolio">
 
-                  <!-- Line 1: Title -->
-                  <h4 class="info-card__title">
-                    {%- if item.title and item.title != "" -%}
-                      <b>{{ item.title }}</b>
-                    {%- elsif item.name and item.name != "" -%}
-                      <b>{{ item.name }}</b>
-                    {%- else -%}
-                      <b>Untitled Project</b>
-                    {%- endif -%}
-                  </h4>
-
-                  <!-- Line 2: top meta row (Status + Year pills right-aligned) -->
-                  <div class="portfolio-top">
-                    <div class="portfolio-top__left">
-                      {%- if item.issuer and item.issuer != "" -%}
-                        <span class="portfolio-issuer">{{ item.issuer }}</span>
+                  <!-- Header row: Title left, pills right -->
+                  <div class="portfolio-head">
+                    <h4 class="info-card__title portfolio-title">
+                      {%- if item.title and item.title != "" -%}
+                        <b>{{ item.title }}</b>
+                      {%- elsif item.name and item.name != "" -%}
+                        <b>{{ item.name }}</b>
+                      {%- else -%}
+                        <b>Untitled Project</b>
                       {%- endif -%}
-                    </div>
+                    </h4>
 
-                    <div class="portfolio-top__right">
+                    <div class="portfolio-head__right">
                       {%- if item.status and item.status != "" -%}
-                        <span class="meta-pill meta-pill--status">
-                          {{ item.status }}
-                        </span>
+                        <span class="meta-pill meta-pill--status">{{ item.status }}</span>
                       {%- endif -%}
 
                       {%- if item.year and item.year != "" -%}
                         <span class="meta-pill meta-pill--year">
-                          <!-- Graduation hat icon -->
                           <span class="pill-ico" aria-hidden="true">
+                            <!-- Calendar -->
                             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                              <path d="M22 10L12 5 2 10l10 5 10-5z"></path>
-                              <path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"></path>
+                              <path d="M8 2v3M16 2v3"></path>
+                              <path d="M3 8h18"></path>
+                              <path d="M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
                             </svg>
                           </span>
                           {{ item.year }}
@@ -182,17 +197,20 @@ sections -> subsections -> items
                     </div>
                   </div>
 
-                  <!-- Line 3: Collaboration (pill + handshake icon), Funding body & amount (plain text + icons) -->
+                  {%- if item.issuer and item.issuer != "" -%}
+                    <div class="portfolio-issuer">{{ item.issuer }}</div>
+                  {%- endif -%}
+
+                  <!-- Collaboration + funding body + amount -->
                   <div class="meta-row">
                     {%- if item.collaboration and item.collaboration != "" -%}
                       <span class="meta-pill meta-pill--collab">
                         <span class="pill-ico" aria-hidden="true">
-                          <!-- Handshake icon -->
+                          <!-- Team / users icon -->
                           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M7 12l2 2c1.2 1.2 3.1 1.2 4.3 0l5.2-5.2"></path>
-                            <path d="M16 7l2 2"></path>
-                            <path d="M2 12l5-5 5 5"></path>
-                            <path d="M22 12l-4-4"></path>
+                            <path d="M16 11a4 4 0 1 0-8 0"></path>
+                            <path d="M3 21a7 7 0 0 1 14 0"></path>
+                            <path d="M17 14a4 4 0 1 1 4 3"></path>
                           </svg>
                         </span>
                         {{ item.collaboration }}
@@ -202,7 +220,7 @@ sections -> subsections -> items
                     {%- if item.fundingBody and item.fundingBody != "" -%}
                       <span class="meta-text">
                         <span class="meta-ico" aria-hidden="true">
-                          <!-- Bank icon -->
+                          <!-- Bank -->
                           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 10h18"></path>
                             <path d="M4 10V7l8-4 8 4v3"></path>
@@ -220,18 +238,18 @@ sections -> subsections -> items
                     {%- if item.amount and item.amount != "" -%}
                       <span class="meta-text">
                         <span class="meta-ico" aria-hidden="true">
-                          <!-- Dollar icon -->
+                          <!-- Dollar -->
                           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 2v20"></path>
                             <path d="M17 6.5c0-2-2.2-3.5-5-3.5S7 4.5 7 6.5 9.2 10 12 10s5 1.5 5 3.5S14.8 17 12 17s-5-1.5-5-3.5"></path>
                           </svg>
                         </span>
-                        ({{ item.amount }})
+                        {{ item.amount }}
                       </span>
                     {%- endif -%}
                   </div>
 
-                  <!-- Line 4: URL row -->
+                  <!-- Links -->
                   <div class="meta-row">
                     {%- if item.url and item.url != "" -%}
                       <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
@@ -249,7 +267,7 @@ sections -> subsections -> items
                     <p class="info-card__desc">{{ item.description }}</p>
                   {%- endif -%}
 
-                  <!-- Roles: support roles as list OR Role as string -->
+                  <!-- Roles: list OR Role string -->
                   {%- assign role_list = nil -%}
                   {%- if item.roles and item.roles.size > 0 -%}
                     {%- assign role_list = item.roles -%}
@@ -266,7 +284,7 @@ sections -> subsections -> items
                         {%- if rr != "" -%}
                           <span class="meta-pill meta-pill--role">
                             <span class="pill-ico" aria-hidden="true">
-                              <!-- Person/role icon -->
+                              <!-- Role/person icon -->
                               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M20 21a8 8 0 0 0-16 0"></path>
                                 <circle cx="12" cy="8" r="4"></circle>
@@ -279,7 +297,7 @@ sections -> subsections -> items
                     </div>
                   {%- endif -%}
 
-                  <!-- Keywords: support keywords as list OR "a; b; c" string -->
+                  <!-- Keywords: list OR "a; b; c" string -->
                   {%- assign kw_list = nil -%}
                   {%- if item.keywords and item.keywords.size > 0 -%}
                     {%- assign kw_list = item.keywords -%}
@@ -305,9 +323,8 @@ sections -> subsections -> items
               {%- elsif include.datafile == "certificates" -%}
                 <!-- ====================== -->
                 <!-- Certificates card format -->
-                <!-- Title + Year pill -->
-                <!-- Hat icon + Issuer -->
-                <!-- Description -->
+                <!-- Title + Year pill (calendar icon) -->
+                <!-- Issuer -->
                 <!-- ====================== -->
                 <article class="info-card info-card--cert">
 
@@ -321,18 +338,22 @@ sections -> subsections -> items
                     </h4>
 
                     {%- if item.year and item.year != "" -%}
-                      <span class="meta-pill cert-year">{{ item.year }}</span>
+                      <span class="meta-pill cert-year meta-pill--year">
+                        <span class="pill-ico" aria-hidden="true">
+                          <!-- Calendar -->
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 2v3M16 2v3"></path>
+                            <path d="M3 8h18"></path>
+                            <path d="M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
+                          </svg>
+                        </span>
+                        {{ item.year }}
+                      </span>
                     {%- endif -%}
                   </div>
 
                   {%- if item.issuer and item.issuer != "" -%}
                     <div class="cert-issuer">
-                      <span class="cert-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M22 10L12 5 2 10l10 5 10-5z"/>
-                          <path d="M6 12v5c0 .6 2.7 2 6 2s6-1.4 6-2v-5"/>
-                        </svg>
-                      </span>
                       <span class="cert-issuer-text">
                         {%- if item.url and item.url != "" -%}
                           <a href="{{ item.url }}" target="_blank" rel="noreferrer">{{ item.issuer }}</a>

@@ -48,19 +48,6 @@ a{ color: inherit; }
 }
 
 .topbar{
-  // max-width: var(--max);
-  // margin: 14px auto 0;
-  // padding: 12px 16px;
-  // display: flex;
-  // gap: 12px;
-  // align-items: center;
-  // justify-content: space-between;
-  // border: 1px solid var(--line);
-  // border-radius: 999px;
-  // background: rgba(255,255,255,.75);
-  // backdrop-filter: blur(10px);
-  // box-shadow: var(--shadow);
-
   max-width: var(--max);
   margin: 14px auto 0;
   padding: 12px 16px;
@@ -75,8 +62,8 @@ a{ color: inherit; }
   box-shadow: var(--shadow);
 
   position: sticky;
-  top: 10px;          /* space from top */
-  z-index: 1000;      /* stay above content */
+  top: 10px;
+  z-index: 1000;
 
   .brand{
     text-decoration: none;
@@ -476,9 +463,6 @@ a{ color: inherit; }
 .section-title{ margin: 0 0 8px; font-size: 20px; font-weight: 900; }
 .subsection-title{ margin: 12px 0 8px; font-size: 16px; font-weight: 800; color: var(--muted); }
 
-/* Disable per-section scrolling (safe no-op if older markup still has cards-scroll) */
-// .cards-scroll{ max-height: none; overflow: visible; padding-right: 0; margin-top: 0; }
-
 .cards-scroll{
   max-height: 70vh;
   overflow: auto;
@@ -490,7 +474,6 @@ a{ color: inherit; }
   &::-webkit-scrollbar-track{ background: transparent; }
 }
 
-/* One scroll container per page (not per section) */
 .page-scroll{
   max-height: 75vh;
   overflow: auto;
@@ -502,7 +485,6 @@ a{ color: inherit; }
   &::-webkit-scrollbar-track{ background: transparent; }
 }
 
-/* 1 card per row */
 .cards-grid{
   display: grid;
   grid-template-columns: 1fr;
@@ -524,6 +506,29 @@ a{ color: inherit; }
     background: rgba(37,99,235,.08);
     border-color: rgba(37,99,235,.25);
   }
+}
+
+/* ✅ NEW: base pill (used for year/status/collab/roles/keywords) */
+.meta-pill{
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(17,24,39,.12);
+  background: rgba(17,24,39,.06);
+  color: var(--text);
+  font-weight: 900;
+  font-size: 12.5px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.pill-ico, .meta-ico{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-right: 6px;
+  opacity: .9;
 }
 
 /* Base card typography */
@@ -575,18 +580,13 @@ a{ color: inherit; }
     display:flex;
     align-items:baseline;
     gap: 8px;
+    flex-wrap: wrap;
   }
 
   .teach-code{
     font-weight: 900;
     color: var(--accent);
     font-size: 14px;
-  }
-
-  .teach-year{
-    font-weight: 900;
-    color: var(--muted);
-    font-size: 13px;
   }
 
   .teach-role{
@@ -599,9 +599,7 @@ a{ color: inherit; }
     font-size: 14px;
     line-height: 1;
     white-space: nowrap;
-
   }
-  
 }
 
 /* Mentoring format */
@@ -619,7 +617,6 @@ a{ color: inherit; }
     font-size: 13.5px;
   }
 
-  // .mentor-role{ font-weight: 900; color: var(--accent); }
   .mentor-role{
     display: inline-flex;
     align-items: center;
@@ -633,9 +630,7 @@ a{ color: inherit; }
     line-height: 1;
     white-space: nowrap;
   }
-  .mentor-sep{ font-weight: 900; color: var(--muted); }
   .mentor-name{ font-weight: 800; }
-  .mentor-year{ font-weight: 900; color: var(--muted); }
 }
 
 /* Certificates layout */
@@ -652,28 +647,12 @@ a{ color: inherit; }
   gap: 10px;
 }
 
-.info-card--cert .cert-year{
-  background: rgba(17,24,39,.06); /* matches your pill style */
-}
-
 .info-card--cert .cert-issuer{
   display: flex;
   align-items: center;
   gap: 10px;
   color: var(--muted);
   font-weight: 800;
-}
-
-.info-card--cert .cert-icon{
-  width: 28px;
-  height: 28px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  border: 1px solid rgba(17,24,39,.12);
-  background: rgba(37,99,235,.08);
-  color: var(--text);
 }
 
 .info-card--cert .cert-issuer-text a{
@@ -686,34 +665,33 @@ a{ color: inherit; }
   text-decoration: underline;
 }
 
-
 /* =============================== */
-/* Added: Portfolio meta rows/pills */
-/* (does not change existing rules) */
+/* Portfolio: title row + pills */
 /* =============================== */
-
-/* =============================== */
-/* Portfolio (icons + right pills) */
-/* =============================== */
-
 .info-card--portfolio{
-  .portfolio-top{
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .portfolio-head{
+    display:flex;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 10px;
+  }
 
-    &__left{
-      min-width: 0;
-    }
+  .portfolio-title{
+    min-width: 0;
+    margin: 0;
+  }
 
-    &__right{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-left: auto;
-    }
+  .portfolio-head__right{
+    display:inline-flex;
+    align-items:center;
+    gap: 8px;
+    margin-left:auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   .portfolio-issuer{
@@ -723,102 +701,28 @@ a{ color: inherit; }
   }
 
   .meta-row{
-    margin-top: 8px;
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
     gap: 8px;
     align-items: center;
   }
 
-  .pill-ico,
-  .meta-ico{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 6px;
-    opacity: .9;
+  .meta-text{
+    display:inline-flex;
+    align-items:center;
+    font-weight: 900;
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1;
   }
 }
 
-/* Year pill variant */
-.meta-pill--year{
-  background: rgba(17,24,39,.06);
-}
-
-/* Collaboration pill a touch “team-ish” */
-.meta-pill--collab{
-  background: rgba(37,99,235,.10);
-}
-
-/* Status pill already exists; keep your existing var if present */
-.meta-pill--status{
-  background: rgba(124,58,237,.10);
-}
-
-/* Roles pill */
-.meta-pill--role{
-  background: rgba(37,99,235,.08);
-}
-
-/* Funding/amount text style (not pills) */
-.info-card--portfolio .meta-text{
-  display: inline-flex;
-  align-items: center;
-  font-weight: 900;
-  color: var(--muted);
-  font-size: 12.5px;
-  line-height: 1;
-}
-
-
-/* Certificates layout */
-.info-card--cert{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.info-card--cert .cert-top{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.info-card--cert .cert-year{
-  background: rgba(17,24,39,.06); /* matches your pill style */
-}
-
-.info-card--cert .cert-issuer{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--muted);
-  font-weight: 800;
-}
-
-.info-card--cert .cert-icon{
-  width: 28px;
-  height: 28px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  border: 1px solid rgba(17,24,39,.12);
-  background: rgba(37,99,235,.08);
-  color: var(--text);
-}
-
-.info-card--cert .cert-issuer-text a{
-  color: var(--accent);
-  font-weight: 900;
-  text-decoration: none;
-}
-
-.info-card--cert .cert-issuer-text a:hover{
-  text-decoration: underline;
-}
-
+/* Pill variants */
+.meta-pill--year{ background: rgba(17,24,39,.06); }
+.meta-pill--status{ background: rgba(124,58,237,.10); }
+.meta-pill--collab{ background: rgba(37,99,235,.10); }
+.meta-pill--role{ background: rgba(37,99,235,.08); }
+.meta-pill--kw{ background: rgba(17,24,39,.06); }
 
 /* Footer */
 .footer{
