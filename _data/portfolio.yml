@@ -8,8 +8,8 @@ sections:
             year: 2022
             collaboration: "Monash University"
             description: "Developing a BN model to effectively detecting vaccine safety signals in a timely manner."
-            # fundingBody: "Don't know"
-            # amount: "$50000"
+            fundingBody: "Don't know"
+            amount: "$50000"
             status: "Ongoing"
             # url: "https://coursera.org/share/..."
             Role: Researcher Officer
