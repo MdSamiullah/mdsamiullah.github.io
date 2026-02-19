@@ -1,11 +1,10 @@
 # _data/certificates.yml
 sections:
-  - title: "Murdocu Children Research Institute (MCRI)"
+  - title: "Murdoch Children's Research Institute (MCRI)"
     subsections:
       - title: "Projects"
         items:
           - title: "Vaccine Safety BN"
-            issuer: "Coursera / Andrew Ng"
             year: 2021
             collaboration: "Monash University"
             description: "This is all habijabi stuffs don't know what to do hulukulu"
