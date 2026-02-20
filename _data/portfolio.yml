@@ -184,7 +184,7 @@ sections:
         items:
           - title: "Somadha"
             collaboration: "Crantech UK"
-            Role: Project Manager, CEO
+            Role: "Project Manager, CEO"
             year: 2020
             description: "Digital marketplace for Bangladeshi freelancers."
             status: "Ongoing"
