@@ -38,7 +38,7 @@ sections:
       - title: "Projects"
         items:
           - title: "Western Grassland Reserve Project Reengineering"
-            collaboration: "DELWP", "Bayesian Intelligence"
+            collaboration: [DELWP, Bayesian Intelligence]
             Role: "Research Assistant" 
             description: "Re-engineering a Dynamic BN for restoring western Melbourne grassland reserve."
             year: 2017-2020
@@ -56,7 +56,7 @@ sections:
             fundingBody: ""
             amount: ""
           - title: "iOOBN software development"
-            Role: "Research", "Development"
+            Role: [Research, Development]
             year: 2016-2020
             collaboration: ""
             description: "Developing a software, iOOBN, to model Object-Oriented Bayesian Network."
@@ -64,7 +64,7 @@ sections:
             fundingBody: ""
             amount: ""
           - title: "BN Model for PROTIC"
-            Role: "Research", "Development"
+            Role: [Research, Development]
             year: 2016-2017
             collaboration: ""
             description: "Developing a model to support the goal of PROTIC to help rural people of Bangladesh through recommendation in farming."
@@ -77,7 +77,7 @@ sections:
       - title: "Projects"
         items:
           - title: "Trustworthy AI"
-            Role: "Research", "Development"
+            Role: [Research, Development]
             year: "2024"
             collaboration: "University of Sydney"
             description: "Developing a trustworthy AI tool for healthcare workers in taking care of emergency department patients."
@@ -90,7 +90,7 @@ sections:
       - title: "Roles"
         items:
           - title: "Curriculum and Syllabus Design"
-            Role: "Consultant", "Executive"
+            Role: [Consultant, Executive]
             year: 2014-2015
             collaboration: ""
             description: "Developing the curriculum and syllabus of Computer Science and Engineering undergraduate program for the Open University Bangladesh"
@@ -99,7 +99,7 @@ sections:
             amount: ""
             url: ""
           - title: "MS Open Credit System"
-            Role: "Consultant", "Executive"
+            Role: [Consultant, Executive]
             year: 2013-2015
             collaboration: ""
             description: "Developing the curriculum rules, regulations and protocols of Computer Science and Engineering Open credit MS program for the University o Dhaka"
@@ -112,15 +112,15 @@ sections:
           - title: "DrAi: Artificial Intelligence and Pattern Recognition Driven Assistant for Providing Effective Treatment"
             fundingBody: "Department of ICT, Ministry of Information and communication technology"
             amount: "A$10000"
-            Role: "Principal Investigator", "Research", "Development"
+            Role: [Principal Investigator, Research, Development]
             year: 2016-2020
             url: ""
-            collaboration: "Dhaka Medical College"
+            collaboration: [Dhaka Medical College]
             description: "Developing a digital assistance for health practitioners of Bangladesh for effective treatment of patients."
             status: ""
-          - title: "“Geo-spatial transfer learning based rumour-spreading trend analysis to detect fake news about COVID-19 and on the effects of its vaccines"
-            collaboration: "Curtin University"
-            Role: "Co-Investigator"
+          - title: "Geo-spatial transfer learning based rumour-spreading trend analysis to detect fake news about COVID-19 and on the effects of its vaccines"
+            collaboration: [Curtin University]
+            Role: [Co-Investigator]
             year: 2020-2021
             description: "Research and development of a fake news detection system."
             status: ""
@@ -135,8 +135,8 @@ sections:
           #   fundingBody: ""
           #   amount: ""
           - title: "Data Driven Intelligent Assistant for Medical Practitioners"
-            collaboration: "Dhaka Medical College"
-            Role: "Principal Investigator"
+            collaboration: [Dhaka Medical College]
+            Role: [Principal Investigator]
             year: 2021-2022
             description: "Developing a data driven intelligent system for health practitioners of Bangladesh for effective treatment of patients."
             status: ""
@@ -144,7 +144,7 @@ sections:
             amount: "A$5000"
           - title: "Central Admission System"
             collaboration: ""
-            Role: "Consultant", "R&D"
+            Role: [Consultant, R&D]
             year: 2021-2022
             description: "A digital web platform for managing admission system for undergraduate students from the whole country for the university of Dhaka with secured payment system."
             status: ""
@@ -152,7 +152,7 @@ sections:
             amount: ""
           - title: "Accounting Information System"
             collaboration: "An automated digital system for accounting management system for the complex manual payment and finance system of the university of Dhaka."
-            Role: "Consultant"
+            Role: [Consultant]
             year: 2013-2015
             description: ""
             status: ""
@@ -160,7 +160,7 @@ sections:
             amount: ""
           - title: "Titas Gas Digitalization Capability Testing Project"
             collaboration: ""
-            Role: "Consultant"
+            Role: [Consultant]
             year: "2015"
             description: ""
             status: ""
@@ -172,7 +172,7 @@ sections:
         items:
           - title: "IEB Accreditation Project"
             collaboration: ""
-            Role: "Consultant", "Executie member"
+            Role: [Consultant, Executie member]
             year: "2012"
             description: "Team member for IEB accreditation for the Department of Computer Science of Daffodil International University."
             status: ""
@@ -184,7 +184,7 @@ sections:
         items:
           - title: "Somadha"
             collaboration: "Crantech UK"
-            Role: "Project Manager", "CEO"
+            Role: [Project Manager, CEO]
             year: 2020
             description: "Digital marketplace for Bangladeshi freelancers."
             status: "Ongoing"
@@ -193,7 +193,7 @@ sections:
             url: 
           - title: "Sobar Daktar"
             collaboration: "Crantech UK"
-            Role: "Project Manager", "CEO"
+            Role: [Project Manager, CEO]
             year: 2020
             description: "AI powered Telemedicine app for Bangladesh."
             status: "Ongoing"
