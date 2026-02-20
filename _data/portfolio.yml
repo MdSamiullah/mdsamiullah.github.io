@@ -8,15 +8,14 @@ sections:
             year: 2022
             collaboration: "Monash University"
             description: "Developing a BN model to effectively detecting vaccine safety signals in a timely manner."
-            fundingBody: "Don't know"
-            amount: "$50000"
             status: "Ongoing"
             # url: "https://coursera.org/share/..."
             Role: Researcher Officer
             Keywords: Vaccine; Reaction; Statistical; Bayesian Network
-          - title: "GVDN Rapid Cycle analysis"
+          - title: "Global Vaccine Data Network Rapid Cycle analysis"
             # issuer: "Coursera / Andrew Ng"
-            collaboration: Global Vaccine Data Network (GVDN)
+            description: ""
+            collaboration: "University of Auckland"
             year: 2023-2024
             # url: "https://coursera.org/share/..."
   - title: "Monash University"
@@ -24,56 +23,64 @@ sections:
       - title: "Roles"
         items:
           - title: "Academic Integrity Committee"
-            issuer: "HAHAHA 2026"
-            year: 2026
+            Role: Integrity Officer
+            description: ""
+            year: 2018-2020
             url: ""
       - title: "Projects"
         items:
-          - title: "Western Grassland Reserve Reengineering"
-            issuer: "HAHAHA 2026"
-            year: 2026
+          - title: "Western Grassland Reserve Project Reengineering"
+            collaboration: ["DELWP", "Bayesian Intelligence"]
+            Role: "Research Assistant" 
+            description: ""
+            year: 2017-2020
             url: ""
           - title: "Unit Marking Breakdown Summary Automation"
-            issuer: "HAHAHA 2026"
-            year: 2026
-            url: ""
-          - title: "BARD Project"
-            issuer: "HAHAHA 2026"
-            year: 2026
+            Role: "Developer"
+            description: ""
+            year: 2019
             url: ""
           - title: "iOOBN software development"
-            issuer: "HAHAHA 2026"
-            year: 2026
+            Role: ["Research", "Development"]
+            year: 2016-2020
+            description: ""
             url: ""
           - title: "BN Model for PROTIC"
-            issuer: "HAHAHA 2026"
-            year: 2026
+            Role: ["Research", "Development"]
+            year: 2016-2020
+            description: ""
             url: ""
   - title: "Bayesian Intelligence"
     subsections:
       - title: "Projects"
         items:
           - title: "Trustworthy AI"
-            issuer: "HAHAHA 2026"
-            year: 2026
+            Role: ["Research", "Development"]
+            year: 2016-2020
+            description: ""
             url: ""
   - title: "University of Dhaka"
     subsections:
       - title: "Roles"
         items:
           - title: "Curriculum and Syllabus Design"
-            issuer: "HAHAHA 2026"
-            year: 2026
+            Role: ["Research", "Development"]
+            year: 2016-2020
+            description: ""
             url: ""
           - title: "MS Open Credit System"
-            issuer: "HAHAHA 2026"
-            year: 2026
+            Role: ["Research", "Development"]
+            year: 2016-2020
+            description: ""
             url: ""
       - title: "Projects"
         items:
           - title: "DrAi: Artificial Intelligence and Pattern Recognition Driven Assistant for Providing Effective Treatment"
-            issuer: "HAHAHA 2026"
-            year: 2026
+            fundingBody: "Department of ICT, Ministry of Information and communication technology"
+            amount: "$10000"
+            Role: ["Research", "Development"]
+            year: 2016-2020
+            description: ""
             url: ""
           - title: "COVID-19 Digital Grants from Australian Academy of Science for “Geo-spatial transfer learning based rumour-spreading trend analysis to detect fake news about COVID-19 and on the effects of its vaccines"
             issuer: "HAHAHA 2026"
