@@ -1,202 +1,202 @@
 # _data/certificates.yml
 sections:
-  - title: Murdoch Children's Research Institute (MCRI)
+  - title: "Murdoch Children's Research Institute (MCRI)"
     subsections:
-      - title: Projects
+      - title: "Projects"
         items:
-          - title: Vaccine Safety BN
+          - title: "Vaccine Safety BN"
             year: 2022
-            collaboration: Monash University
-            description: Developing a BN model to effectively detecting vaccine safety signals in a timely manner.
-            status: Ongoing
-            # url: https://coursera.org/share/...
+            collaboration: "Monash University"
+            description: "Developing a BN model to effectively detecting vaccine safety signals in a timely manner."
+            status: "Ongoing"
+            # url: "https://coursera.org/share/..."
             Role: Researcher Officer
             Keywords: Vaccine; Reaction; Statistical; Bayesian Network
-          - title: Global Vaccine Data Network Rapid Cycle analysis
-            # issuer: Coursera / Andrew Ng
-            collaboration: University of Auckland
-            Role: Research Officer
-            description: Developing Rapid Cycle Analysis for vaccine safety using world-wide data
+          - title: "Global Vaccine Data Network Rapid Cycle analysis"
+            # issuer: "Coursera / Andrew Ng"
+            collaboration: "University of Auckland"
+            Role: "Research Officer"
+            description: "Developing Rapid Cycle Analysis for vaccine safety using world-wide data"
             year: 2023-2024
-            status: 
-            fundingBody: GVDN
-            amount: 
-            # url: https://coursera.org/share/...
-  - title: Monash University
+            status: ""
+            fundingBody: "GVDN"
+            amount: ""
+            # url: "https://coursera.org/share/..."
+  - title: "Monash University"
     subsections:
-      - title: Roles
+      - title: "Roles"
         items:
-          - title: Academic Integrity Committee
+          - title: "Academic Integrity Committee"
             Role: Integrity Officer
-            description: Conducting investigation of academic integrity violation.
+            description: "Conducting investigation of academic integrity violation."
             year: 2018-2020
-            url: 
-            collaboration: 
-            status: 
-            fundingBody: 
-            amount: 
-      - title: Projects
+            url: ""
+            collaboration: ""
+            status: ""
+            fundingBody: ""
+            amount: ""
+      - title: "Projects"
         items:
-          - title: Western Grassland Reserve Project Reengineering
-            collaboration: DELWP, Bayesian Intelligence
-            Role: Research Assistant 
-            description: Re-engineering a Dynamic BN for restoring western Melbourne grassland reserve.
+          - title: "Western Grassland Reserve Project Reengineering"
+            collaboration: "DELWP", "Bayesian Intelligence"
+            Role: "Research Assistant" 
+            description: "Re-engineering a Dynamic BN for restoring western Melbourne grassland reserve."
             year: 2017-2020
-            url: 
-            status: 
-            fundingBody: 
-            amount: 
-          - title: Unit Marking Breakdown Summary Automation
-            Role: Developer
-            description: Developing an automated system for marking breakdown summary of units taught in FIT, Monash University.
+            url: ""
+            status: ""
+            fundingBody: ""
+            amount: ""
+          - title: "Unit Marking Breakdown Summary Automation"
+            Role: "Developer"
+            description: "Developing an automated system for marking breakdown summary of units taught in FIT, Monash University."
             year: 2018-2019
-            url: 
-            collaboration: 
-            status: 
-            fundingBody: 
-            amount: 
-          - title: iOOBN software development
-            Role: Research, Development
+            url: ""
+            collaboration: ""
+            status: ""
+            fundingBody: ""
+            amount: ""
+          - title: "iOOBN software development"
+            Role: "Research", "Development"
             year: 2016-2020
-            collaboration: 
-            description: Developing a software, iOOBN, to model Object-Oriented Bayesian Network.
-            status: 
-            fundingBody: 
-            amount: 
-          - title: BN Model for PROTIC
-            Role: Research, Development
+            collaboration: ""
+            description: "Developing a software, iOOBN, to model Object-Oriented Bayesian Network."
+            status: ""
+            fundingBody: ""
+            amount: ""
+          - title: "BN Model for PROTIC"
+            Role: "Research", "Development"
             year: 2016-2017
-            collaboration: 
-            description: Developing a model to support the goal of PROTIC to help rural people of Bangladesh through recommendation in farming.
-            status: 
-            fundingBody: 
-            amount: 
-            url: 
-  - title: Bayesian Intelligence
+            collaboration: ""
+            description: "Developing a model to support the goal of PROTIC to help rural people of Bangladesh through recommendation in farming."
+            status: ""
+            fundingBody: ""
+            amount: ""
+            url: ""
+  - title: "Bayesian Intelligence"
     subsections:
-      - title: Projects
+      - title: "Projects"
         items:
-          - title: Trustworthy AI
-            Role: Research, Development
-            year: 2024
-            collaboration: University of Sydney
-            description: Developing a trustworthy AI tool for healthcare workers in taking care of emergency department patients.
-            status: Ongoing
-            fundingBody: 
-            amount: 
-            url: 
-  - title: University of Dhaka
+          - title: "Trustworthy AI"
+            Role: "Research", "Development"
+            year: "2024"
+            collaboration: "University of Sydney"
+            description: "Developing a trustworthy AI tool for healthcare workers in taking care of emergency department patients."
+            status: "Ongoing"
+            fundingBody: ""
+            amount: ""
+            url: ""
+  - title: "University of Dhaka"
     subsections:
-      - title: Roles
+      - title: "Roles"
         items:
-          - title: Curriculum and Syllabus Design
-            Role: Consultant, Executive
+          - title: "Curriculum and Syllabus Design"
+            Role: "Consultant", "Executive"
             year: 2014-2015
-            collaboration: 
-            description: Developing the curriculum and syllabus of Computer Science and Engineering undergraduate program for the Open University Bangladesh
-            status: 
-            fundingBody: 
-            amount: 
-            url: 
-          - title: MS Open Credit System
-            Role: Consultant, Executive
+            collaboration: ""
+            description: "Developing the curriculum and syllabus of Computer Science and Engineering undergraduate program for the Open University Bangladesh"
+            status: ""
+            fundingBody: ""
+            amount: ""
+            url: ""
+          - title: "MS Open Credit System"
+            Role: "Consultant", "Executive"
             year: 2013-2015
-            collaboration: 
-            description: Developing the curriculum rules, regulations and protocols of Computer Science and Engineering Open credit MS program for the University o Dhaka
-            status: 
-            fundingBody: 
-            amount: 
-            url: 
-      - title: Projects
+            collaboration: ""
+            description: "Developing the curriculum rules, regulations and protocols of Computer Science and Engineering Open credit MS program for the University o Dhaka"
+            status: ""
+            fundingBody: ""
+            amount: ""
+            url: ""
+      - title: "Projects"
         items:
-          - title: DrAi: Artificial Intelligence and Pattern Recognition Driven Assistant for Providing Effective Treatment
-            fundingBody: Department of ICT, Ministry of Information and communication technology
-            amount: A$10000
-            Role: Principal Investigator, Research, Development
+          - title: "DrAi: Artificial Intelligence and Pattern Recognition Driven Assistant for Providing Effective Treatment"
+            fundingBody: "Department of ICT, Ministry of Information and communication technology"
+            amount: "A$10000"
+            Role: "Principal Investigator", "Research", "Development"
             year: 2016-2020
-            url: 
-            collaboration: Dhaka Medical College
-            description: Developing a digital assistance for health practitioners of Bangladesh for effective treatment of patients.
-            status: 
-          - title: “Geo-spatial transfer learning based rumour-spreading trend analysis to detect fake news about COVID-19 and on the effects of its vaccines
-            collaboration: Curtin University
-            Role: Co-Investigator
+            url: ""
+            collaboration: "Dhaka Medical College"
+            description: "Developing a digital assistance for health practitioners of Bangladesh for effective treatment of patients."
+            status: ""
+          - title: "“Geo-spatial transfer learning based rumour-spreading trend analysis to detect fake news about COVID-19 and on the effects of its vaccines"
+            collaboration: "Curtin University"
+            Role: "Co-Investigator"
             year: 2020-2021
-            description: Research and development of a fake news detection system.
-            status: 
-            fundingBody: COVID-19 Digital Grants from Australian Academy of Science
-            amount: A$10,000
-          # - title: Developing Efficient Technique to Detect False Facts Using Knowledge Graph and Bayesian Network Based Models
-          #   collaboration: 
+            description: "Research and development of a fake news detection system."
+            status: ""
+            fundingBody: "COVID-19 Digital Grants from Australian Academy of Science"
+            amount: "A$10,000"
+          # - title: "Developing Efficient Technique to Detect False Facts Using Knowledge Graph and Bayesian Network Based Models"
+          #   collaboration: ""
           #   Role: 
           #   year: 
-          #   description: 
-          #   status: 
-          #   fundingBody: 
-          #   amount: 
-          - title: Data Driven Intelligent Assistant for Medical Practitioners
-            collaboration: Dhaka Medical College
-            Role: Principal Investigator
+          #   description: ""
+          #   status: ""
+          #   fundingBody: ""
+          #   amount: ""
+          - title: "Data Driven Intelligent Assistant for Medical Practitioners"
+            collaboration: "Dhaka Medical College"
+            Role: "Principal Investigator"
             year: 2021-2022
-            description: Developing a data driven intelligent system for health practitioners of Bangladesh for effective treatment of patients.
-            status: 
-            fundingBody: Ministry of Science & Technology, Bangladesh
-            amount: A$5000
-          - title: Central Admission System
-            collaboration: 
-            Role: Consultant, R&D
+            description: "Developing a data driven intelligent system for health practitioners of Bangladesh for effective treatment of patients."
+            status: ""
+            fundingBody: "Ministry of Science & Technology, Bangladesh"
+            amount: "A$5000"
+          - title: "Central Admission System"
+            collaboration: ""
+            Role: "Consultant", "R&D"
             year: 2021-2022
-            description: A digital web platform for managing admission system for undergraduate students from the whole country for the university of Dhaka with secured payment system.
-            status: 
-            fundingBody: University of Dhaka
-            amount: 
-          - title: Accounting Information System
-            collaboration: An automated digital system for accounting management system for the complex manual payment and finance system of the university of Dhaka.
-            Role: Consultant
+            description: "A digital web platform for managing admission system for undergraduate students from the whole country for the university of Dhaka with secured payment system."
+            status: ""
+            fundingBody: "University of Dhaka"
+            amount: ""
+          - title: "Accounting Information System"
+            collaboration: "An automated digital system for accounting management system for the complex manual payment and finance system of the university of Dhaka."
+            Role: "Consultant"
             year: 2013-2015
-            description: 
-            status: 
-            fundingBody: University of Dhaka
-            amount: 
-          - title: Titas Gas Digitalization Capability Testing Project
-            collaboration: 
-            Role: Consultant
-            year: 2015
-            description: 
-            status: 
-            fundingBody: Tital Gas Bangladesh
-            amount: 
-  - title: Daffodil Internation University
+            description: ""
+            status: ""
+            fundingBody: "University of Dhaka"
+            amount: ""
+          - title: "Titas Gas Digitalization Capability Testing Project"
+            collaboration: ""
+            Role: "Consultant"
+            year: "2015"
+            description: ""
+            status: ""
+            fundingBody: "Tital Gas Bangladesh"
+            amount: ""
+  - title: "Daffodil Internation University"
     subsections:
-      - title: Projects
+      - title: "Projects"
         items:
-          - title: IEB Accreditation Project
-            collaboration: 
-            Role: Consultant, Executie member
-            year: 2012
-            description: Team member for IEB accreditation for the Department of Computer Science of Daffodil International University.
-            status: 
-            fundingBody: 
-            amount: 
-  - title: Startups
+          - title: "IEB Accreditation Project"
+            collaboration: ""
+            Role: "Consultant", "Executie member"
+            year: "2012"
+            description: "Team member for IEB accreditation for the Department of Computer Science of Daffodil International University."
+            status: ""
+            fundingBody: ""
+            amount: ""
+  - title: "Startups"
     subsections:
-      - title: Projects
+      - title: "Projects"
         items:
-          - title: Somadha
-            collaboration: Crantech UK
-            Role: Project Manager, CEO
+          - title: "Somadha"
+            collaboration: "Crantech UK"
+            Role: "Project Manager", "CEO"
             year: 2020
-            description: Digital marketplace for Bangladeshi freelancers.
-            status: Ongoing
-            fundingBody: Investors
-            amount: https://somadha.com
+            description: "Digital marketplace for Bangladeshi freelancers."
+            status: "Ongoing"
+            fundingBody: "Investors"
+            amount: "https://somadha.com"
             url: 
-          - title: Sobar Daktar
-            collaboration: Crantech UK
-            Role: Project Manager, CEO
+          - title: "Sobar Daktar"
+            collaboration: "Crantech UK"
+            Role: "Project Manager", "CEO"
             year: 2020
-            description: AI powered Telemedicine app for Bangladesh.
-            status: Ongoing
-            fundingBody: Investors
-            amount: 
-            url: https://sobar-daktar.somadha.com/
+            description: "AI powered Telemedicine app for Bangladesh."
+            status: "Ongoing"
+            fundingBody: "Investors"
+            amount: ""
+            url: "https://sobar-daktar.somadha.com/"
