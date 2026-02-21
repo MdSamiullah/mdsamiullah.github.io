@@ -384,11 +384,16 @@ sections -> subsections -> items
 
                   {%- if item.issuer and item.issuer != "" -%}
                     <!-- <div class="cert-issuer"> -->
-                      <span class="cert-issuer-text">
-                        {%- if item.url and item.url != "" -%}
-                          <a href="{{ item.url }}" target="_blank" rel="noreferrer">{{ item.issuer }}</a>
-                        {%- else -%}
+                      <!-- <span class="cert-issuer-text"> -->
                           <!-- {{ item.issuer }} -->
+                          {%- if item.url and item.url != "" -%}
+                          <span class="meta-pill cert-issuer meta-pill--issuer">
+                            <span class="pill-ico" aria-hidden="true">
+
+                              <a href="{{ item.url }}" target="_blank" rel="noreferrer">{{ item.issuer }}</a>
+                            </span>
+                          </span>
+                          {%- else -%}
                           <span class="meta-pill cert-issuer meta-pill--issuer">
                             <span class="pill-ico" aria-hidden="true">
                               <!-- Calendar -->
@@ -401,7 +406,7 @@ sections -> subsections -> items
                             {{ item.issuer }}
                           </span>
                         {%- endif -%}
-                      </span>
+                      <!-- </span> -->
                     <!-- </div> -->
                   {%- endif -%}
 
