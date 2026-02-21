@@ -614,35 +614,32 @@ a{ color: inherit; }
 }
 
 /* Mentoring format */
+/* Mentoring: role left, year+name right, single line */
 .info-card--simple{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
   .mentor-line{
-    display:flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    display: flex;
     align-items: baseline;
-    color: var(--muted);
-    font-size: 13.5px;
+    justify-content: space-between;
+    flex-wrap: nowrap;      /* keep in a single line */
+    gap: 10px;
   }
 
   .mentor-role{
+    flex: 0 0 auto;
+  }
+
+  /* assumes year + name are inside a wrapper (e.g., .mentor-meta) */
+  .mentor-meta{
+    margin-left: auto;
     display: inline-flex;
-    align-items: center;
-    padding: 5px 10px;
-    border-radius: 999px;
-    border: 1px solid rgba(17,24,39,.12);
-    background: rgba(37,99,235,.08);
-    color: var(--text);
-    font-weight: 900;
-    font-size: 12.5px;
-    line-height: 1;
+    align-items: baseline;
+    gap: 6px;
+    justify-content: flex-end;
+    flex: 0 0 auto;
     white-space: nowrap;
   }
-  .mentor-name{ font-weight: 800; }
 }
+
 
 /* Certificates layout */
 .info-card--cert{
