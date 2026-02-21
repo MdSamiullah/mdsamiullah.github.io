@@ -218,7 +218,7 @@ sections -> subsections -> items
                         {%- for r in collaboration_list -%}
                           {%- assign rr = r | strip -%}
                           {%- if rr != "" -%}
-                            <span class="meta-pill meta-pill--role">
+                            <span class="meta-pill meta-pill--collab">
                               <span class="pill-ico" aria-hidden="true">
                                 <!-- Role/person icon -->
                                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -250,7 +250,7 @@ sections -> subsections -> items
                         {%- for r in fundingBody_list -%}
                           {%- assign rr = r | strip -%}
                           {%- if rr != "" -%}
-                            <span class="meta-pill meta-pill--role">
+                            <span class="meta-pill meta-pill--fundbody">
                               <span class="pill-ico" aria-hidden="true">
                                 <!-- Role/person icon -->
                                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
