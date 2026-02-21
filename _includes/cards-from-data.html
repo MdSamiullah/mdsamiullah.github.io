@@ -384,13 +384,24 @@ sections -> subsections -> items
 
                   {%- if item.issuer and item.issuer != "" -%}
                     <div class="cert-issuer">
-                      <span class="cert-issuer-text">
+                      <!-- <span class="cert-issuer-text"> -->
                         {%- if item.url and item.url != "" -%}
                           <a href="{{ item.url }}" target="_blank" rel="noreferrer">{{ item.issuer }}</a>
                         {%- else -%}
-                          {{ item.issuer }}
+                          <!-- {{ item.issuer }} -->
+                          <span class="meta-pill cert-year meta-pill--year">
+                            <span class="pill-ico" aria-hidden="true">
+                              <!-- Calendar -->
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 10v10h16V10"></path>
+                                <path d="M3 10l9-6 9 6"></path>
+                                <path d="M9 20v-6h6v6"></path>
+                              </svg>
+                            </span>
+                            {{ item.issuer }}
+                          </span>
                         {%- endif -%}
-                      </span>
+                      <!-- </span> -->
                     </div>
                   {%- endif -%}
 
