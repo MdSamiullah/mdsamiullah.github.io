@@ -804,3 +804,45 @@ a{ color: inherit; }
 .cards-search__meta{
   font-size: 13px;
 }
+
+/* Put page title + search bar on one line */
+.page-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 14px;
+}
+
+/* Remove extra spacing when title is inside .page-head */
+.page-head .page-title{
+  margin: 0;
+}
+
+/* Make search sit on the right and not too wide */
+.page-head .cards-search{
+  margin: 0;
+  flex: 0 0 auto;
+  align-items: flex-end;
+}
+
+.page-head .cards-search__input{
+  width: min(420px, 55vw);
+}
+
+/* Hide the "Showing X items" line when in header row (optional) */
+.page-head .cards-search__meta{
+  display: none;
+}
+
+/* Mobile: stack title and search */
+@media (max-width: 640px){
+  .page-head{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .page-head .cards-search__input{
+    width: 100%;
+  }
+}
+
