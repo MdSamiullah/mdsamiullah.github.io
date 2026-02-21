@@ -1,19 +1,41 @@
 # _data/certificates.yml
 sections:
-  - title: "Certifications"
+  - title: "Degrees"
     subsections:
       - title: ""
         items:
-          - title: "Deep Learning Specialization"
-            issuer: "Coursera / Andrew Ng"
-            year: 2021
-            url: "https://coursera.org/share/..."
-            description: This certificate is a part of my doing nothing hahaha
-          - title: "Advanced Data Analytics"
-            issuer: "Some Institute"
-            year: 2020
+          - title: "PhD in IT"
+            issuer: "Faculty of IT, Monash University"
+            year: "2016-2020"
             url: ""
-  - title: "Awards & Courses"
+            description: "Research degree involving the development of a Object-Oriented Bayesian network modelling tool with inheritance and other OO-features."
+          - title: "Masters of Science in Computer Science and Engineering"
+            issuer: "Department of Computer Science and Engineering, University of Dhaka"
+            year: "2010-2012"
+            description: "MS by research involving the development of efficient graph correlation mining in graph databases."
+            url: ""
+          - title: "BSC with Honours in Computer Science and Engineering"
+            issuer: "Department of Computer Science and Engineering, University of Dhaka"
+            year: "2005-2009"
+            description: ""
+            url: ""
+  - title: "Awards"
+    subsections:
+      - title: ""
+        items:
+          - title: "Best Paper Award"
+            issuer: "HAHAHA 2026"
+            year: 2026
+            url: ""
+  - title: "Courses"
+    subsections:
+      - title: ""
+        items:
+          - title: "Best Paper Award"
+            issuer: "HAHAHA 2026"
+            year: 2026
+            url: ""
+  - title: "Training"
     subsections:
       - title: ""
         items:
