@@ -217,22 +217,40 @@ sections -> subsections -> items
                       </span>
                     {%- endif -%}
 
-                    {%- if item.fundingBody and item.fundingBody != "" -%}
-                      <span class="meta-text">
-                        <span class="meta-ico" aria-hidden="true">
-                          <!-- Bank -->
-                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 10h18"></path>
-                            <path d="M4 10V7l8-4 8 4v3"></path>
-                            <path d="M6 10v9"></path>
-                            <path d="M10 10v9"></path>
-                            <path d="M14 10v9"></path>
-                            <path d="M18 10v9"></path>
-                            <path d="M4 19h16"></path>
-                          </svg>
-                        </span>
-                        {{ item.fundingBody }}
-                      </span>
+
+                    <!-- Fundingbody: list OR fundingBody string -->
+                    {%- assign fundingBody_list = nil -%}
+                    {%- if item.fundingBody and item.fundingBody.size > 0 -%}
+                      {%- assign fundingBody_list = item.fundingBody -%}
+                    {%- elsif item.fundingBody and item.fundingBody != "" -%}
+                      {%- assign fundingBody_list = item.fundingBody | split: "," -%}
+                    {%- elsif item.fundingBody and item.fundingBody != "" -%}
+                      {%- assign fundingBody_list = item.fundingBody | split: "," -%}
+                    {%- endif -%}
+
+                    {%- if fundingBody_list -%}
+                      <div class="meta-row">
+                        {%- for r in fundingBody_list -%}
+                          {%- assign rr = r | strip -%}
+                          {%- if rr != "" -%}
+                            <span class="meta-pill meta-pill--role">
+                              <span class="pill-ico" aria-hidden="true">
+                                <!-- Role/person icon -->
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M3 10h18"></path>
+                                  <path d="M4 10V7l8-4 8 4v3"></path>
+                                  <path d="M6 10v9"></path>
+                                  <path d="M10 10v9"></path>
+                                  <path d="M14 10v9"></path>
+                                  <path d="M18 10v9"></path>
+                                  <path d="M4 19h16"></path>
+                                </svg>
+                              </span>
+                              {{ rr }}
+                            </span>
+                          {%- endif -%}
+                        {%- endfor -%}
+                      </div>
                     {%- endif -%}
 
                     {%- if item.amount and item.amount != "" -%}
