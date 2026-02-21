@@ -1,0 +1,58 @@
+<div class="cards-search">
+  <input
+    id="cardsSearch"
+    class="cards-search__input"
+    type="search"
+    placeholder="Search within this page… (title, year, issuer, keywords, etc.)"
+    autocomplete="off"
+  />
+  <div class="cards-search__meta muted" id="cardsSearchMeta"></div>
+</div>
+
+<script>
+(function () {
+  function ready(fn){ if(document.readyState!=="loading") fn(); else document.addEventListener("DOMContentLoaded", fn); }
+
+  ready(function(){
+    var input = document.getElementById("cardsSearch");
+    if(!input) return;
+
+    // Limit filtering to the main content so sidebar text doesn’t interfere
+    var root = document.querySelector(".content") || document;
+    var cards = Array.from(root.querySelectorAll("article.info-card"));
+    var meta  = document.getElementById("cardsSearchMeta");
+
+    if(cards.length === 0){
+      if(meta) meta.textContent = "No cards found to search.";
+      return;
+    }
+
+    function normalize(s){
+      return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+    }
+
+    function update(){
+      var q = normalize(input.value);
+      var shown = 0;
+
+      cards.forEach(function(card){
+        var text = normalize(card.innerText);
+        var match = q === "" || text.indexOf(q) !== -1;
+        card.style.display = match ? "" : "none";
+        if(match) shown++;
+      });
+
+      if(meta){
+        if(q === ""){
+          meta.textContent = "Showing " + shown + " items.";
+        }else{
+          meta.textContent = "Showing " + shown + " of " + cards.length + " items.";
+        }
+      }
+    }
+
+    input.addEventListener("input", update);
+    update();
+  });
+})();
+</script>

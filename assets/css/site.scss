@@ -774,3 +774,33 @@ a{ color: inherit; }
   color: var(--muted);
   font-size: 14px;
 }
+
+/* Common search bar for card pages */
+.cards-search{
+  margin: 0 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cards-search__input{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 8px 22px rgba(17,24,39,.05);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  outline: none;
+}
+
+.cards-search__input:focus{
+  border-color: rgba(37,99,235,.35);
+  box-shadow: 0 10px 26px rgba(37,99,235,.10);
+}
+
+.cards-search__meta{
+  font-size: 13px;
+}
