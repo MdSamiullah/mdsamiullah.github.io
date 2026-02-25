@@ -11,7 +11,7 @@ Output format (YAML list):
 ...
 
 Usage:
-  python scripts/fetch_scholar_citations.py TvgYhREAAAAJ
+  python scripts/fetch_scholar_citations.py ehcf5mEAAAAJ
 """
 
 import os
