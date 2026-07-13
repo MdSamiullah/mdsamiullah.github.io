@@ -15,6 +15,19 @@ sections:
             year: "Currrent"
             role: "Principal supervisor"
             url: ""
+      - title: "Undergraduate Research Project"
+        items:
+          - name: "Ayden Narayan"
+            project: "Designing Quantum Algorithm For Efficient Inference"
+            year: "Currrent"
+            role: "Principal supervisor"
+            url: ""
+
+          - name: "James Smith"
+            project: "Designing Quantum Algorithm to Learn Causal Structures from Data"
+            year: "Currrent"
+            role: "Principal supervisor"
+            url: ""
   - title: "University of Dhaka"
     subsections:
       - title: "Masters Thesis Supervision"
