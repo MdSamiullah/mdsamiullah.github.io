@@ -80,6 +80,18 @@ sections:
     subsections:
       - title: ""
         items:
+          - title: "Supporting Academic Integrity"
+            issuer: "Monash University"
+            year: "2026"
+            url: ""
+          - title: "Fundamentals of programmatic approaches"
+            issuer: "Monash University"
+            year: "2026"
+            url: ""
+          - title: "Moodle essentials"
+            issuer: "Monash University"
+            year: "2025"
+            url: ""
           - title: "BDITEC (Bangladesh IT-engineers Examination Center) Management"
             issuer: "University of Dahaka and Ministry of Education, Bangladesh"
             year: "2013"

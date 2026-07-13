@@ -55,7 +55,7 @@ sections:
             status: ""
             fundingBody: ""
             amount: ""
-          - title: "Developed an AI-powered job application automation system"
+          - title: "AI-powered Job Application Automation system"
             # collaboration: "DELWP;Bayesian Intelligence"
             Role: "Developer, Coordinator" 
             description: "The app can generate tailored cover letters, selection criteria responses, ATS-aware LaTeX CVs, and validation reports using multiple LLM providers (OpenAI, Groq, Anthropic)."
