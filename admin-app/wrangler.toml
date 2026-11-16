@@ -14,7 +14,7 @@ CONTENT_REPO = "mdsamiullah/homepage-content"
 BRANCH = "main"
 ADMIN_USERS = "mdsamiullah"
 # Replace with the Worker URL after the first deploy, then deploy again.
-APP_ORIGIN = "https://sami-homepage-admin.YOUR-SUBDOMAIN.workers.dev"
+APP_ORIGIN = "https://sami-homepage-admin.mdsamiullah.workers.dev"
 # GitHub App Client ID (not App ID; this is not a secret).
-GITHUB_CLIENT_ID = "REPLACE_ME"
+GITHUB_CLIENT_ID = "Iv23liq538NX4hBnG1J2"
 # Set GITHUB_CLIENT_SECRET and SESSION_SECRET using wrangler secret put.
