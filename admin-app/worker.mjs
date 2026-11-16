@@ -46,8 +46,13 @@ async function route(req,env){
  if(p==='/auth/callback'){
   const state=await unseal(cookies(req)['__Host-oauth']||'',env);
   if(!state||state.state!==u.searchParams.get('state')||!u.searchParams.get('code'))fail('Sign-in expired or state mismatch. Start sign-in again.',403);
-  const r=await fetch('https://github.com/login/oauth/access_token',{method:'POST',headers:{Accept:'application/json','Content-Type':'application/json'},body:JSON.stringify({client_id:env.GITHUB_CLIENT_ID,client_secret:env.GITHUB_CLIENT_SECRET,code:u.searchParams.get('code'),redirect_uri:env.APP_ORIGIN+'/auth/callback',code_verifier:state.verifier})});
-  const t=await r.json();if(!t.access_token)fail('GitHub sign-in failed. Check App callback and client secret.',401);
+  const params=new URLSearchParams({client_id:env.GITHUB_CLIENT_ID,client_secret:env.GITHUB_CLIENT_SECRET,code:u.searchParams.get('code'),redirect_uri:env.APP_ORIGIN+'/auth/callback',code_verifier:state.verifier});
+  const r=await fetch('https://github.com/login/oauth/access_token',{method:'POST',headers:{Accept:'application/json','Content-Type':'application/x-www-form-urlencoded'},body:params.toString()});
+  const t=await r.json();
+  if(!t.access_token){
+   const messages={incorrect_client_credentials:'GitHub rejected the Client ID or client secret. Check that wrangler.toml has this App’s Client ID and Cloudflare has its current client secret.',bad_verification_code:'This sign-in code is expired or was already used. Start a fresh sign-in.',redirect_uri_mismatch:'The callback URL does not match. Check APP_ORIGIN and the GitHub App Redirect URL.',access_denied:'GitHub sign-in was declined.'};
+   fail(messages[t.error]||'GitHub could not exchange the sign-in code. Check the App Client ID, client secret, and exact callback URL, then start a fresh sign-in.',401);
+  }
   const user=await github(t.access_token,'/user');if(!allowed(user?.login,env))fail('This GitHub account is not an approved editor.',403);
   const h=new Headers({Location:'/'});h.append('Set-Cookie',cookie('__Host-oauth','',0));h.append('Set-Cookie',cookie('__Host-session',await seal({token:t.access_token,login:user.login,exp:Date.now()+Math.min(t.expires_in||28800,28800)*1000},env),Math.min(t.expires_in||28800,28800)));
   return new Response(null,{status:302,headers:h});
