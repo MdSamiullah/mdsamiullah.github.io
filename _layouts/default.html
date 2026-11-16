@@ -6,6 +6,7 @@
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ site.description | escape }}" />
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/managed.css' | relative_url }}" />
   </head>
 
   <!-- <body class="{{ page.body_class }}"> -->
@@ -13,7 +14,7 @@
     <header class="topbar">
       <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
       <nav class="nav" aria-label="Primary">
-        <a class="nav__link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+        <a class="nav__link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">{{ site.data.managed.labels.home }}</a>
         {% for item in site.nav %}
           <a class="nav__link {% if page.url == item.url %}active{% endif %}" href="{{ item.url | relative_url }}">
             {{ item.title }}
@@ -28,14 +29,14 @@
       </aside>
 
       <main class="content">
-        {% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
+        <!-- {% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %} -->
         {{ content }}
       </main>
     </div>
 
     <footer class="footer">
       <span>© {{ site.time | date: "%Y" }} {{ site.title }}</span>
-      <span class="muted">Built with Jekyll + GitHub Pages</span>
+      <span class="muted">{{ site.data.managed.labels.footer }}</span>
     </footer>
   </body>
 </html>

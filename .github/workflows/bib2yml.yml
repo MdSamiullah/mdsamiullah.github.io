@@ -23,6 +23,7 @@ jobs:
           python-version: "3.11"
 
       - name: Convert BibTeX to YAML
+        if: ${{ hashFiles('_data/managed.json') == '' }}
         run: |
           python scripts/bib2yml.py assets/bib/publications.bib _data/publications.yml
 

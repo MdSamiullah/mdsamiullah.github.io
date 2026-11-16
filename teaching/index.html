@@ -4,6 +4,12 @@ title: Teaching
 permalink: /teaching/
 ---
 
+<div class="page-head">
+  <h1 class="page-title">{{ site.data.managed.pages.teaching.title }}</h1>
+  {% include cards-search.html %}
+</div>
+<div class="page-intro">{{ site.data.managed.pages.teaching.body }}</div>
 <div class="cards-scroll">
+<!-- {% include cards-search.html %} -->
 {% include cards-from-data.html datafile="teaching" %}
 </div>

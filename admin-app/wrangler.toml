@@ -1,0 +1,20 @@
+name = "sami-homepage-admin"
+main = "worker.mjs"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+[vars]
+PUBLIC_REPO = "mdsamiullah/mdsamiullah.github.io"
+CONTENT_REPO = "mdsamiullah/homepage-content"
+BRANCH = "main"
+ADMIN_USERS = "mdsamiullah"
+# Replace with the Worker URL after the first deploy, then deploy again.
+APP_ORIGIN = "https://sami-homepage-admin.YOUR-SUBDOMAIN.workers.dev"
+# GitHub App Client ID (not App ID; this is not a secret).
+GITHUB_CLIENT_ID = "REPLACE_ME"
+# Set GITHUB_CLIENT_SECRET and SESSION_SECRET using wrangler secret put.

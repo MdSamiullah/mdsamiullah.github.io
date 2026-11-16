@@ -1,0 +1,57 @@
+{
+  "title": "Md Samiullah",
+  "description": "Researcher \u2022 Educator \u2022 Developer",
+  "url": "https://mdsamiullah.github.io",
+  "baseurl": "",
+  "profile": {
+    "name": "Md Samiullah",
+    "photo": "/assets/img/profile.jpg",
+    "designations": [
+      "Research Fellow, MCRI, RCH",
+      "Assitant Professor, CSE, DU"
+    ],
+    "interests": "Research Interests: AI, ML, BioStat, Bayesian",
+    "location": "Melbourne, Australia"
+  },
+  "social": {
+    "email": "samiullahmdsami@gmail.com",
+    "website": "https://mdsamiullah.github.io/homepage/",
+    "github": "mdsamiullah",
+    "linkedin": "md-samiullah",
+    "google_scholar": "https://scholar.google.com/citations?user=ehcf5mEAAAAJ",
+    "googlescholar": "ehcf5mEAAAAJ",
+    "orcid": "0000-0001-8212-1938",
+    "location": "Melbourne, Australia",
+    "facebook": "samicse"
+  },
+  "nav": [
+    {
+      "title": "Publications",
+      "url": "/publications/"
+    },
+    {
+      "title": "Certificates",
+      "url": "/certificates/"
+    },
+    {
+      "title": "Teaching",
+      "url": "/teaching/"
+    },
+    {
+      "title": "Mentoring",
+      "url": "/mentoring/"
+    },
+    {
+      "title": "CV",
+      "url": "/cv/"
+    },
+    {
+      "title": "Portfolio",
+      "url": "/portfolio/"
+    }
+  ],
+  "markdown": "kramdown",
+  "kramdown": {
+    "input": "GFM"
+  }
+}

@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Homepage studio</title><link rel="stylesheet" href="/style.css"></head><body>
+<header><a class="brand" href="/">Homepage <strong>studio</strong></a><span id="account">Private content workspace</span><button id="logout" hidden>Sign out</button></header>
+<div id="notice" role="status" aria-live="polite"></div>
+<section id="login" class="welcome"><span class="eyebrow">YOUR ACADEMIC HOMEPAGE</span><h1>Keep your work<br>up to date.</h1><p>Edit your pages, organise research, and review imports in one place.</p><a class="button primary" href="/auth/login">Sign in with GitHub</a><p class="hint">Access is limited to approved editors. Drafts are private until you publish.</p></section>
+<div id="workspace" hidden>
+<div class="actionbar"><span id="state">Loading…</span><button id="reload">Reload saved</button><button id="export">Export backup</button><button id="save">Save private draft</button><button id="publish" class="primary">Publish website</button></div>
+<div class="layout"><nav id="sections" aria-label="Content sections"></nav><main><div class="page-heading"><div><span class="eyebrow">CONTENT MANAGER</span><h1 id="heading">Overview</h1></div></div><div id="view"></div></main></div>
+</div><dialog id="editor"><form method="dialog" id="editor-form"><div class="dialog-head"><h2 id="editor-title">Edit</h2><button type="button" id="close-editor" aria-label="Close editor">×</button></div><div id="editor-body"></div><div class="dialog-footer"><button type="button" id="cancel-editor">Cancel</button><button type="submit" class="primary">Apply changes</button></div></form></dialog>
+<script type="module" src="/app.mjs"></script></body></html>

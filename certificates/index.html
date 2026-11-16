@@ -4,8 +4,14 @@ title: Certificates
 permalink: /certificates/
 ---
 
-# Certificates & Awards
+<!-- # Certificates & Awards -->
 
+<div class="page-head">
+  <h1 class="page-title">{{ site.data.managed.pages.certificates.title }}</h1>
+  {% include cards-search.html %}
+</div>
+<div class="page-intro">{{ site.data.managed.pages.certificates.body }}</div>
 <div class="cards-scroll">
+    <!-- {% include cards-search.html %} -->
     {% include cards-from-data.html datafile="certificates" %}
 </div>

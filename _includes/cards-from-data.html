@@ -12,8 +12,7 @@ sections -> subsections -> items
 
 {%- if dataset == nil -%}
   <p class="muted">
-    No data found for <code>{{ include.datafile }}</code>.
-    Check <code>_data/{{ include.datafile }}.yml</code>.
+    {{ site.data.managed.labels.no_data }}
   </p>
 {%- else -%}
 
@@ -49,29 +48,61 @@ sections -> subsections -> items
                     {%- elsif item.title and item.title != "" -%}
                       {{ item.title }}
                     {%- else -%}
-                      Untitled Project
+                      {{ site.data.managed.labels.untitled }} Project
                     {%- endif -%}
                   </h4>
 
                   <div class="mentor-line">
                     {%- if item.role and item.role != "" -%}
-                      <span class="mentor-role">{{ item.role }}</span>
+                      <!-- <span class="mentor-role">{{ item.role }}</span> -->
+                      <span class="meta-pill meta-pill--role">
+                            <span class="pill-ico" aria-hidden="true">
+                              <!-- Role/person icon -->
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21a8 8 0 0 0-16 0"></path>
+                                <circle cx="12" cy="8" r="4"></circle>
+                              </svg>
+                            </span>
+                            {{ item.role }}
+                          </span>
                     {%- endif -%}
-                    
+
                     {%- if item.name and item.name != "" -%}
-                      <span class="mentor-name">{{ item.name }}</span>
+                      <!-- <span class="mentor-name">{{ item.name }}</span> -->
+                      <span class="meta-pill meta-pill--role">
+                            <span class="pill-ico" aria-hidden="true">
+                              <!-- mentee icon -->
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">;
+                                <path d="M2 9l10-4 10 4-10 4-10-4z M6 11v5c2 1.5 4 2.5 6 2.5s4-1 6-2.5v-5 M20 10v6">;</path>;
+                                <circle cx="20" cy="16.5" r="1"></circle>
+                              </svg>
+
+                            </span>
+                            {{ item.name }}
+                          </span>
                     {%- endif -%}
+
                     {%- if item.year and item.year != "" -%}
-                      <span class="mentor-year">({{ item.year }})</span>
+                      <span class="meta-pill meta-pill--year">
+                        <span class="pill-ico" aria-hidden="true">
+                          <!-- Calendar -->
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 2v3M16 2v3"></path>
+                            <path d="M3 8h18"></path>
+                            <path d="M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
+                          </svg>
+                        </span>
+                        {{ item.year }}
+                      </span>
                     {%- endif -%}
 
                     {%- if item.url and item.url != "" -%}
-                      <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
+                      <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.link }}</a>
                     {%- endif -%}
                   </div>
 
                   {%- if item.description and item.description != "" -%}
-                    <p class="info-card__desc">{{ item.description }}</p>
+                    <div class="info-card__desc">{{ item.description }}</div>
                   {%- endif -%}
 
                 </article>
@@ -90,16 +121,41 @@ sections -> subsections -> items
                       {%- if item.code and item.code != "" -%}
                         <span class="teach-code">{{ item.code }}</span>
                       {%- endif -%}
+
                       {%- if item.year and item.year != "" -%}
-                        <span class="teach-year">({{ item.year }})</span>
+                        <span class="meta-pill meta-pill--year">
+                          <span class="pill-ico" aria-hidden="true">
+                            <!-- Calendar -->
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M8 2v3M16 2v3"></path>
+                              <path d="M3 8h18"></path>
+                              <path d="M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
+                            </svg>
+                          </span>
+                          {{ item.year }}
+                        </span>
                       {%- endif -%}
+
                       {%- if item.role and item.role != "" -%}
-                        <span class="teach-role">{{ item.role }}</span>
+                        <!-- <span class="teach-role">{{ item.role }}</span> -->
+                        
+                        <span class="meta-pill meta-pill--role">
+                            <span class="pill-ico" aria-hidden="true">
+                              <!-- Role/person icon -->
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21a8 8 0 0 0-16 0"></path>
+                                <circle cx="12" cy="8" r="4"></circle>
+                              </svg>
+                            </span>
+                            {{ item.role }}
+                          </span>
+                        
+
                       {%- endif -%}
                     </div>
 
                     {%- if item.url and item.url != "" -%}
-                      <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
+                      <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.link }}</a>
                     {%- endif -%}
                   </div>
 
@@ -107,22 +163,22 @@ sections -> subsections -> items
                     {%- if item.title and item.title != "" -%}
                       {{ item.title }}
                     {%- else -%}
-                      Untitled Unit
+                      {{ site.data.managed.labels.untitled }} Unit
                     {%- endif -%}
                   </h4>
 
                   {%- if item.description and item.description != "" -%}
-                    <p class="info-card__desc">
+                    <div class="info-card__desc">
                       {{ item.description }}
                       {%- if item.url and item.url != "" -%}
-                        &nbsp;<a href="{{ item.url }}" target="_blank" rel="noreferrer">More</a>
+                        &nbsp;<a href="{{ item.url }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.more }}</a>
                       {%- endif -%}
-                    </p>
+                    </div>
                   {%- else -%}
                     {%- if item.url and item.url != "" -%}
-                      <p class="info-card__desc">
-                        <a href="{{ item.url }}" target="_blank" rel="noreferrer">More details</a>
-                      </p>
+                      <div class="info-card__desc">
+                        <a href="{{ item.url }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.more_details }}</a>
+                      </div>
                     {%- endif -%}
                   {%- endif -%}
 
@@ -130,71 +186,117 @@ sections -> subsections -> items
 
               {%- elsif include.datafile == "portfolio" -%}
                 <!-- =================== -->
-                <!-- Portfolio card format (custom) -->
-                <!-- Title (Status) -->
-                <!-- Capsules: Collaboration, FundingBody, (Amount) -->
-                <!-- Year + URL -->
+                <!-- Portfolio (custom) -->
+                <!-- Title + (Status, Year) SAME ROW, right aligned -->
+                <!-- Collaboration pill (team/users icon) -->
+                <!-- Funding body + amount (as text w/icons) -->
+                <!-- Links row -->
                 <!-- Description -->
-                <!-- Roles capsules -->
-                <!-- Keywords capsules -->
+                <!-- Roles pills (icon) -->
+                <!-- Keywords pills -->
                 <!-- =================== -->
                 <article class="info-card info-card--portfolio">
 
-                  <!-- Line 1: Title + (Status) -->
-                  <h4 class="info-card__title">
-                    {%- if item.title and item.title != "" -%}
-                      <b>{{ item.title }}</b>
-                    {%- elsif item.name and item.name != "" -%}
-                      <b>{{ item.name }}</b>
-                    {%- else -%}
-                      <b>Untitled Project</b>
-                    {%- endif -%}
-                    {%- if item.status and item.status != "" -%}
-                      <span class="meta-pill meta-pill--status">({{ item.status }})</span>
-                    {%- endif -%}
-                  </h4>
+                  <!-- Header row: Title left, pills right -->
+                  <div class="portfolio-head">
+                    <h4 class="info-card__title portfolio-title">
+                      {%- if item.title and item.title != "" -%}
+                        <b>{{ item.title }}</b>
+                      {%- elsif item.name and item.name != "" -%}
+                        <b>{{ item.name }}</b>
+                      {%- else -%}
+                        <b>{{ site.data.managed.labels.untitled }} Project</b>
+                      {%- endif -%}
+                    </h4>
 
-                  <!-- Line 2: Collaboration + FundingBody + (Amount) capsules -->
+                    <div class="portfolio-head__right">
+                      {%- if item.status and item.status != "" -%}
+                        <span class="meta-pill meta-pill--status">{{ item.status }}</span>
+                      {%- endif -%}
+
+                      {%- if item.year and item.year != "" -%}
+                        <span class="meta-pill meta-pill--year">
+                          <span class="pill-ico" aria-hidden="true">
+                            <!-- Calendar -->
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M8 2v3M16 2v3"></path>
+                              <path d="M3 8h18"></path>
+                              <path d="M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
+                            </svg>
+                          </span>
+                          {{ item.year }}
+                        </span>
+                      {%- endif -%}
+                    </div>
+                  </div>
+
+                  {%- if item.issuer and item.issuer != "" -%}
+                    <div class="portfolio-issuer">{{ item.issuer }}</div>
+                  {%- endif -%}
+
+                  <!-- Collaboration + funding body + amount -->
                   <div class="meta-row">
                     {%- if item.collaboration and item.collaboration != "" -%}
-                      <span class="meta-pill">{{ item.collaboration }}</span>
+                      <span class="meta-pill meta-pill--collab">
+                        <span class="pill-ico" aria-hidden="true">
+                          <!-- Team / users icon -->
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 11a4 4 0 1 0-8 0"></path>
+                            <path d="M3 21a7 7 0 0 1 14 0"></path>
+                            <path d="M17 14a4 4 0 1 1 4 3"></path>
+                          </svg>
+                        </span>
+                        {{ item.collaboration }}
+                      </span>
                     {%- endif -%}
+
                     {%- if item.fundingBody and item.fundingBody != "" -%}
-                      <span class="meta-pill">{{ item.fundingBody }}</span>
+                      <span class="meta-text">
+                        <span class="meta-ico" aria-hidden="true">
+                          <!-- Bank -->
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="8"></circle>
+                            <path d="M12 7v10"></path>
+                            <path d="M15 9.5c0-1.4-1.3-2.5-3-2.5s-3 1.1-3 2.5 1.3 2.2 3 2.5 3 1 3 2.5-1.3 2.5-3 2.5-3-1.1-3-2.5"></path>
+                          </svg>
+                        </span>
+                        {{ item.fundingBody }}
+                      </span>
                     {%- endif -%}
+
                     {%- if item.amount and item.amount != "" -%}
-                      <span class="meta-pill meta-pill--amount">({{ item.amount }})</span>
+                      <span class="meta-text">
+                        <span class="meta-ico" aria-hidden="true">
+                          <!-- Dollar -->
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20"></path>
+                            <path d="M17 6.5c0-2-2.2-3.5-5-3.5S7 4.5 7 6.5 9.2 10 12 10s5 1.5 5 3.5S14.8 17 12 17s-5-1.5-5-3.5"></path>
+                          </svg>
+                        </span>
+                        {{ item.amount }}
+                      </span>
                     {%- endif -%}
                   </div>
 
-                  <!-- Line 3: Year + URL -->
+                  <!-- Links -->
                   <div class="meta-row">
-                    {%- if item.year and item.year != "" -%}
-                      <span class="generic-year">{{ item.year }}</span>
-                    {%- endif -%}
-
                     {%- if item.url and item.url != "" -%}
-                      <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
+                      <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.link }}</a>
                     {%- endif -%}
                     {%- if item.github and item.github != "" -%}
-                      <a class="meta-link" href="{{ item.github }}" target="_blank" rel="noreferrer">GitHub</a>
+                      <a class="meta-link" href="{{ item.github }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.github }}</a>
                     {%- endif -%}
                     {%- if item.demo and item.demo != "" -%}
-                      <a class="meta-link" href="{{ item.demo }}" target="_blank" rel="noreferrer">Demo</a>
+                      <a class="meta-link" href="{{ item.demo }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.demo }}</a>
                     {%- endif -%}
                   </div>
 
-                  <!-- Optional issuer line (you asked "allow issuer") -->
-                  {%- if item.issuer and item.issuer != "" -%}
-                    <p class="info-card__desc"><b>{{ item.issuer }}</b></p>
-                  {%- endif -%}
-
-                  <!-- Line 4: Description -->
+                  <!-- Description -->
                   {%- if item.description and item.description != "" -%}
-                    <p class="info-card__desc">{{ item.description }}</p>
+                    <div class="info-card__desc">{{ item.description }}</div>
                   {%- endif -%}
 
-                  <!-- Roles: support roles as list OR Role as string -->
+                  <!-- Roles: list OR Role string -->
                   {%- assign role_list = nil -%}
                   {%- if item.roles and item.roles.size > 0 -%}
                     {%- assign role_list = item.roles -%}
@@ -209,13 +311,22 @@ sections -> subsections -> items
                       {%- for r in role_list -%}
                         {%- assign rr = r | strip -%}
                         {%- if rr != "" -%}
-                          <span class="meta-pill">{{ rr }}</span>
+                          <span class="meta-pill meta-pill--role">
+                            <span class="pill-ico" aria-hidden="true">
+                              <!-- Role/person icon -->
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21a8 8 0 0 0-16 0"></path>
+                                <circle cx="12" cy="8" r="4"></circle>
+                              </svg>
+                            </span>
+                            {{ rr }}
+                          </span>
                         {%- endif -%}
                       {%- endfor -%}
                     </div>
                   {%- endif -%}
 
-                  <!-- Keywords: support keywords as list OR "a; b; c" string -->
+                  <!-- Keywords: list OR "a; b; c" string -->
                   {%- assign kw_list = nil -%}
                   {%- if item.keywords and item.keywords.size > 0 -%}
                     {%- assign kw_list = item.keywords -%}
@@ -238,6 +349,79 @@ sections -> subsections -> items
 
                 </article>
 
+              {%- elsif include.datafile == "certificates" -%}
+                <!-- ====================== -->
+                <!-- Certificates card format -->
+                <!-- Title + Year pill (calendar icon) -->
+                <!-- Issuer -->
+                <!-- ====================== -->
+                <article class="info-card info-card--cert">
+
+                  <div class="cert-top">
+                    <h4 class="info-card__title">
+                      <!-- <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 9l10-4 10 4-10 4-10-4z"></path>
+                        <path d="M6 11v5c2 1.5 4 2.5 6 2.5s4-1 6-2.5v-5"></path>
+                        <path d="M20 10v6"></path>
+                        <circle cx="20" cy="16.5" r="1"></circle>
+                      </svg> -->
+
+                      {%- if item.title and item.title != "" -%}
+                        {{ item.title }}
+                      {%- else -%}
+                        {{ site.data.managed.labels.untitled }} Certificate
+                      {%- endif -%}
+                    </h4>
+
+                    {%- if item.year and item.year != "" -%}
+                      <span class="meta-pill cert-year meta-pill--year">
+                        <span class="pill-ico" aria-hidden="true">
+                          <!-- Calendar -->
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 2v3M16 2v3"></path>
+                            <path d="M3 8h18"></path>
+                            <path d="M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
+                          </svg>
+                        </span>
+                        {{ item.year }}
+                      </span>
+                    {%- endif -%}
+                  </div>
+
+                  {%- if item.issuer and item.issuer != "" -%}
+                    <!-- <div class="cert-issuer"> -->
+                      <!-- <span class="cert-issuer-text"> -->
+                          <!-- {{ item.issuer }} -->
+                          {%- if item.url and item.url != "" -%}
+                          <span class="meta-pill cert-issuer meta-pill--issuer">
+                            <span class="pill-ico" aria-hidden="true">
+
+                              <a href="{{ item.url }}" target="_blank" rel="noreferrer">{{ item.issuer }}</a>
+                            </span>
+                          </span>
+                          {%- else -%}
+                          <span class="meta-pill cert-issuer meta-pill--issuer">
+                            <span class="pill-ico" aria-hidden="true">
+                              <!-- Calendar -->
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 10v10h16V10"></path>
+                                <path d="M3 10l9-6 9 6"></path>
+                                <path d="M9 20v-6h6v6"></path>
+                              </svg>
+                            </span>
+                            {{ item.issuer }}
+                          </span>
+                        {%- endif -%}
+                      <!-- </span> -->
+                    <!-- </div> -->
+                  {%- endif -%}
+
+                  {%- if item.description and item.description != "" -%}
+                    <div class="info-card__desc">{{ item.description }}</div>
+                  {%- endif -%}
+
+                </article>
+
               {%- else -%}
                 <!-- ================= -->
                 <!-- Generic card format -->
@@ -250,13 +434,13 @@ sections -> subsections -> items
                     {%- endif -%}
 
                     {%- if item.url and item.url != "" -%}
-                      <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Link</a>
+                      <a class="meta-link" href="{{ item.url }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.link }}</a>
                     {%- endif -%}
                     {%- if item.github and item.github != "" -%}
-                      <a class="meta-link" href="{{ item.github }}" target="_blank" rel="noreferrer">GitHub</a>
+                      <a class="meta-link" href="{{ item.github }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.github }}</a>
                     {%- endif -%}
                     {%- if item.demo and item.demo != "" -%}
-                      <a class="meta-link" href="{{ item.demo }}" target="_blank" rel="noreferrer">Demo</a>
+                      <a class="meta-link" href="{{ item.demo }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.demo }}</a>
                     {%- endif -%}
                   </div>
 
@@ -266,16 +450,16 @@ sections -> subsections -> items
                     {%- elsif item.name and item.name != "" -%}
                       {{ item.name }}
                     {%- else -%}
-                      Untitled
+                      {{ site.data.managed.labels.untitled }}
                     {%- endif -%}
                   </h4>
 
                   {%- if item.issuer and item.issuer != "" -%}
-                    <p class="info-card__desc"><b>{{ item.issuer }}</b></p>
+                    <div class="info-card__desc"><b>{{ item.issuer }}</b></div>
                   {%- endif -%}
 
                   {%- if item.description and item.description != "" -%}
-                    <p class="info-card__desc">{{ item.description }}</p>
+                    <div class="info-card__desc">{{ item.description }}</div>
                   {%- endif -%}
 
                 </article>
@@ -285,7 +469,7 @@ sections -> subsections -> items
           </div>
 
         {%- else -%}
-          <p class="muted">No items in this subsection.</p>
+          <p class="muted">{{ site.data.managed.labels.no_items }}</p>
         {%- endif -%}
 
       {%- endfor -%}

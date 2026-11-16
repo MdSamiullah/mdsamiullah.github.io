@@ -1,0 +1,121 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
+
+<div class="page-intro">{{ site.data.managed.pages.publications.body }}</div>
+<!-- TOP: Citations chart -->
+<section class="panel">
+  <div class="panel__hd">
+    <h2 class="panel__title">{{ site.data.managed.labels.citations }}</h2>
+    <p class="panel__sub">{{ site.data.managed.labels.citations_subtitle }}</p>
+  </div>
+
+  <div class="panel__bd">
+    {% assign cits = site.data.citations | sort: "year" %}
+
+    {% if cits and cits.size > 0 %}
+      {% assign maxc = 0 %}
+      {% assign total = 0 %}
+      {% for r in cits %}
+        {% if r.count > maxc %}{% assign maxc = r.count %}{% endif %}
+        {% assign total = total | plus: r.count %}
+      {% endfor %}
+
+      <div class="scholar-chart">
+        <div class="scholar-chart__top">
+          <div class="scholar-chart__title">{{ site.data.managed.labels.citations_chart_title }}</div>
+          <div class="scholar-chart__meta">{{ site.data.managed.labels.citations_total }} {{ total }}</div>
+        </div>
+
+        <div class="scholar-bars">
+          {% for r in cits %}
+            {% assign pct = 0 %}
+            {% if maxc > 0 %}
+              {% assign pct = r.count | times: 100 | divided_by: maxc %}
+            {% endif %}
+            {% assign hpx = pct | times: 170 | divided_by: 100 %}
+
+            <div class="scholar-bar">
+              <div class="scholar-bar__count">{{ r.count }}</div>
+              <div class="scholar-bar__col"
+                   style="--h: {{ hpx }}px;"
+                   data-tip="{{ r.year }}: {{ r.count }}">
+              </div>
+              <div class="scholar-bar__year">{{ r.year }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    {% else %}
+      <p class="muted">
+        {{ site.data.managed.labels.citations_empty }}
+      </p>
+    {% endif %}
+
+    {% if site.social.google_scholar %}
+      <div style="margin-top:12px;">
+        {% assign gs = site.social.google_scholar %}
+        {% if gs contains "http" %}
+          <a class="btn" href="{{ gs }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.scholar_button }}</a>
+        {% else %}
+          <a class="btn" href="https://scholar.google.com/citations?user={{ gs }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.scholar_button }}</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- BELOW: Publications list (scrollable) -->
+<section class="panel" style="margin-top:14px;">
+  <div class="panel__hd">
+    <h2 class="panel__title">{{ site.data.managed.pages.publications.title }}</h2>
+    <p class="panel__sub">{{ site.data.managed.labels.publications_subtitle }}</p>
+  </div>
+
+  {% if site.data.publications == nil or site.data.publications.size == 0 %}
+    <div class="panel__bd">
+      {{ site.data.managed.labels.publications_empty }}
+    </div>
+  {% else %}
+
+    {% assign pubs = site.data.publications | where_exp: "p", "p.year != nil" | sort: "year" | reverse %}
+    {% assign years = pubs | map: "year" | uniq %}
+
+    <div class="pubs-scroll">
+      {% for y in years %}
+        <h3 style="margin:14px 0 6px;">{% if y == 0 %}{{ site.data.managed.labels.undated }}{% else %}{{ y }}{% endif %}</h3>
+
+        {% assign by_year = pubs | where: "year", y %}
+        {% for p in by_year %}
+          <div class="pub-card">
+            <div class="pub-title">{{ p.title }}</div>
+
+            {% if p.authors %}
+              <p class="pub-meta"><b>{{ site.data.managed.labels.authors }}</b> {{ p.authors }}</p>
+            {% endif %}
+
+            {% if p.venue %}
+              <p class="pub-meta"><b>{{ site.data.managed.labels.venue }}</b> {{ p.venue }}{% if p.type %} · {{ p.type }}{% endif %}</p>
+            {% endif %}
+
+            <div class="pub-links">
+              {% if p.pdf and p.pdf != "" %}
+                <a class="pub-btn" href="{{ p.pdf }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.pdf }}</a>
+              {% endif %}
+              {% if p.doi and p.doi != "" %}
+                <a class="pub-btn" href="{{ p.doi }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.doi }}</a>
+              {% endif %}
+              {% if p.code and p.code != "" %}
+                <a class="pub-btn" href="{{ p.code }}" target="_blank" rel="noreferrer">{{ site.data.managed.labels.code }}</a>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+
+  {% endif %}
+</section>

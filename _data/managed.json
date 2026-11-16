@@ -1,0 +1,2198 @@
+{
+  "version": 1,
+  "settings": {
+    "title": "Md Samiullah",
+    "description": "Researcher • Educator • Developer",
+    "profile": {
+      "name": "Md Samiullah",
+      "photo": "/assets/img/profile.jpg",
+      "designations": [
+        "Research Fellow, MCRI, RCH",
+        "Assitant Professor, CSE, DU"
+      ],
+      "interests": "Research Interests: AI, ML, BioStat, Bayesian",
+      "location": "Melbourne, Australia"
+    },
+    "social": {
+      "email": "samiullahmdsami@gmail.com",
+      "website": "https://mdsamiullah.github.io/homepage/",
+      "github": "mdsamiullah",
+      "linkedin": "md-samiullah",
+      "google_scholar": "https://scholar.google.com/citations?user=ehcf5mEAAAAJ",
+      "googlescholar": "ehcf5mEAAAAJ",
+      "orcid": "0000-0001-8212-1938",
+      "location": "Melbourne, Australia",
+      "facebook": "samicse"
+    },
+    "nav": [
+      {
+        "title": "Publications",
+        "url": "/publications/"
+      },
+      {
+        "title": "Certificates",
+        "url": "/certificates/"
+      },
+      {
+        "title": "Teaching",
+        "url": "/teaching/"
+      },
+      {
+        "title": "Mentoring",
+        "url": "/mentoring/"
+      },
+      {
+        "title": "CV",
+        "url": "/cv/"
+      },
+      {
+        "title": "Portfolio",
+        "url": "/portfolio/"
+      }
+    ]
+  },
+  "labels": {
+    "home": "Home",
+    "footer": "Built with Jekyll + GitHub Pages",
+    "scholar": "Google Scholar/Md Samiullah",
+    "search": "Search within this page… (title, year, issuer, keywords, etc.)",
+    "citations": "Citations",
+    "citations_subtitle": "Citations per year",
+    "citations_chart_title": "Citations per year",
+    "citations_total": "Total (shown years):",
+    "citations_empty": "No citation data yet.",
+    "scholar_button": "View Scholar Profile",
+    "publications_subtitle": "Newest first · scrollable list",
+    "publications_empty": "No publications found.",
+    "authors": "Authors:",
+    "venue": "Venue:",
+    "pdf": "PDF",
+    "doi": "DOI",
+    "code": "Code",
+    "link": "Link",
+    "github": "GitHub",
+    "demo": "Demo",
+    "more": "More",
+    "more_details": "More details",
+    "untitled": "Untitled",
+    "no_items": "No items in this subsection.",
+    "no_data": "No entries yet.",
+    "undated": "Undated",
+    "search_no_cards": "No cards found to search.",
+    "search_showing": "Showing",
+    "search_of": "of",
+    "search_items": "items."
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "body": "<h2>Welcome</h2>\nI’m <strong>Md Samiullah</strong>. I am a researcher and educator with a strong focus on intelligent systems, data science, and applied machine learning. My work bridges theory and practice — from developing robust models for real-world problems such as cybersecurity, malware detection, and mental health analytics, to translating research insights into scalable, impactful solutions.\n<p>Alongside my research, I am deeply committed to teaching and mentorship, guiding students through data-driven thinking, algorithmic design, and practical implementation. I enjoy building systems that are not only technically sound but also socially meaningful, collaborating across disciplines to solve complex challenges at the intersection of AI, data, and human behavior.</p>",
+      "cards": [
+        {
+          "title": "CV",
+          "url": "/cv/",
+          "image": "/assets/img/icons/cv.svg",
+          "description": "View my CV (PDF) with education, experience, awards, and service.",
+          "button": "Open CV"
+        },
+        {
+          "title": "Publications",
+          "url": "/publications/",
+          "image": "/assets/img/icons/publications.svg",
+          "description": "Browse my research outputs, venues, and links to papers/code.",
+          "button": "Open Publications"
+        },
+        {
+          "title": "Teaching",
+          "url": "/teaching/",
+          "image": "/assets/img/icons/teaching.svg",
+          "description": "Courses, topics, and teaching-related materials.",
+          "button": "Open Teaching"
+        },
+        {
+          "title": "Mentoring",
+          "url": "/mentoring/",
+          "image": "/assets/img/icons/teaching.svg",
+          "description": "Research and Development Project Supervision.",
+          "button": "Open Mentoring"
+        },
+        {
+          "title": "Certificates",
+          "url": "/certificates/",
+          "image": "/assets/img/icons/certificates.svg",
+          "description": "Selected professional certifications and training highlights.",
+          "button": "Open Certificates"
+        },
+        {
+          "title": "Portfolio",
+          "url": "/portfolio/",
+          "image": "/assets/img/icons/portfolio.svg",
+          "description": "Projects, demos, tools, and practical implementations.",
+          "button": "Open Portfolio"
+        }
+      ]
+    },
+    "publications": {
+      "title": "Publications",
+      "body": ""
+    },
+    "mentoring": {
+      "title": "Mentoring",
+      "body": ""
+    },
+    "teaching": {
+      "title": "Teaching",
+      "body": ""
+    },
+    "certificates": {
+      "title": "Certificates",
+      "body": ""
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "body": ""
+    },
+    "cv": {
+      "title": "Curriculum Vitae (PDF)",
+      "body": "<p>If the preview doesn’t load, use the download button.</p>",
+      "pdf": "/assets/cv/CV.pdf",
+      "button": "Download PDF"
+    },
+    "about": {
+      "title": "About",
+      "body": "<p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href=\"https://jekyllrb.com/\">jekyllrb.com</a>.</p><p>You can find the source code for Minima at GitHub: <a href=\"https://github.com/jekyll/minima\">jekyll / minima</a>.</p><p>You can find the source code for Jekyll at GitHub: <a href=\"https://github.com/jekyll/jekyll\">jekyll / jekyll</a>.</p>"
+    },
+    "not_found": {
+      "title": "404",
+      "body": "<p><strong>Page not found :(</strong></p><p>The requested page could not be found.</p>"
+    },
+    "welcome_post": {
+      "title": "Welcome to Jekyll!",
+      "body": "<p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>\n<p>Jekyll requires blog post files to be named according to the following format:</p>\n<p><code>YEAR-MONTH-DAY-title.MARKUP</code></p>\n<p>Where <code>YEAR</code> is a four-digit number, <code>MONTH</code> and <code>DAY</code> are both two-digit numbers, and <code>MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>\n<p>Jekyll also offers powerful support for code snippets:</p>\n<pre><code class=\"language-ruby\">def print_hi(name)\n  puts &quot;Hi, #{name}&quot;\nend\nprint_hi(&#39;Tom&#39;)\n#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.\n</code></pre>\n<p>Check out the <a href=\"https://jekyllrb.com/docs/home\">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href=\"https://github.com/jekyll/jekyll\">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href=\"https://talk.jekyllrb.com/\">Jekyll Talk</a>.</p>\n"
+    }
+  },
+  "collections": {
+    "publications": [
+      {
+        "title": "Discovering the Impact on Mental Health for Prolonged Online Dependency in Post-COVID Era Using Deep Transfer Learning\n",
+        "authors": "Md Ehesas Mia Mahir, Md Samiullah, Md Sazzadur Rahman, Carson K Leung\n",
+        "venue": "2026 20th International Conference on Ubiquitous Information Management and Communication (IMCOM)\n",
+        "year": 2026,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-1",
+        "visible": true
+      },
+      {
+        "title": "MIRACLE: Malware image recognition and classification by layered extraction: MIRACLE: malware image recognition...: I. Alam et al.\n",
+        "authors": "Inzamamul Alam, Md Samiullah, SM Asaduzzaman, Upama Kabir, AM Aahad, Simon S Woo\n",
+        "venue": "Data Mining \\& Knowledge Discovery\n",
+        "year": 2025,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-2",
+        "visible": true
+      },
+      {
+        "title": "Supervised graph embedding for classification using discriminating frequent patterns\n",
+        "authors": "Md Tanvir Alam, Chowdhury Farhan Ahmed, Md Samiullah, Carson K Leung\n",
+        "venue": "International Journal of Data Science and Analytics\n",
+        "year": 2025,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-3",
+        "visible": true
+      },
+      {
+        "title": "A Probabilistic Reasoning Framework to Detect Fake News on Social Media\n",
+        "authors": "Mehreen Rashid, Fabliha Anber, Md Samiullah, Chowdhury Farhan Ahmed, Carson K Leung, Adam GM Pazdor\n",
+        "venue": "2025 19th International Conference on Ubiquitous Information Management and Communication (IMCOM)\n",
+        "year": 2025,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-4",
+        "visible": true
+      },
+      {
+        "title": "Framework for Implementation of Poisson MaxSPRT Technique with Variations for Vaccine Safety\n",
+        "authors": "Md Samiullah, Jim Buttery, Hazel J Clothier, Jiying Yin, John Mallard, Jeremiah Munakabayo, Gonzalo Sepulveda Kattan, Gerardo Luis Dimaguila\n",
+        "venue": "medRxiv\n",
+        "year": 2024,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-5",
+        "visible": true
+      },
+      {
+        "title": "SREMIC: Spatial relation extraction-based malware image classification\n",
+        "authors": "Inzamamul Alam, Md Samiullah, Upama Kabir, Simon Woo, Carson K Leung, Hoang Hai Nguyen\n",
+        "venue": "2024 18th International Conference on Ubiquitous Information Management and Communication (IMCOM)\n",
+        "year": 2024,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-6",
+        "visible": true
+      },
+      {
+        "title": "An Efficient Approach to Learn an Effective Hierarchy of a Set of OOBN Classes\n",
+        "authors": "Wakilur Islam, Rezaul Karim, Md Samiullah, Chowdhury Farhan Ahmed, Carson K Leung, Adam GM Pazdor, Connor CJ Hryhoruk\n",
+        "venue": "2024 18th International Conference on Ubiquitous Information Management and Communication (IMCOM)\n",
+        "year": 2024,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-7",
+        "visible": true
+      },
+      {
+        "title": "Discovering interesting patterns from hypergraphs\n",
+        "authors": "Md Tanvir Alam, Chowdhury Farhan Ahmed, Md Samiullah, Carson Kai-Sang Leung\n",
+        "venue": "ACM Transactions on Knowledge Discovery from Data\n",
+        "year": 2023,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-8",
+        "visible": true
+      },
+      {
+        "title": "Shareable and inheritable incremental compilation in iOOBN\n",
+        "authors": "Md Samiullah, Ann Nicholson, David Albrecht\n",
+        "venue": "Pacific Rim International Conference on Artificial Intelligence\n",
+        "year": 2023,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-9",
+        "visible": true
+      },
+      {
+        "title": "Connectable and independent junction tree-based compilation technique of object-oriented bayesian networks\n",
+        "authors": "AM Aahad, Khondker Bin Yamin, Md Samiullah, Chowdhury Farhan Ahmed, Carson K Leung, Evan WR Madill, Adam GM Pazdor\n",
+        "venue": "2023 IEEE 35th International Conference on Tools with Artificial Intelligence (ICTAI)\n",
+        "year": 2023,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-10",
+        "visible": true
+      },
+      {
+        "title": "Discovering probabilistically weighted sequential patterns in uncertain databases\n",
+        "authors": "Md Sahidul Islam, Pankaj Chandra Kar, Md Samiullah, Chowdhury Farhan Ahmed, Carson Kai-Sang Leung\n",
+        "venue": "Applied Intelligence\n",
+        "year": 2023,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-11",
+        "visible": true
+      },
+      {
+        "title": "A Vertex-extension based Algorithm for Frequent Pattern Mining from Graph Databases\n",
+        "authors": "Md Tanvir Alam, Chowdhury Farhan Ahmed, Md Samiullah\n",
+        "venue": "Dhaka University Journal of Applied Science and Engineering\n",
+        "year": 2022,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-12",
+        "visible": true
+      },
+      {
+        "title": "Automated construction of an object-oriented Bayesian network (OOBN) class hierarchy\n",
+        "authors": "Md Samiullah, Ann Nicholson, David Albrecht\n",
+        "venue": "2022 IEEE 34th International Conference on Tools with Artificial Intelligence (ICTAI)\n",
+        "year": 2022,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-13",
+        "visible": true
+      },
+      {
+        "title": "Dr. AI: A Heterogeneous Clinical Decision Support System for Personalised Health Care\n",
+        "authors": "Md Samiullah, Pankaj Chandra Kar, Md Sahidul Islam, Md Tanvir Alam, Chowdhury Farhan Ahmed\n",
+        "venue": "Proceedings of Seventh International Congress on Information and Communication Technology: ICICT 2022, London, Volume 3\n",
+        "year": 2022,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-14",
+        "visible": true
+      },
+      {
+        "title": "UFreS: a new technique for discovering frequent subgraph patterns in uncertain graph databases\n",
+        "authors": "Riddho Ridwanul Haque, Chowdhury Farhan Ahmed, Md Samiullah, Carson K Leung\n",
+        "venue": "2021 IEEE International Conference on Big Knowledge (ICBK)\n",
+        "year": 2021,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-15",
+        "visible": true
+      },
+      {
+        "title": "Discriminating frequent pattern based supervised graph embedding for classification\n",
+        "authors": "Md Tanvir Alam, Chowdhury Farhan Ahmed, Md Samiullah, Carson K Leung\n",
+        "venue": "Pacific-Asia Conference on Knowledge Discovery and Data Mining\n",
+        "year": 2021,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-16",
+        "visible": true
+      },
+      {
+        "title": "Mining frequent patterns from hypergraph databases\n",
+        "authors": "Md Tanvir Alam, Chowdhury Farhan Ahmed, Md Samiullah, Carson K Leung\n",
+        "venue": "Pacific-Asia Conference on Knowledge Discovery and Data Mining\n",
+        "year": 2021,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-17",
+        "visible": true
+      },
+      {
+        "title": "A review on probabilistic graphical models and tools\n",
+        "authors": "Md Samiullah, David Albrecht, Ann E Nicholson, Chowdhury Farhan Ahmed\n",
+        "venue": "Dhaka University Journal of Applied Science and Engineering\n",
+        "year": 2021,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-18",
+        "visible": true
+      },
+      {
+        "title": "iOOBN: an object-oriented Bayesian network modelling framework with inheritance\n",
+        "authors": "Md Samiullah\n",
+        "venue": "",
+        "year": 2020,
+        "type": "phdthesis",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-19",
+        "visible": true
+      },
+      {
+        "title": "Mining non-redundant closed flexible periodic patterns\n",
+        "authors": "Sayma Akther, Md Rezaul Karim, Md Samiullah, Chowdhury Farhan Ahmed\n",
+        "venue": "Engineering Applications of Artificial Intelligence\n",
+        "year": 2018,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-20",
+        "visible": true
+      },
+      {
+        "title": "Ioobn: A Bayesian network modelling tool using object oriented Bayesian networks with inheritance\n",
+        "authors": "Md Samiullah, Thao Xuan Hoang, David Albrecht, Ann Nicholson, Kevin Korb\n",
+        "venue": "2017 IEEE 29th International Conference on Tools with Artificial Intelligence (ICTAI)\n",
+        "year": 2017,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-21",
+        "visible": true
+      },
+      {
+        "title": "An efficient dynamic superset bit-vector approach for mining frequent closed itemsets and their lattice structure\n",
+        "authors": "Tahrima Hashem, Md Rezaul Karim, Md Samiullah, Chowdhury Farhan Ahmed\n",
+        "venue": "Expert Systems with Applications\n",
+        "year": 2017,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-22",
+        "visible": true
+      },
+      {
+        "title": "An efficient approach for mining frequent subgraphs\n",
+        "authors": "Tahira Alam, Sabit Anwar Zahin, Md Samiullah, Chowdhury Farhan Ahmed\n",
+        "venue": "International Conference on Pattern Recognition and Machine Intelligence\n",
+        "year": 2017,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-23",
+        "visible": true
+      },
+      {
+        "title": "Supergraph based periodic pattern mining in dynamic social networks\n",
+        "authors": "Sajal Halder, Md Samiullah, Young-Koo Lee\n",
+        "venue": "Expert Systems with Applications\n",
+        "year": 2017,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-24",
+        "visible": true
+      },
+      {
+        "title": "A new framework for mining weighted periodic patterns in time series databases\n",
+        "authors": "Ashis Kumar Chanda, Chowdhury Farhan Ahmed, Md Samiullah, Carson K Leung\n",
+        "venue": "Expert Systems with Applications\n",
+        "year": 2017,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-25",
+        "visible": true
+      },
+      {
+        "title": "Mining interesting patterns from uncertain databases\n",
+        "authors": "Akiz Uddin Ahmed, Chowdhury Farhan Ahmed, Md Samiullah, Nahim Adnan, Carson Kai-Sang Leung\n",
+        "venue": "Information Sciences\n",
+        "year": 2016,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-26",
+        "visible": true
+      },
+      {
+        "title": "An efficient approach for mining frequent patterns over uncertain data streams\n",
+        "authors": "Md Badi-Uz-Zaman Shajib, Md Samiullah, Chowdhury Farhan Ahmed, Carson K Leung, Adam GM Pazdor\n",
+        "venue": "2016 IEEE 28th International Conference on Tools with Artificial Intelligence (ICTAI)\n",
+        "year": 2016,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-27",
+        "visible": true
+      },
+      {
+        "title": "Reframing in frequent pattern mining\n",
+        "authors": "Chowdhury Farhan Ahmed, Md Samiullah, Nicolas Lachiche, Meelis Kull, Peter Flach\n",
+        "venue": "2015 IEEE 27th International Conference on Tools with Artificial Intelligence (ICTAI)\n",
+        "year": 2015,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-28",
+        "visible": true
+      },
+      {
+        "title": "A new framework for mining frequent interaction patterns from meeting databases\n",
+        "authors": "Anna Fariha, Chowdhury Farhan Ahmed, Carson K Leung, Md Samiullah, Suraiya Pervin, Longbing Cao\n",
+        "venue": "Engineering Applications of Artificial Intelligence\n",
+        "year": 2015,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-29",
+        "visible": true
+      },
+      {
+        "title": "An efficient approach to mine flexible periodic patterns in time series databases\n",
+        "authors": "Ashis Kumar Chanda, Swapnil Saha, Manziba Akanda Nishi, Md Samiullah, Chowdhury Farhan Ahmed\n",
+        "venue": "Engineering Applications of Artificial Intelligence\n",
+        "year": 2015,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-30",
+        "visible": true
+      },
+      {
+        "title": "An efficient approach for mining cross-level closed itemsets and minimal association rules using closed itemset lattices\n",
+        "authors": "Tahrima Hashem, Chowdhury Farhan Ahmed, Md Samiullah, Sayma Akther, Byeong-Soo Jeong, Seokhee Jeon\n",
+        "venue": "Expert systems with applications\n",
+        "year": 2014,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-31",
+        "visible": true
+      },
+      {
+        "title": "Mining frequent correlated graphs with a new measure\n",
+        "authors": "Md Samiullah, Chowdhury Farhan Ahmed, Anna Fariha, Md Rafiqul Islam, Nicolas Lachiche\n",
+        "venue": "Expert systems with applications\n",
+        "year": 2014,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-32",
+        "visible": true
+      },
+      {
+        "title": "Correlation mining in graph databases with a new measure\n",
+        "authors": "Md Samiullah, Chowdhury Farhan Ahmed, Manziba Akanda Nishi, Anna Fariha, SM Abdullah, Md Rafiqul Islam\n",
+        "venue": "Asia-Pacific Web Conference\n",
+        "year": 2013,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-33",
+        "visible": true
+      },
+      {
+        "title": "Effective periodic pattern mining in time series databases\n",
+        "authors": "Manziba Akanda Nishi, Chowdhury Farhan Ahmed, Md Samiullah, Byeong-Soo Jeong\n",
+        "venue": "Expert Systems with Applications\n",
+        "year": 2013,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-34",
+        "visible": true
+      },
+      {
+        "title": "Queue management based congestion control in wireless body sensor network\n",
+        "authors": "Md Samiullah, SM Abdullah, AFM Imamul Hoq Bappi, Shahed Anwar\n",
+        "venue": "2012 International Conference on Informatics, Electronics \\& Vision (ICIEV)\n",
+        "year": 2012,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-35",
+        "visible": true
+      },
+      {
+        "title": "Movie swarm: Information mining technique for movie recommendation system\n",
+        "authors": "Sajal Halder, Md Samiullah, AM Jehad Sarkar, Young-Koo Lee\n",
+        "venue": "2012 7th International Conference on Electrical and Computer Engineering\n",
+        "year": 2012,
+        "type": "inproceedings",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-36",
+        "visible": true
+      },
+      {
+        "title": "Efficient Graph Classification in Shifted Datasets Using Weighted Correlated Feature Selection\n",
+        "authors": "Md Samiullah, Chowdhury Farhan Ahmed, Anna Fariha, Akiz Uddin\n",
+        "venue": "",
+        "year": 0,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-37",
+        "visible": true
+      },
+      {
+        "title": "A new framework for mining weighted periodic patterns in time series\n",
+        "authors": "Ashis Kumar Chanda, Chowdhury Farhan Ahmed, Md Samiullah, Carson K Leung\n",
+        "venue": "",
+        "year": 0,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-38",
+        "visible": true
+      },
+      {
+        "title": "Reframing in Frequent Pattern Mining. In 2015 IEEE 27th International Conference on Tools with Artificial Intelligence (ICTAI 2015): Proceedings of a meeting held 9-11 November 2015 at Vietri sul Mare, Italy (pp. 799\n",
+        "authors": "CF Ahmed, M Samiullah, N Lachiche, M Kull, PA Flach\n",
+        "venue": "",
+        "year": 0,
+        "type": "article",
+        "pdf": "",
+        "doi": "",
+        "code": "",
+        "id": "publications-39",
+        "visible": true
+      }
+    ],
+    "mentoring": [
+      {
+        "name": "Daniz Ozgun Akkus",
+        "project": "Deep Neural Bayesian Network approach to Breast Cancer Detection",
+        "year": "Currrent",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "Monash University",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-1",
+        "visible": true
+      },
+      {
+        "name": "Jatin Yadav",
+        "project": "Combined approach to detecting LLM hallucianation",
+        "year": "Currrent",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "Monash University",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-2",
+        "visible": true
+      },
+      {
+        "name": "Ayden Narayan",
+        "project": "Designing Quantum Algorithm For Efficient Inference",
+        "year": "Currrent",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "Monash University",
+        "subsection": "Undergraduate Research Project",
+        "id": "mentoring-3",
+        "visible": true
+      },
+      {
+        "name": "James Smith",
+        "project": "Designing Quantum Algorithm to Learn Causal Structures from Data",
+        "year": "Currrent",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "Monash University",
+        "subsection": "Undergraduate Research Project",
+        "id": "mentoring-4",
+        "visible": true
+      },
+      {
+        "name": "Shadman Rabby",
+        "project": "Multimodal Fake News Detection Technique using LLM and VLMs",
+        "year": "Current",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-5",
+        "visible": true
+      },
+      {
+        "name": "Inzamam Alam",
+        "project": "Spatial Relation Extraction-based Malware Image Classification",
+        "year": "2021–2023",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-6",
+        "visible": true
+      },
+      {
+        "name": "Hasibul Haque",
+        "project": "Efficient Inference Algorithm for Object Oriented Bayesian Networks",
+        "year": "2021–2023",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-7",
+        "visible": true
+      },
+      {
+        "name": "MBUZ Shajib",
+        "project": "An efficient approach for mining frequent patterns over uncertain data streams",
+        "year": "2015–2016",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-8",
+        "visible": true
+      },
+      {
+        "name": "Sayma Akhter",
+        "project": "Mining non-redundant closed flexible periodic patterns",
+        "year": "2013–20115",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-9",
+        "visible": true
+      },
+      {
+        "name": "Tahrima Hashem",
+        "project": "An efficient dynamic superset bit-vector approach for mining frequent closed itemsets and their lattice structure",
+        "year": "2013–2015",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-10",
+        "visible": true
+      },
+      {
+        "name": "Tarannum Shaila Zaman Prottasha",
+        "project": "An improved Single Pass Approach for Web Access Sequential Pattern Mining",
+        "year": "2013–2014",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-11",
+        "visible": true
+      },
+      {
+        "name": "Jewel Rana",
+        "project": "Infrequent Weighted Web Access Sequence Mining Using Frequent Pattern Growth Approach.",
+        "year": "2013–2014",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-12",
+        "visible": true
+      },
+      {
+        "name": "Rumana Ferdous Munne",
+        "project": "Method of Optimized Sentiment analysis using Unsupervised learning algorithm for Bangla language",
+        "year": "2013–2014",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-13",
+        "visible": true
+      },
+      {
+        "name": "Mostafijur Rahman",
+        "project": "Infrequent Weighted Web Access Sequence Mining Using Frequent Pattern Growth Approach",
+        "year": "2013–2014",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-14",
+        "visible": true
+      },
+      {
+        "name": "Akiz Ahmed",
+        "project": "Mining Interesting Patterns from Uncertain Databases",
+        "year": "2013–2014",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-15",
+        "visible": true
+      },
+      {
+        "name": "Nahim Adnan",
+        "project": "Mining High utility Patterns from Uncertain Databases",
+        "year": "2013–2014",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-16",
+        "visible": true
+      },
+      {
+        "name": "Lioza Noor",
+        "project": "Exploring fathers’ involvement in child caring during the COVID-19 pandemic in urban areas",
+        "year": "2013–2014",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-17",
+        "visible": true
+      },
+      {
+        "name": "Nazia Alam",
+        "project": "Graph theoretic appoach to find graph correlation",
+        "year": "2013–2014",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-18",
+        "visible": true
+      },
+      {
+        "name": "Tanvir Fahim",
+        "project": "Mining frequent patterns from hypergraph databases",
+        "year": "2021–2022",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-19",
+        "visible": true
+      },
+      {
+        "name": "Redwan Ahmed Rizvee",
+        "project": "High utility pattern mining from Time Series Dataset",
+        "year": "2013–2014",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-20",
+        "visible": true
+      },
+      {
+        "name": "Riddho Ridwanul Hoque",
+        "project": "UFreS: a new technique for discovering frequent subgraph patterns in uncertain graph databases",
+        "year": "2020–2021",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-21",
+        "visible": true
+      },
+      {
+        "name": "Ashis Kumar Chanda",
+        "project": "A new framework for mining weighted periodic patterns in time series databases",
+        "year": "2016–2017",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-22",
+        "visible": true
+      },
+      {
+        "name": "Rezwana Sultana",
+        "project": "An Effective Use of Simulated Binary Crossover in Particle Swarm Optimization For Gene Regulatory Network Reconstruction",
+        "year": "2012–2013",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-23",
+        "visible": true
+      },
+      {
+        "name": "Abdullah Al - Matin",
+        "project": "Study and Survey of Sequential Pattern Mining Approaches.",
+        "year": "2013–2014",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-24",
+        "visible": true
+      },
+      {
+        "name": "Maliha Momtaz",
+        "project": "Maximal and closed frequent itemsets mining from uncertain database and data stream",
+        "year": "2013–2014",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-25",
+        "visible": true
+      },
+      {
+        "name": "Ashis K Chanda and Swapnil Saha",
+        "project": "An efficient approach to mine flexible periodic patterns in time series databases",
+        "year": "2013-2014",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-26",
+        "visible": true
+      },
+      {
+        "name": "Maliha Momtaz and Mahbuba Maliha Mourin",
+        "project": "CUFPR- Compressed Uncertain Frequent Pattern Mining in Running Database",
+        "year": "2014-2015",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-27",
+        "visible": true
+      },
+      {
+        "name": "Rabeya Akhter and Anjum Riashat",
+        "project": "Infrequent Weighted Web Access pattern mining form Web Access Sequence(web logs)",
+        "year": "2014-2015",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-28",
+        "visible": true
+      },
+      {
+        "name": "Rezaul Islam and Wakilur Islam",
+        "project": "An Efficient Approach to Learn an Effective Hierarchy of a Set of OOBN Classes",
+        "year": "2022-2023",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-29",
+        "visible": true
+      },
+      {
+        "name": "A.M. Aahad and KB Yamin",
+        "project": "Connectable and independent junction tree-based compilation technique of object-oriented bayesian networks",
+        "year": "2022-2023",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-30",
+        "visible": true
+      },
+      {
+        "name": "Md. Mainul Haque and Saikat Bose",
+        "project": "Mining Closed Frequent Itemset from Uncertain Data",
+        "year": "2014-2015",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-31",
+        "visible": true
+      },
+      {
+        "name": "Tahira Alam and Sabit Anwar Zahin",
+        "project": "An efficient approach of mining frequent subgraphs using supergraph: mSpan",
+        "year": "2014-2015",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-32",
+        "visible": true
+      },
+      {
+        "name": "Mehreen Rashid and Fabliha Anber",
+        "project": "A Probabilistic Reasoning Framework to Detect Fake News on Social Media",
+        "year": "2023-2024",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-33",
+        "visible": true
+      },
+      {
+        "name": "Sahidul Islam and Pankaj Chandra Kar",
+        "project": "Discovering Probabilistically Weighted Sequential Patterns in Uncertain Databases",
+        "year": "2021-2022",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-34",
+        "visible": true
+      },
+      {
+        "name": "Mridul Banik and Sowmik Kumar Sarker",
+        "project": "Attention Based Neural Network for Machine Translation",
+        "year": "2021-2022",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-35",
+        "visible": true
+      },
+      {
+        "name": "Md Shamsurrahman Sami and Tasnia Shahrin",
+        "project": "Multi-Scale Feature Fusion Chest X-ray Analysis for Lung Disease Detection Using Deep Learning",
+        "year": "2024-2025",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-36",
+        "visible": true
+      },
+      {
+        "name": "Hasibul Haque and Kesab Roy",
+        "project": "Malware image classification",
+        "year": "2022",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-37",
+        "visible": true
+      },
+      {
+        "name": "Sanjay Saha and Hasan Mashrique",
+        "project": "Efficient Mining of Multiple Level Association Rules from Data Streams",
+        "year": "2022",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-38",
+        "visible": true
+      },
+      {
+        "name": "Akiz Ahmed and Nahim Adnan",
+        "project": "Mining interesting patterns from uncertain databases",
+        "year": "2013",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-39",
+        "visible": true
+      },
+      {
+        "name": "Tahrima Hashem and Sayma Akter",
+        "project": "An efficient approach for mining cross-level closed itemsets and minimal association rules using closed itemset lattices",
+        "year": "2013",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-40",
+        "visible": true
+      },
+      {
+        "name": "Sayeed Mahmud and Md. Farhad Alam Bhuiyan",
+        "project": "An Optimized And Fast Sequential Pattern Mining Technique in DNA and miRNA Data Sequences",
+        "year": "2012-2013",
+        "role": "Associate Supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-41",
+        "visible": true
+      },
+      {
+        "name": "Mohammad Maruful Haque and Md. Zobayer Hasan",
+        "project": "CUFP Tree Based Efficient Pattern Mining Algorithm for Uncertain Database",
+        "year": "2012-2013",
+        "role": "Associate Supervisor",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate Project Supervision",
+        "id": "mentoring-42",
+        "visible": true
+      },
+      {
+        "name": "Ehesas Mia Mahir",
+        "project": "Discovering the Impact on Mental Health for Prolonged Online Dependency in Post-COVID Era Using Deep Transfer Learning",
+        "year": "2023–2025",
+        "role": "Associate supervisor",
+        "url": "",
+        "section": "Jahangir Nagar University",
+        "subsection": "Masters Thesis Supervision",
+        "id": "mentoring-43",
+        "visible": true
+      },
+      {
+        "name": "Md Azizur Rahman and NJ Samiha",
+        "project": "Library Management System using Java Spring Hybernate framework",
+        "year": "2011–2012",
+        "role": "Principal supervisor",
+        "url": "",
+        "section": "Daffodil International University",
+        "subsection": "Undergraduate Project",
+        "id": "mentoring-44",
+        "visible": true
+      }
+    ],
+    "teaching": [
+      {
+        "code": "FIT1045",
+        "title": "Algorithms and Programming Fundamentals in Python",
+        "year": "2017–2019",
+        "role": "Tutor & admin tutor",
+        "description": "Introductory programming and algorithms in Python. Emphasis on problem solving using programming.",
+        "url": "/teaching/fit1045/",
+        "section": "Monash University",
+        "subsection": "Undergraduate",
+        "id": "teaching-1",
+        "visible": true
+      },
+      {
+        "code": "FIT1008",
+        "title": "Introduction to Computer Science",
+        "year": "2016–2018",
+        "role": "Tutor",
+        "description": "Foundations of computing and programming basics.",
+        "section": "Monash University",
+        "subsection": "Undergraduate",
+        "id": "teaching-2",
+        "visible": true
+      },
+      {
+        "code": "FIT2004",
+        "title": "Algorithms and Data structures",
+        "year": "2017-2019",
+        "role": "Tutor",
+        "description": "Algorithm and Data structure analysis and implementation.",
+        "url": "/teaching/fit2004/",
+        "section": "Monash University",
+        "subsection": "Undergraduate",
+        "id": "teaching-3",
+        "visible": true
+      },
+      {
+        "code": "FIT2100",
+        "title": "Operating Systems",
+        "year": "2018-2019",
+        "role": "Tutor & admin tutor",
+        "description": "Operating systems theory and concepts, practice and implementation.",
+        "url": "/teaching/fit2100/",
+        "section": "Monash University",
+        "subsection": "Undergraduate",
+        "id": "teaching-4",
+        "visible": true
+      },
+      {
+        "code": "FIT3080",
+        "title": "Intelligent Systems",
+        "year": "2017-2019, 2025",
+        "role": "Tutor & admin tutor",
+        "description": "Introductory AI and knowledge-based systems.",
+        "url": "/teaching/fit3080/",
+        "section": "Monash University",
+        "subsection": "Undergraduate",
+        "id": "teaching-5",
+        "visible": true
+      },
+      {
+        "code": "FIT3139",
+        "title": "Computational Science",
+        "year": "2019",
+        "role": "Tutor & admin tutor",
+        "url": "/teaching/fit3080/",
+        "section": "Monash University",
+        "subsection": "Undergraduate",
+        "id": "teaching-6",
+        "visible": true
+      },
+      {
+        "code": "FIT1054",
+        "title": "Computer science (advanced)",
+        "year": "2019",
+        "role": "Tutor",
+        "url": "/teaching/fit1054/",
+        "section": "Monash University",
+        "subsection": "Undergraduate",
+        "id": "teaching-7",
+        "visible": true
+      },
+      {
+        "code": "FIT2085",
+        "title": "Introduction to computer science for engineers",
+        "year": "2019",
+        "role": "Tutor",
+        "url": "/teaching/fit2085/",
+        "section": "Monash University",
+        "subsection": "Undergraduate",
+        "id": "teaching-8",
+        "visible": true
+      },
+      {
+        "code": "FIT5047",
+        "title": "Intelligent Systems",
+        "year": "2017-2019, 2023-2026",
+        "role": "Tutor, admin tutor & guest lecturer",
+        "description": "Advanced topics in AI and knowledge-based systems.",
+        "section": "Monash University",
+        "subsection": "Postgraduate",
+        "id": "teaching-9",
+        "visible": true
+      },
+      {
+        "code": "FIT5142",
+        "title": "Advanced Data Mining",
+        "year": "2019",
+        "role": "Tutor",
+        "description": "Data Science Theories, concepts and implementation.",
+        "section": "Monash University",
+        "subsection": "Postgraduate",
+        "id": "teaching-10",
+        "visible": true
+      },
+      {
+        "code": "FIT5145",
+        "title": "Introduction to Data Science",
+        "year": "2025",
+        "role": "Tutor",
+        "description": "Data Science Theories, concepts and implementation.",
+        "section": "Monash University",
+        "subsection": "Postgraduate",
+        "id": "teaching-11",
+        "visible": true
+      },
+      {
+        "code": "FIT5211",
+        "title": "Algorithms and Data Structures",
+        "year": "2019",
+        "role": "Tutor",
+        "description": "Advanced Algorithm and Data structure analysis and implementation.",
+        "section": "Monash University",
+        "subsection": "Postgraduate",
+        "id": "teaching-12",
+        "visible": true
+      },
+      {
+        "code": "FIT9133",
+        "title": " Programming Foundations in Python",
+        "year": "2017-2019",
+        "role": "Tutor",
+        "description": "Foundations of computing, problem solving and programming basics.",
+        "section": "Monash University",
+        "subsection": "Postgraduate",
+        "id": "teaching-13",
+        "visible": true
+      },
+      {
+        "code": "CSE4102",
+        "title": "Introduction to Data Science",
+        "year": "2020-2022",
+        "role": "Lecturer",
+        "url": "/teaching/cse4102/",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate",
+        "id": "teaching-14",
+        "visible": true
+      },
+      {
+        "code": "CSE4202",
+        "title": "Machine learning & Data mining",
+        "year": "2013,2020-2021",
+        "role": "Lecturer",
+        "description": "Machine Learning and Data mining techniques and methods.",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate",
+        "id": "teaching-15",
+        "visible": true
+      },
+      {
+        "code": "CSE3203",
+        "title": "Compiler Design Principles",
+        "year": "2014-2015",
+        "role": "Lecturer",
+        "description": "Theories and concepts of Compiler Design.",
+        "url": "/teaching/cse3203/",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate",
+        "id": "teaching-16",
+        "visible": true
+      },
+      {
+        "code": "CSE3105",
+        "title": "Software Design Pattern",
+        "year": "2013-2015, 2021-2022",
+        "role": "Lecturer",
+        "description": "Principles, concepts and applications of software design patterns",
+        "url": "/teaching/cse3105/",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate",
+        "id": "teaching-17",
+        "visible": true
+      },
+      {
+        "code": "CSE4212",
+        "title": "Advanced Database Management",
+        "year": "2013, 2022",
+        "role": "Lecturer",
+        "description": "Advanced Database techniques, theories and concepts.",
+        "url": "/teaching/cse4212/",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate",
+        "id": "teaching-18",
+        "visible": true
+      },
+      {
+        "code": "CSE2102",
+        "title": "Theory of Computations.",
+        "year": "2014",
+        "role": "Lecturer",
+        "description": "Introduciton to the theoy of computations, techniques and methods.",
+        "url": "/teaching/cse2102/",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate",
+        "id": "teaching-19",
+        "visible": true
+      },
+      {
+        "code": "CSE1113",
+        "title": "Data Structures Lab",
+        "year": "2014",
+        "role": "Instructor",
+        "description": "Practical implementation of Data structures to solve problems.",
+        "url": "/teaching/cse2102/",
+        "section": "University of Dhaka",
+        "subsection": "Undergraduate",
+        "id": "teaching-20",
+        "visible": true
+      },
+      {
+        "code": "CSE5202",
+        "title": "Advanced Data Mining",
+        "year": "2013",
+        "role": "Lecturer",
+        "description": "Advanced topics in Data mining techniques.",
+        "section": "University of Dhaka",
+        "subsection": "Postgraduate",
+        "id": "teaching-21",
+        "visible": true
+      },
+      {
+        "code": "NSU EWU IUB CSE311",
+        "title": "Database Systems",
+        "year": "2021-2022",
+        "role": "Lecturer",
+        "section": "Other Bangladesh University: NSU, AUST, EWU, IUB, DIU, National University, BUBT, ULAB",
+        "subsection": "Undergraduate",
+        "id": "teaching-22",
+        "visible": true
+      },
+      {
+        "code": "NSU CSE425",
+        "title": "Concepts of programming Language",
+        "year": "2021-2022",
+        "role": "Lecturer",
+        "section": "Other Bangladesh University: NSU, AUST, EWU, IUB, DIU, National University, BUBT, ULAB",
+        "subsection": "Undergraduate",
+        "id": "teaching-23",
+        "visible": true
+      },
+      {
+        "code": "NSU CSE445",
+        "title": "Introduction to Machine learning",
+        "year": "2022",
+        "role": "Lecturer",
+        "description": "Machine Learning and Data mining techniques and methods.",
+        "section": "Other Bangladesh University: NSU, AUST, EWU, IUB, DIU, National University, BUBT, ULAB",
+        "subsection": "Undergraduate",
+        "id": "teaching-24",
+        "visible": true
+      },
+      {
+        "code": "DIU EWU AUST CSE101",
+        "title": "Introduction to Computer Science",
+        "year": "2022",
+        "role": "Lecturer",
+        "description": "Introduciton to computers: fundamentals of computations.",
+        "section": "Other Bangladesh University: NSU, AUST, EWU, IUB, DIU, National University, BUBT, ULAB",
+        "subsection": "Undergraduate",
+        "id": "teaching-25",
+        "visible": true
+      },
+      {
+        "code": "AUST CSE307",
+        "title": "Data Communication",
+        "year": "2013",
+        "role": "Lecturer",
+        "description": "Data communication protocols and methods.",
+        "section": "Other Bangladesh University: NSU, AUST, EWU, IUB, DIU, National University, BUBT, ULAB",
+        "subsection": "Undergraduate",
+        "id": "teaching-26",
+        "visible": true
+      },
+      {
+        "code": "AUST CSE332",
+        "title": "Compiler Design and Analysis",
+        "year": "2011-2012",
+        "role": "Lecturer",
+        "description": "Theories and concepts of Compiler Design.",
+        "section": "Other Bangladesh University: NSU, AUST, EWU, IUB, DIU, National University, BUBT, ULAB",
+        "subsection": "Undergraduate",
+        "id": "teaching-27",
+        "visible": true
+      },
+      {
+        "code": "DIU EWU IUB BUBT CSE 112",
+        "title": "Structured Programming Language",
+        "year": "2011–2014",
+        "role": "Lecturer & Instructor",
+        "description": "Introductory programming and algorithms in C/C++. Emphasis on problem solving using programming.",
+        "url": "/teaching/fit1045/",
+        "section": "Other Bangladesh University: NSU, AUST, EWU, IUB, DIU, National University, BUBT, ULAB",
+        "subsection": "Undergraduate",
+        "id": "teaching-28",
+        "visible": true
+      },
+      {
+        "code": "NSU BUS516",
+        "title": "Computer Information Systems",
+        "year": "2021",
+        "role": "Lecturer",
+        "description": "Study, analysis, and design of computer-based information systems to support business management decisions.",
+        "section": "Other Bangladesh University: NSU, AUST, EWU, IUB, DIU, National University, BUBT, ULAB",
+        "subsection": "Postgraduate",
+        "id": "teaching-29",
+        "visible": true
+      },
+      {
+        "code": "NSU MIS652",
+        "title": "Management Information Systems",
+        "year": "2022",
+        "role": "Lecturer",
+        "description": "the strategic role of information systems in modern business organizations.",
+        "section": "Other Bangladesh University: NSU, AUST, EWU, IUB, DIU, National University, BUBT, ULAB",
+        "subsection": "Postgraduate",
+        "id": "teaching-30",
+        "visible": true
+      },
+      {
+        "code": "NSU MIS657, Nat. Uni. MIS512",
+        "title": "Business Analytics and Data Science.",
+        "year": "2022, 2014",
+        "role": "Lecturer",
+        "description": "the application of data science techniques and analytical tools to solve business problems and support decision-making processes.",
+        "section": "Other Bangladesh University: NSU, AUST, EWU, IUB, DIU, National University, BUBT, ULAB",
+        "subsection": "Postgraduate",
+        "id": "teaching-31",
+        "visible": true
+      }
+    ],
+    "certificates": [
+      {
+        "title": "PhD in IT",
+        "issuer": "Faculty of IT, Monash University",
+        "year": "2016-2020",
+        "url": "",
+        "description": "Research degree involving the development of a Object-Oriented Bayesian network modelling tool with inheritance and other OO-features.",
+        "section": "Degrees",
+        "subsection": "",
+        "id": "certificates-1",
+        "visible": true
+      },
+      {
+        "title": "Masters of Science in Computer Science and Engineering",
+        "issuer": "Department of Computer Science and Engineering, University of Dhaka",
+        "year": "2010-2012",
+        "description": "MS by research involving the development of efficient graph correlation mining in graph databases.",
+        "url": "",
+        "section": "Degrees",
+        "subsection": "",
+        "id": "certificates-2",
+        "visible": true
+      },
+      {
+        "title": "BSC with Honours in Computer Science and Engineering",
+        "issuer": "Department of Computer Science and Engineering, University of Dhaka",
+        "year": "2005-2009",
+        "description": "",
+        "url": "",
+        "section": "Degrees",
+        "subsection": "",
+        "id": "certificates-3",
+        "visible": true
+      },
+      {
+        "title": "Postgraduate Publication Award",
+        "issuer": "FIT, Monash University",
+        "year": 2019,
+        "url": "",
+        "section": "Awards",
+        "subsection": "",
+        "id": "certificates-4",
+        "visible": true
+      },
+      {
+        "title": "Australian Postgraduate Award",
+        "issuer": "Australian Federal Government",
+        "year": 2016,
+        "url": "",
+        "section": "Awards",
+        "subsection": "",
+        "id": "certificates-5",
+        "visible": true
+      },
+      {
+        "title": "International Postgraduate Research Scholarship",
+        "issuer": "Australian Federal Government",
+        "year": 2016,
+        "url": "",
+        "section": "Awards",
+        "subsection": "",
+        "id": "certificates-6",
+        "visible": true
+      },
+      {
+        "title": "Merit Scholarship (3rd Rank for BSC Result)",
+        "issuer": "University of Dhaka",
+        "year": 2011,
+        "url": "",
+        "section": "Awards",
+        "subsection": "",
+        "id": "certificates-7",
+        "visible": true
+      },
+      {
+        "title": "Understanding and Visualizing Data with Python",
+        "issuer": "Coursera",
+        "year": 2021,
+        "url": "",
+        "section": "Courses",
+        "subsection": "",
+        "id": "certificates-8",
+        "visible": true
+      },
+      {
+        "title": "Python and Django Full Stack Web Developer Bootcamp",
+        "issuer": "Udemy",
+        "year": 2020,
+        "url": "",
+        "section": "Courses",
+        "subsection": "",
+        "id": "certificates-9",
+        "visible": true
+      },
+      {
+        "title": "The Data Science Course 2021: Complete Data Science Bootcamp",
+        "issuer": "Udemy",
+        "year": 2024,
+        "url": "",
+        "section": "Courses",
+        "subsection": "",
+        "id": "certificates-10",
+        "visible": true
+      },
+      {
+        "title": "React - The Complete Guide",
+        "issuer": "Udemy",
+        "year": 2025,
+        "url": "",
+        "section": "Courses",
+        "subsection": "",
+        "id": "certificates-11",
+        "visible": true
+      },
+      {
+        "title": "Deep Learning A-Z",
+        "issuer": "Udemy",
+        "year": 2024,
+        "url": "",
+        "section": "Courses",
+        "subsection": "",
+        "id": "certificates-12",
+        "visible": true
+      },
+      {
+        "title": "NLP - Natural Language Processing with Python",
+        "issuer": "Udemy",
+        "year": 2025,
+        "url": "",
+        "section": "Courses",
+        "subsection": "",
+        "id": "certificates-13",
+        "visible": true
+      },
+      {
+        "title": "Introduction to Generative AI",
+        "issuer": "Google",
+        "year": 2024,
+        "url": "",
+        "section": "Courses",
+        "subsection": "",
+        "id": "certificates-14",
+        "visible": true
+      },
+      {
+        "title": "Digital Health 101 Course: Transforming Healthcare with Expert Insights and Practical Skills",
+        "issuer": "University of Melbourne",
+        "year": 2024,
+        "url": "",
+        "section": "Courses",
+        "subsection": "",
+        "id": "certificates-15",
+        "visible": true
+      },
+      {
+        "title": "Supporting Academic Integrity",
+        "issuer": "Monash University",
+        "year": "2026",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-16",
+        "visible": true
+      },
+      {
+        "title": "Fundamentals of programmatic approaches",
+        "issuer": "Monash University",
+        "year": "2026",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-17",
+        "visible": true
+      },
+      {
+        "title": "Moodle essentials",
+        "issuer": "Monash University",
+        "year": "2025",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-18",
+        "visible": true
+      },
+      {
+        "title": "BDITEC (Bangladesh IT-engineers Examination Center) Management",
+        "issuer": "University of Dahaka and Ministry of Education, Bangladesh",
+        "year": "2013",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-19",
+        "visible": true
+      },
+      {
+        "title": "ITEE (Information Technology Engineers Examination) Training of Trainers",
+        "issuer": "University of Dahaka and Ministry of Education, Bangladesh",
+        "year": "2013-2014",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-20",
+        "visible": true
+      },
+      {
+        "title": "Research Strategies and Skills",
+        "issuer": "Monash University",
+        "year": "2022, 2023, 2024",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-21",
+        "visible": true
+      },
+      {
+        "title": "Advanced Research Methods",
+        "issuer": "Monash University",
+        "year": "2017",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-22",
+        "visible": true
+      },
+      {
+        "title": "Research Integrity",
+        "issuer": "",
+        "year": "2016, 2024",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-23",
+        "visible": true
+      },
+      {
+        "title": "Ethics and Professional Conduct",
+        "issuer": "MCRI",
+        "year": "2023, 2024",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-24",
+        "visible": true
+      },
+      {
+        "title": "Understanding Mental Health",
+        "issuer": "Monash University",
+        "year": "2024",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-25",
+        "visible": true
+      },
+      {
+        "title": "Data Protection and Privacy",
+        "issuer": "Monash University, MCRI",
+        "year": "2022, 2023",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-26",
+        "visible": true
+      },
+      {
+        "title": "Introduction to Cyber Security",
+        "issuer": "MCRI",
+        "year": "2023",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-27",
+        "visible": true
+      },
+      {
+        "title": "Equal Opportunity Online Training",
+        "issuer": "Monash University",
+        "year": "2023",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-28",
+        "visible": true
+      },
+      {
+        "title": "MCRI and VCGS Core Compliance Training",
+        "issuer": "MCRI and VCGS",
+        "year": "2022",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-29",
+        "visible": true
+      },
+      {
+        "title": "Research Data Management",
+        "issuer": "MCRI",
+        "year": "2023",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-30",
+        "visible": true
+      },
+      {
+        "title": "Performance and Development",
+        "issuer": "MCRI",
+        "year": "2023, 2024",
+        "url": "",
+        "section": "Training",
+        "subsection": "",
+        "id": "certificates-31",
+        "visible": true
+      }
+    ],
+    "portfolio": [
+      {
+        "title": "Vaccine Safety BN",
+        "year": 2022,
+        "collaboration": "Monash University",
+        "description": "Developing a BN model to effectively detecting vaccine safety signals in a timely manner.",
+        "status": "Ongoing",
+        "Role": "Researcher Officer",
+        "Keywords": "Vaccine; Reaction; Statistical; Bayesian Network",
+        "section": "Murdoch Children's Research Institute (MCRI)",
+        "subsection": "Projects",
+        "id": "portfolio-1",
+        "visible": true
+      },
+      {
+        "title": "Global Vaccine Data Network Rapid Cycle analysis",
+        "collaboration": "University of Auckland",
+        "Role": "Research Officer",
+        "description": "Developing Rapid Cycle Analysis for vaccine safety using world-wide data",
+        "year": "2023-2024",
+        "status": "",
+        "fundingBody": "GVDN",
+        "amount": "",
+        "section": "Murdoch Children's Research Institute (MCRI)",
+        "subsection": "Projects",
+        "id": "portfolio-2",
+        "visible": true
+      },
+      {
+        "title": "Academic Integrity Committee",
+        "Role": "Integrity Officer",
+        "description": "Conducting investigation of academic integrity violation.",
+        "year": "2018-2020",
+        "url": "",
+        "collaboration": "",
+        "status": "",
+        "fundingBody": "",
+        "amount": "",
+        "section": "Monash University",
+        "subsection": "Roles",
+        "id": "portfolio-3",
+        "visible": true
+      },
+      {
+        "title": "Automated Marking Rubric and Feedback System (Python, Google Apps Script, Google Sheets)",
+        "Role": "Developer, Designer, Coordinator",
+        "description": "Designed and developed a Python and Google Apps Script–based marking platform integrated with Google Sheets to streamline tutor marking workflows.",
+        "year": "2026",
+        "url": "",
+        "status": "",
+        "fundingBody": "",
+        "amount": "",
+        "section": "Monash University",
+        "subsection": "Projects",
+        "id": "portfolio-4",
+        "visible": true
+      },
+      {
+        "title": "Automated Assessment Marking System (Python, NLP)",
+        "Role": "Developer, Coordinator",
+        "description": "Designed and implemented a Python-based automated assessment system for programming assignments in the Natural Language Processing (FIT5217) unit.",
+        "year": "2026",
+        "url": "",
+        "status": "",
+        "fundingBody": "",
+        "amount": "",
+        "section": "Monash University",
+        "subsection": "Projects",
+        "id": "portfolio-5",
+        "visible": true
+      },
+      {
+        "title": "AI-powered Job Application Automation system",
+        "Role": "Developer, Coordinator",
+        "description": "The app can generate tailored cover letters, selection criteria responses, ATS-aware LaTeX CVs, and validation reports using multiple LLM providers (OpenAI, Groq, Anthropic).",
+        "year": "2026",
+        "url": "",
+        "status": "",
+        "fundingBody": "",
+        "amount": "",
+        "section": "Monash University",
+        "subsection": "Projects",
+        "id": "portfolio-6",
+        "visible": true
+      },
+      {
+        "title": "Western Grassland Reserve Project Reengineering",
+        "collaboration": "DELWP;Bayesian Intelligence",
+        "Role": "Research Assistant",
+        "description": "Re-engineering a Dynamic BN for restoring western Melbourne grassland reserve.",
+        "year": "2017-2020",
+        "url": "",
+        "status": "",
+        "fundingBody": "",
+        "amount": "",
+        "section": "Monash University",
+        "subsection": "Projects",
+        "id": "portfolio-7",
+        "visible": true
+      },
+      {
+        "title": "Unit Marking Breakdown Summary Automation",
+        "Role": "Developer",
+        "description": "Developing an automated system for marking breakdown summary of units taught in FIT, Monash University.",
+        "year": "2018-2019",
+        "url": "",
+        "collaboration": "",
+        "status": "",
+        "fundingBody": "",
+        "amount": "",
+        "section": "Monash University",
+        "subsection": "Projects",
+        "id": "portfolio-8",
+        "visible": true
+      },
+      {
+        "title": "iOOBN software development",
+        "Role": "Research, Development",
+        "year": "2016-2020",
+        "collaboration": "",
+        "description": "Developing a software, iOOBN, to model Object-Oriented Bayesian Network.",
+        "status": "",
+        "fundingBody": "",
+        "amount": "",
+        "section": "Monash University",
+        "subsection": "Projects",
+        "id": "portfolio-9",
+        "visible": true
+      },
+      {
+        "title": "BN Model for PROTIC",
+        "Role": "Research, Development",
+        "year": "2016-2017",
+        "collaboration": "",
+        "description": "Developing a model to support the goal of PROTIC to help rural people of Bangladesh through recommendation in farming.",
+        "status": "",
+        "fundingBody": "",
+        "amount": "",
+        "url": "",
+        "section": "Monash University",
+        "subsection": "Projects",
+        "id": "portfolio-10",
+        "visible": true
+      },
+      {
+        "title": "Trustworthy AI",
+        "Role": "Research, Development",
+        "year": "2024",
+        "collaboration": "University of Sydney",
+        "description": "Developing a trustworthy AI tool for healthcare workers in taking care of emergency department patients.",
+        "status": "Ongoing",
+        "fundingBody": "",
+        "amount": "",
+        "url": "",
+        "section": "Bayesian Intelligence",
+        "subsection": "Projects",
+        "id": "portfolio-11",
+        "visible": true
+      },
+      {
+        "title": "Media Coordinator",
+        "Role": "Official Webpage management",
+        "year": "2024",
+        "description": "Managing the social media and official webpage of the association.",
+        "status": "Ongoing",
+        "fundingBody": "",
+        "amount": "",
+        "url": "",
+        "section": "Bayesian Network Modelling Association (BNMA)",
+        "subsection": "Roles",
+        "id": "portfolio-12",
+        "visible": true
+      },
+      {
+        "title": "Curriculum and Syllabus Design",
+        "Role": "Consultant, Executive member",
+        "year": "2014-2015",
+        "collaboration": "",
+        "description": "Developing the curriculum and syllabus of Computer Science and Engineering undergraduate program for the Open University Bangladesh",
+        "status": "",
+        "fundingBody": "",
+        "amount": "",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Roles",
+        "id": "portfolio-13",
+        "visible": true
+      },
+      {
+        "title": "MS Open Credit System",
+        "Role": "Consultant, Executive",
+        "year": "2013-2015",
+        "collaboration": "",
+        "description": "Developing the curriculum rules, regulations and protocols of Computer Science and Engineering Open credit MS program for the University o Dhaka",
+        "status": "",
+        "fundingBody": "",
+        "amount": "",
+        "url": "",
+        "section": "University of Dhaka",
+        "subsection": "Roles",
+        "id": "portfolio-14",
+        "visible": true
+      },
+      {
+        "title": "DrAi: Artificial Intelligence and Pattern Recognition Driven Assistant for Providing Effective Treatment",
+        "fundingBody": "Department of ICT, Ministry of Information and communication technology",
+        "amount": "A$10000",
+        "Role": "Principal Investigator, Research, Development",
+        "year": "2016-2020",
+        "url": "",
+        "collaboration": "Dhaka Medical College",
+        "description": "Developing a digital assistance for health practitioners of Bangladesh for effective treatment of patients.",
+        "status": "",
+        "section": "University of Dhaka",
+        "subsection": "Projects",
+        "id": "portfolio-15",
+        "visible": true
+      },
+      {
+        "title": "Geo-spatial transfer learning based rumour-spreading trend analysis to detect fake news about COVID-19 and on the effects of its vaccines",
+        "collaboration": "Curtin University",
+        "Role": "Co-Investigator",
+        "year": "2020-2021",
+        "description": "Research and development of a fake news detection system.",
+        "status": "",
+        "fundingBody": "COVID-19 Digital Grants from Australian Academy of Science",
+        "amount": "A$10,000",
+        "section": "University of Dhaka",
+        "subsection": "Projects",
+        "id": "portfolio-16",
+        "visible": true
+      },
+      {
+        "title": "Data Driven Intelligent Assistant for Medical Practitioners",
+        "collaboration": "Dhaka Medical College",
+        "Role": "Principal Investigator",
+        "year": "2021-2022",
+        "description": "Developing a data driven intelligent system for health practitioners of Bangladesh for effective treatment of patients.",
+        "status": "",
+        "fundingBody": "Ministry of Science & Technology, Bangladesh",
+        "amount": "A$5000",
+        "section": "University of Dhaka",
+        "subsection": "Projects",
+        "id": "portfolio-17",
+        "visible": true
+      },
+      {
+        "title": "Central Admission System",
+        "collaboration": "",
+        "Role": "Consultant, R&D",
+        "year": "2021-2022",
+        "description": "A digital web platform for managing admission system for undergraduate students from the whole country for the university of Dhaka with secured payment system.",
+        "status": "",
+        "fundingBody": "University of Dhaka",
+        "amount": "",
+        "section": "University of Dhaka",
+        "subsection": "Projects",
+        "id": "portfolio-18",
+        "visible": true
+      },
+      {
+        "title": "Accounting Information System",
+        "collaboration": "",
+        "Role": "Consultant",
+        "year": "2013-2015",
+        "description": "An automated digital system for accounting management system for the complex manual payment and finance system of the university of Dhaka.",
+        "status": "",
+        "fundingBody": "University of Dhaka",
+        "amount": "",
+        "section": "University of Dhaka",
+        "subsection": "Projects",
+        "id": "portfolio-19",
+        "visible": true
+      },
+      {
+        "title": "Titas Gas Digitalization Capability Testing Project",
+        "collaboration": "",
+        "Role": "Consultant",
+        "year": "2015",
+        "description": "",
+        "status": "",
+        "fundingBody": "Tital Gas Bangladesh",
+        "amount": "",
+        "section": "University of Dhaka",
+        "subsection": "Projects",
+        "id": "portfolio-20",
+        "visible": true
+      },
+      {
+        "title": "IEB Accreditation Project",
+        "collaboration": "",
+        "Role": "Consultant, Executie member",
+        "year": "2012",
+        "description": "Team member for IEB accreditation for the Department of Computer Science of Daffodil International University.",
+        "status": "",
+        "fundingBody": "",
+        "amount": "",
+        "section": "Daffodil Internation University",
+        "subsection": "Projects",
+        "id": "portfolio-21",
+        "visible": true
+      },
+      {
+        "title": "Somadha",
+        "collaboration": "Crantech UK",
+        "Role": "Project Manager, CEO",
+        "year": "2020",
+        "description": "Digital marketplace for Bangladeshi freelancers.",
+        "status": "Ongoing",
+        "fundingBody": "Investors",
+        "amount": "https://somadha.com",
+        "url": null,
+        "section": "Startups",
+        "subsection": "Projects",
+        "id": "portfolio-22",
+        "visible": true
+      },
+      {
+        "title": "Sobar Daktar",
+        "collaboration": "Crantech UK",
+        "Role": "Project Manager, CEO",
+        "year": "2020",
+        "description": "AI powered Telemedicine app for Bangladesh.",
+        "status": "Ongoing",
+        "fundingBody": "Investors",
+        "amount": "",
+        "url": "https://sobar-daktar.somadha.com/",
+        "section": "Startups",
+        "subsection": "Projects",
+        "id": "portfolio-23",
+        "visible": true
+      }
+    ]
+  },
+  "citations": [
+    {
+      "year": 2026,
+      "count": 50
+    },
+    {
+      "year": 2025,
+      "count": 52
+    },
+    {
+      "year": 2024,
+      "count": 66
+    },
+    {
+      "year": 2023,
+      "count": 66
+    },
+    {
+      "year": 2022,
+      "count": 80
+    },
+    {
+      "year": 2021,
+      "count": 91
+    },
+    {
+      "year": 2020,
+      "count": 67
+    },
+    {
+      "year": 2019,
+      "count": 63
+    },
+    {
+      "year": 2018,
+      "count": 58
+    },
+    {
+      "year": 2017,
+      "count": 28
+    },
+    {
+      "year": 2016,
+      "count": 25
+    },
+    {
+      "year": 2015,
+      "count": 21
+    },
+    {
+      "year": 2014,
+      "count": 17
+    },
+    {
+      "year": 2013,
+      "count": 6
+    }
+  ],
+  "options": {
+    "automatic_citations": true
+  },
+  "theme": {
+    "accent": "#2563eb",
+    "accent2": "#7c3aed",
+    "background": "#f6f7fb"
+  },
+  "trash": []
+}

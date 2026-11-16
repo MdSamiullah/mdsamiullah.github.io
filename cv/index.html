@@ -1,0 +1,27 @@
+---
+layout: default
+title: CV
+permalink: /cv/
+# body_class: cv-page
+---
+
+{% assign cv_pdf = site.data.managed.pages.cv.pdf | relative_url %}
+
+<div class="cv-toolbar">
+  <div class="cv-toolbar__left">
+    <div class="cv-toolbar__title">{{ site.data.managed.pages.cv.title }}</div>
+    <div class="cv-toolbar__hint">
+      {{ site.data.managed.pages.cv.body }}
+    </div>
+  </div>
+
+  <a class="btn" href="{{ cv_pdf }}" target="_blank" rel="noreferrer">{{ site.data.managed.pages.cv.button }}</a>
+</div>
+
+<iframe
+  class="cv-frame"
+  src="{{ cv_pdf }}"
+  title="CV PDF Preview"
+  loading="lazy">
+</iframe>
+

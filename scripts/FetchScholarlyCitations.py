@@ -11,10 +11,11 @@ Output format (YAML list):
 ...
 
 Usage:
-  python scripts/fetch_scholar_citations.py TvgYhREAAAAJ
+  python scripts/fetch_scholar_citations.py ehcf5mEAAAAJ
 """
 
 import os
+import json
 import sys
 import time
 import threading
@@ -47,6 +48,14 @@ def main():
         return 2
 
     scholar_id = sys.argv[1].strip()
+    managed = Path("_data/managed.json")
+    if managed.exists():
+        content = json.loads(managed.read_text(encoding="utf-8"))
+        if not content.get("options", {}).get("automatic_citations", True):
+            print("Manual citation mode; keeping the admin-entered counts.")
+            return 0
+        scholar_id = content["settings"]["social"].get("googlescholar", scholar_id)
+
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
     # start watchdog
