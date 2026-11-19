@@ -1,0 +1,3 @@
+Extract homepage-source into a NEW private-source folder. Do not overwrite or push these files into your public repository.
+Read homepage-source/docs/PRIVATE_SOURCE_MIGRATION.md in order. It includes backups, private repo creation, publishing, Cloudflare settings and public history cleanup.
+Your original configuration and secrets are not included. No live repositories were modified.
